@@ -1,11 +1,21 @@
+
+/**
+  * 當menu過多時，自動適配，避免UI錯亂
+  * @param {*} n
+  * 傳入 1 sidebar打開時
+  * 傳入 2 正常狀態下
+  */
+
 $(function () {
   const blogNameWidth = $('#site-name').width()
   const menusWidth = $('#menus').width()
+  const sidebarWidth = $('#sidebar').width() || 300
 
-  const adjustMenu = () => {
+  const adjustMenu = function (n) {
     const $nav = $('#nav')
     let t
-    if (window.innerWidth < 768) t = true
+    if (n === 0) t = true
+    else if (n === 1) t = blogNameWidth + menusWidth > $nav.width() - sidebarWidth - 30
     else t = blogNameWidth + menusWidth > $nav.width() - 30
 
     if (t) {
@@ -17,45 +27,153 @@ $(function () {
 
   // 初始化header
   const initAdjust = () => {
-    adjustMenu()
-    $('#nav').addClass('show')
+    if (window.innerWidth < 768) adjustMenu(0)
+    else adjustMenu(2)
+    $('#nav').css({ opacity: '1', animation: 'headerNoOpacity 1s' })
   }
 
-  // sidebar menus
+  /**
+ * 進入post頁sidebar處理
+ */
+  const OpenSidebarAuto = () => {
+    if (window.innerWidth > 1024 && $('#toggle-sidebar').hasClass('on')) {
+      setTimeout(function () {
+        openSidebar()
+      }, 400)
+    }
+  }
+
+  /**
+ * 點擊左下角箭頭,顯示sidebar
+ */
+
+  const closeSidebar = () => {
+    $('#sidebar').removeClass('tocOpenPc').animate({
+      left: '-300px'
+    }, 400)
+    $('#menus').animate({
+      paddingRight: 0
+    }, 400)
+    $('#body-wrap').animate({
+      paddingLeft: 0
+    }, 400)
+    if ($('#nav').hasClass('hide-menu')) {
+      setTimeout(function () {
+        adjustMenu(2)
+      }, 400)
+    }
+  }
+
+  const openSidebar = () => {
+    if (!$('#nav').hasClass('hide-menu')) {
+      adjustMenu(1)
+    }
+    $('#sidebar').addClass('tocOpenPc').animate({
+      left: 0
+    }, 400)
+    $('#menus').animate({
+      paddingRight: 300
+    }, 400)
+    $('#body-wrap').animate({
+      paddingLeft: 300
+    }, 400)
+  }
+
+  const toggleSidebar = function () {
+    $('#toggle-sidebar').on('click', function () {
+      const isOpen = $(this).hasClass('on')
+      isOpen ? $(this).removeClass('on') : $(this).addClass('on')
+      if (isOpen) {
+        closeSidebar()
+      } else {
+        openSidebar()
+      }
+    })
+  }
+
+  /**
+ * 手機menu和toc按鈕點擊
+ * 顯示menu和toc的sidebar
+ */
+
   const sidebarFn = () => {
     const $toggleMenu = $('#toggle-menu')
     const $mobileSidebarMenus = $('#mobile-sidebar-menus')
+    const $mobileTocButton = $('#mobile-toc-button')
     const $menuMask = $('#menu_mask')
     const $body = $('body')
+    const $sidebar = $('#sidebar')
 
-    function openMobileSidebar () {
+    function openMobileSidebar (name) {
       btf.sidebarPaddingR()
       $body.css('overflow', 'hidden')
       $menuMask.fadeIn()
-      $toggleMenu.removeClass('close').addClass('open')
-      $mobileSidebarMenus.addClass('open')
+
+      if (name === 'menu') {
+        $toggleMenu.removeClass('close').addClass('open')
+        $mobileSidebarMenus.addClass('open')
+      }
+
+      if (name === 'toc') {
+        $mobileTocButton.removeClass('close').addClass('open')
+        $sidebar.addClass('tocOpenMobile').css({ transform: 'translate3d(-100%,0,0)', left: '' })
+      }
     }
 
-    function closeMobileSidebar () {
+    function closeMobileSidebar (name) {
       $body.css({ overflow: '', 'padding-right': '' })
       $menuMask.fadeOut()
-      $toggleMenu.removeClass('open').addClass('close')
-      $mobileSidebarMenus.removeClass('open')
+
+      if (name === 'menu') {
+        $toggleMenu.removeClass('open').addClass('close')
+        $mobileSidebarMenus.removeClass('open')
+      }
+
+      if (name === 'toc') {
+        $mobileTocButton.removeClass('open').addClass('close')
+        $sidebar.removeClass('tocOpenMobile').css({ transform: '' })
+      }
     }
 
     $toggleMenu.on('click', function () {
-      openMobileSidebar()
+      openMobileSidebar('menu')
+    })
+
+    $mobileTocButton.on('click', function () {
+      openMobileSidebar('toc')
     })
 
     $menuMask.on('click touchstart', function (e) {
       if ($toggleMenu.hasClass('open')) {
-        closeMobileSidebar()
+        closeMobileSidebar('menu')
+      }
+      if ($mobileTocButton.hasClass('open')) {
+        closeMobileSidebar('toc')
       }
     })
 
     $(window).on('resize', function (e) {
       if (!$toggleMenu.is(':visible')) {
-        if ($toggleMenu.hasClass('open')) closeMobileSidebar()
+        if ($toggleMenu.hasClass('open')) closeMobileSidebar('menu')
+      }
+    })
+
+    const mql = window.matchMedia('(max-width: 1024px)')
+    mql.addListener((ev) => {
+      if (ev.matches) {
+        if ($sidebar.hasClass('tocOpenPc')) closeSidebar()
+      } else {
+        if ($('#toggle-sidebar').hasClass('on')) openSidebar()
+        if ($mobileTocButton.hasClass('open')) closeMobileSidebar('toc')
+      }
+    })
+
+    // toc元素點擊
+    $sidebar.find('.toc-link').on('click', function (e) {
+      e.preventDefault()
+      btf.scrollToDest(decodeURI($(this).attr('href')))
+      if (window.innerWidth < 1024) {
+        closeMobileSidebar('toc')
       }
     })
   }
@@ -64,7 +182,7 @@ $(function () {
  * 首頁top_img底下的箭頭
  */
   const scrollDownInIndex = () => {
-    $('#scroll-down').on('click', function () {
+    $('#scroll_down').on('click', function () {
       btf.scrollToDest('#content-inner')
     })
   }
@@ -227,7 +345,9 @@ $(function () {
  * fancybox和 mediumZoom
  */
   const addLightBox = function () {
-    if (GLOBAL_CONFIG.lightbox === 'fancybox') {
+    const isMediumZoom = GLOBAL_CONFIG.medium_zoom
+    const isFancybox = GLOBAL_CONFIG.fancybox
+    if (isFancybox) {
       const images = $('#article-container img:not(.gallery-group-img)').not($('a>img'))
       images.each(function (i, o) {
         const lazyloadSrc = $(o).attr('data-lazy-src') ? $(o).attr('data-lazy-src') : $(o).attr('src')
@@ -243,7 +363,7 @@ $(function () {
         buttons: ['slideShow', 'fullScreen', 'thumbs', 'close'],
         hash: false
       })
-    } else {
+    } else if (isMediumZoom) {
       const zoom = mediumZoom(document.querySelectorAll('#article-container :not(a)>img'))
       zoom.on('open', function (event) {
         const photoBg = $(document.documentElement).attr('data-theme') === 'dark' ? '#121212' : '#fff'
@@ -305,19 +425,14 @@ $(function () {
  *  toc
  */
   const tocFn = function () {
-    const $cardTocLayout = $('#card-toc')
-    const $cardToc = $cardTocLayout.find('.toc-content')
-    const $tocChild = $cardToc.find('.toc-child')
-    const $tocLink = $cardToc.find('.toc-link')
-    const $article = $('#article-container')
-
-    $tocChild.hide()
+    $('.toc-child').hide()
 
     // main of scroll
     $(window).scroll(btf.throttle(function (event) {
       const currentTop = $(this).scrollTop()
       scrollPercent(currentTop)
       findHeadPosition(currentTop)
+      autoScrollToc(currentTop)
     }, 100))
 
     // expand toc-item
@@ -329,16 +444,20 @@ $(function () {
     }
 
     const scrollPercent = function (currentTop) {
-      const docHeight = $article.height()
+      const $dom = $('#article-container')
+      const docHeight = $dom.height()
       const winHeight = $(window).height()
-      const headerHeight = $article.offset().top
+      const headerHeight = $dom.offset().top
       const contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight)
       const scrollPercent = (currentTop - headerHeight) / (contentMath)
       const scrollPercentRounded = Math.round(scrollPercent * 100)
       const percentage = (scrollPercentRounded > 100) ? 100
         : (scrollPercentRounded <= 0) ? 0
           : scrollPercentRounded
-      $cardToc.attr('progress-percentage', percentage)
+      $('#sidebar .progress-num').text(percentage)
+      $('#sidebar .sidebar-toc__progress-bar').animate({
+        width: percentage + '%'
+      }, 100)
     }
 
     // anchor
@@ -349,83 +468,41 @@ $(function () {
       }
     }
 
-    const mobileToc = {
-      open: () => {
-        $cardTocLayout.css('display', 'block')
-      },
-
-      close: () => {
-        $cardTocLayout.css('animation', 'toc-close .2s')
-        setTimeout(() => {
-          $cardTocLayout.css({ display: '', animation: '' })
-        }, 100)
-      }
-    }
-
-    $('#mobile-toc-button').on('click', () => {
-      if ($cardTocLayout.is(':visible')) {
-        mobileToc.close()
-      } else {
-        mobileToc.open()
-      }
-    })
-
-    // toc元素點擊
-    $tocLink.on('click', function (e) {
-      e.preventDefault()
-      btf.scrollToDest(decodeURI($(this).attr('href')))
-      if (window.innerWidth < 900) {
-        mobileToc.close()
-      }
-    })
-
-    const autoScrollToc = function (currentTop, item) {
-      const activePosition = item.offset().top
-      const $tocContent = $cardToc
-      const sidebarScrollTop = $tocContent.scrollTop()
-      if (activePosition > (currentTop + $(window).height() - 100)) {
-        $tocContent.scrollTop(sidebarScrollTop + 100)
-      }
-      if (activePosition < currentTop + 100) {
-        $tocContent.scrollTop(sidebarScrollTop - 100)
-      }
-    }
-
     // find head position & add active class
     // DOM Hierarchy:
     // ol.toc > (li.toc-item, ...)
     // li.toc-item > (a.toc-link, ol.toc-2child > (li.toc-item, ...))
-    const list = $article.find('h1,h2,h3,h4,h5,h6')
-
+    const versionBiggerFive = GLOBAL_CONFIG.hexoversion.split('.')[0] >= 5
     const findHeadPosition = function (top) {
     // assume that we are not in the post page if no TOC link be found,
     // thus no need to update the status
-      if ($tocLink.length === 0) {
+      if ($('.toc-link').length === 0) {
         return false
       }
 
+      const list = $('#article-container').find('h1,h2,h3,h4,h5,h6')
       let currentId = ''
       list.each(function () {
         const head = $(this)
         if (top > head.offset().top - 70) {
-          currentId = '#' + encodeURI($(this).attr('id'))
+          if (versionBiggerFive) currentId = '#' + encodeURI($(this).attr('id'))
+          else currentId = '#' + $(this).attr('id')
         }
       })
 
       if (currentId === '') {
-        $tocLink.removeClass('active')
-        $tocChild.hide()
+        $('.toc-link').removeClass('active')
+        $('.toc-child').hide()
       }
 
-      const currentActive = $tocLink.filter('.active')
+      const currentActive = $('.toc-link.active')
       if (currentId && currentActive.attr('href') !== currentId) {
         if (isAnchor) updateAnchor(currentId)
 
-        $tocLink.removeClass('active')
+        $('.toc-link').removeClass('active')
 
-        const _this = $tocLink.filter('[href="' + currentId + '"]')
+        const _this = $('.toc-link[href="' + currentId + '"]')
         _this.addClass('active')
-        autoScrollToc(top, _this)
 
         const parents = _this.parents('.toc-child')
         // Returned list is in reverse order of the DOM elements
@@ -439,6 +516,19 @@ $(function () {
           .closest('.toc-item').siblings('.toc-item')
         // Hide their respective list of subsections
           .find('.toc-child').hide()
+      }
+    }
+
+    const autoScrollToc = function (currentTop) {
+      if ($('.toc-link').hasClass('active')) {
+        const activePosition = $('.active').offset().top
+        const sidebarScrollTop = $('#sidebar .sidebar-toc__content').scrollTop()
+        if (activePosition > (currentTop + $(window).height() - 100)) {
+          $('#sidebar .sidebar-toc__content').scrollTop(sidebarScrollTop + 100)
+        }
+        if (activePosition < currentTop + 100) {
+          $('#sidebar .sidebar-toc__content').scrollTop(sidebarScrollTop - 100)
+        }
       }
     }
   }
@@ -561,6 +651,22 @@ $(function () {
   }
 
   /**
+ * 百度推送
+ */
+  const pushToBaidu = () => {
+    const bp = document.createElement('script')
+    const curProtocol = window.location.protocol.split(':')[0]
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+    }
+    bp.dataset.pjax = ''
+    const s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(bp, s)
+  }
+
+  /**
  * tag-hide
  */
   const clickFnOfTagHide = function () {
@@ -613,19 +719,20 @@ $(function () {
     const $cardCategory = $('#aside-cat-list .card-category-list-item.parent i')
     $cardCategory.on('click', function (e) {
       e.preventDefault()
-      $(this).toggleClass('expand').parents('.parent').next().slideToggle(300)
+      const $this = $(this)
+      $this.toggleClass('expand')
+      $this.parents('.parent').next().toggle()
     })
   }
 
   const switchComments = function () {
     let switchDone = false
     $('#switch-comments-btn').on('click', function () {
-      $('#post-comment > .comment-wrap > div').each(function (i, o) {
-        const $this = $(o)
-        if ($this.is(':visible')) {
-          $this.hide()
+      $('#post-comment > .comment-wrap > div').each(function () {
+        if ($(this).is(':visible')) {
+          $(this).hide()
         } else {
-          $this.css({
+          $(this).css({
             display: 'block',
             animation: 'tabshow .5s'
           })
@@ -659,36 +766,27 @@ $(function () {
     })
   }
 
-  const relativeDate = function (selector) {
-    selector.each((i, o) => {
-      const $this = $(o)
-      const timeVal = $this.attr('datetime')
-      $this.text(btf.diffDate(timeVal, true)).css('display', 'inline')
-    })
-  }
-
   const unRefreshFn = function () {
     $(window).on('resize', function () {
-      adjustMenu()
+      if (window.innerWidth < 768) adjustMenu(0)
+      else if ($('#sidebar').hasClass('tocOpenPc') && $('#nav').hasClass('fixed')) adjustMenu(1)
+      else adjustMenu(2)
     })
 
     clickFnOfSubMenu()
     GLOBAL_CONFIG.islazyload && lazyloadImg()
     GLOBAL_CONFIG.copyright !== undefined && addCopyright()
+    GLOBAL_CONFIG.baiduPush && pushToBaidu()
   }
 
   window.refreshFn = function () {
     initAdjust()
 
     if (GLOBAL_CONFIG_SITE.isPost) {
-      GLOBAL_CONFIG_SITE.isToc && tocFn()
+      OpenSidebarAuto()
+      toggleSidebar()
+      GLOBAL_CONFIG_SITE.isSidebar && tocFn()
       GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice()
-      GLOBAL_CONFIG.relativeDate.post && relativeDate($('#post-meta time'))
-    } else {
-      GLOBAL_CONFIG.relativeDate.homepage && relativeDate($('#recent-posts time'))
-      GLOBAL_CONFIG.runtime && addRuntime()
-      addLastPushDate()
-      toggleCardCategory()
     }
 
     sidebarFn()
@@ -696,12 +794,15 @@ $(function () {
     GLOBAL_CONFIG.highlight && addHighlightTool()
     GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption()
     runJustifiedGallery()
-    GLOBAL_CONFIG.lightbox !== 'null' && addLightBox()
+    addLightBox()
     scrollFn()
+    GLOBAL_CONFIG.runtime && addRuntime()
+    addLastPushDate()
     addTableWrap()
     clickFnOfTagHide()
     tabsFn.clickFnOfTabs()
     tabsFn.backToTop()
+    toggleCardCategory()
     switchComments()
   }
 

@@ -47,8 +47,7 @@ $(function () {
   }
 
   searchClickFn()
-
-  window.addEventListener('pjax:complete', function () {
+  window.addEventListener('pjax:success', function () {
     $('#local-search').is(':visible') && closeSearch()
     searchClickFn()
   })
@@ -86,7 +85,7 @@ $(function () {
             }
             let dataTitle = data.title.trim().toLowerCase()
             const dataContent = data.content.trim().replace(/<[^>]+>/g, '').toLowerCase()
-            const dataUrl = data.url.startsWith('/') ? data.url : GLOBAL_CONFIG.root + data.url
+            const dataUrl = data.url
             let indexTitle = -1
             let indexContent = -1
             let firstOccur = -1

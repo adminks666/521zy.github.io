@@ -36,7 +36,7 @@ $(function () {
 
   searchClickFn()
 
-  window.addEventListener('pjax:complete', function () {
+  window.addEventListener('pjax:success', function () {
     closeSearch()
     searchClickFn()
   })
