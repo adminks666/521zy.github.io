@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>hexo框架MD语法属性</title>
+      <link href="2020/10/27/hexo%E6%A1%86%E6%9E%B6MD%E8%AF%AD%E6%B3%95%E5%B1%9E%E6%80%A7/"/>
+      <url>2020/10/27/hexo%E6%A1%86%E6%9E%B6MD%E8%AF%AD%E6%B3%95%E5%B1%9E%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>#hexo框架MD语法属性<br>title 【必需】文章标题</p><p>date 【必需】文章创建日期</p><p>updated 【可选】文章更新日期</p><p>tags 【可选】文章标籤</p><p>categories 【可选】文章分类</p><p>keywords 【可选】文章关键字</p><p>description 【可选】文章描述</p><p>top_img 【可选】文章顶部图片</p><p>cover 【可选】文章缩略图 (如果没有设置 top_img, 文章页顶部将显示缩略图，可设为 false / 图片地址 / 留空)</p><p>comments 【可选】显示文章评论模块 (默认 true)</p><p>toc 【可选】显示文章 TOC (默认为设置中 toc 的 enable 配置)</p><p>toc_number 【可选】显示 toc_number (默认为设置中 toc 的 number 配置)</p><p>auto_open 【可选】是否自动打开 TOC (默认为设置中 toc 的 auto_open 配置)</p><p>copyright 【可选】显示文章版权模块 (默认为设置中 post_copyright 的 enable 配置)</p><p>copyright_author 【可选】文章版权模块的文章作者</p><p>copyright_author_href 【可选】文章版权模块的文章作者链接</p><p>copyright_url 【可选】文章版权模块的文章连结链接</p><p>copyright_info 【可选】文章版权模块的版权声明文字</p><p>mathjax 【可选】显示 mathjax (当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)</p><p>katex 【可选】显示 katex (当设置 katex 的 per_page: false 时，才需要配置，默认 false)</p><p>aplayer 【可选】在需要的页面加载 aplayer 的 js 和 css, 请参考文章下面的音乐 配置</p><p>highlight_shrink 【可选】配置代码框是否展开 (true/false)(默认为设置中 highlight_shrink 的配置)</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第三篇文章-关于美化进度</title>
       <link href="2020/10/23/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0-%E5%85%B3%E4%BA%8E%E7%BE%8E%E5%8C%96%E8%BF%9B%E5%BA%A6/"/>
       <url>2020/10/23/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0-%E5%85%B3%E4%BA%8E%E7%BE%8E%E5%8C%96%E8%BF%9B%E5%BA%A6/</url>
