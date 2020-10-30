@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>漏洞盒子</title>
+      <link href="2020/10/30/%E6%BC%8F%E6%B4%9E%E7%9B%92%E5%AD%90/"/>
+      <url>2020/10/30/%E6%BC%8F%E6%B4%9E%E7%9B%92%E5%AD%90/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/888b61e5f74a0fbcbc28cdfb76c10db6.png#pic_center" alt="在这里插入图片描述"></p><p>支持20+种类型文件及30+种病毒检测</p><p>快速生成内容详实的检测分析报告</p><p>恶意样本及分析报告免费共享</p><p>样本检测内容及结果定期更新</p><p>检测报告一键收藏快速分享</p><p>这样一款沙箱该卖什么价？</p><p>今天，由FreeBuf × 漏洞盒子联合推出的「大圣云沙箱」服务正式上线，同时宣布：即日起，「大圣云沙箱」向所有安全从业者永久免费开放使用！</p><p>「大圣云沙箱」入口<br><a href="https://mac-cloud.riskivy.com/">大圣云沙箱</a></p><p>「大圣云沙箱」是什么？<br>「大圣云沙箱」是一款基于云端架构的高级威胁检测和恶意软件免费分析服务，通过引入沙箱技术对最新高级恶意软件进行虚拟执行、行为捕获等全面深入的分析检测。旨在帮助白帽子&amp;企业安全管理运营人员快速进行威胁识别及响应处置。</p><p>服务免费，能力在线<br>汇集数十款病毒引擎及文件格式，覆盖更全面<br>「大圣云沙箱」内置多种反病毒引擎，对符合条件的文件以及该文件的操作进行病毒检测，同时将检测结果与威胁数据与多模型进行综合评估输出，为用户提供多维度的风险检测结果分析。</p><p>目前系统支持几十种格式文件的检测，并覆盖包括Windows、Linux及安卓apk文件等多平台操作系统，实现更加全面的威胁检测分析。</p><p>恶意样本威胁库定期更新，参考更清晰<br>样本上传完成后，系统会快速生成包括网络行为、进程行为、注册表、文件在内的恶意文件检测报告，白帽子&amp;安全管理运营人员可以此为参考，进行溯源及分析。同时，后台共享库会将已有样本分析报告全部开放，支持在线查看与下载。</p><p>结合机器学习与高级统计分析，识别更精准<br>「大圣云沙箱」以AI技术为核心，基于动静态多模型检测方法，结合模糊哈希技术、异常聚类技术、信誉估值技术等多种机器学习模型，对网络中的潜在恶意文件进行综合评估与检测，有效降低单一检测方式而造成的误报，提升识别准确率。</p><p>如何用「大圣云沙箱」进行威胁识别？<br>STEP 1 : 点击链接进入云沙箱入口▼<br><a href="https://mac-cloud.riskivy.com/">云沙箱</a></p><p>STEP 2 : 拖入文件完成样本上传▼<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/d1f5024ffd18690071edb39b7447c152.png#pic_center" alt="在这里插入图片描述"></p><p>STEP 3 ：获得检测报告▼</p><p>（反病毒引擎、动态引擎检测、基因检测等）<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/3cad66d7e07544fcb2461b1a5997a159.png#pic_center" alt="在这里插入图片描述"></p><p>彩蛋时间<br>「大圣云沙箱」服务刚刚上线，我们相信它还有很多可以优化的地方，在这里我们准备了一些礼品，以抽奖形式送给首批参与体验使用的用户。也欢迎大家将使用中遇到的问题与建议反馈给我们进行优化<del>TIPS：登录「大圣云沙箱」文件上传页面，参与样本上传即可参与抽奖哦</del></p><p>本文作者：FB客服， 转载请注明来自FreeBuf.COM</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo框架MD语法属性</title>
       <link href="2020/10/27/hexo%E6%A1%86%E6%9E%B6MD%E8%AF%AD%E6%B3%95%E5%B1%9E%E6%80%A7/"/>
       <url>2020/10/27/hexo%E6%A1%86%E6%9E%B6MD%E8%AF%AD%E6%B3%95%E5%B1%9E%E6%80%A7/</url>
