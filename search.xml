@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>利用阿里云平台搭建个人Hexo博客</title>
+      <link href="article/99fedde2.html"/>
+      <url>article/99fedde2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>利用云开发平台搭建个人 Hexo 博客的好处<br>不需要购买主机<br>不需要配置环境<br>不需要直接配置代码仓库<br>Hexo的主题好看，可以利用漂亮的md写文章<br>环境需求<br>可以上网的浏览器，登陆<a href="https://workbench.aliyun.com/">https://workbench.aliyun.com/</a></p><p>操作步骤：<br>从账号的创建到一键部署，手把手教你零基础创建个人博客，后续可以继续根据网上的教程来修改代码对博客进行定制化的美化。</p><ol><li><p>点击主页上的登陆按钮登陆阿里云账号，没有账号注册后登陆即可</p></li><li><p>填写团队名称，使用规模选1-10即可<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/df708d66d1bcd15c55e36f4bdc5c154f.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>点击 创建应用，按图选择“Hexo博客”的模版进行下一步操作<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/b2f872b38f57185b0679ea34172e2431.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>输入hexo模版应用的名称简介等信息确定以后成功创建应用，点击应用卡片上的“开发”进入CloudIDE开发界面</p></li><li><p>按照下图调出命令行，输下面的两行命令安装依赖和构建，详细使用文档可查看README.md<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/a32baacf4820f9fa59ecfac14b807f3b.png#pic_center" alt="在这里插入图片描述"><br>首先安装依赖：<code>*npm i --registry=https://registry.npm.taobao.org*</code><br>启动 hexo 本地 server：<code>*npm run dev*</code></p><p>6.点击左侧的tab，然后进行一键部署<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/e6da4d423e955ff0ecfd640b83a73a36.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>点击命令行中的二级域名就可以预览你的博客了<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/f5d75ddb236769179bb06b4d8b0b188a.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>在域名控制台，配置CNAME映射到该域名，下图以阿里云的域名控制台为例。<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/09dede90de47d06e76d297cc87b1de05.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>在云开发平台的应用卡片上点击「应用配置」，选择「线上环境」，绑定配置好的域名<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/436fcded341a1c75d2ea8c1ea274adf7.png#pic_center" alt="在这里插入图片描述"></p></li><li><p>继续在线上环境进行部署和发布上线<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/52c03b2771657efc97d00c18236a5ae8.png#pic_center" alt="在这里插入图片描述"><br>通过配置的域名进行访问了，赶紧来试试吧<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/0b28b93b1e63c3128744a77c572a0aa9.png#pic_center" alt="在这里插入图片描述"></p></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>有人问什么是爱情</title>
       <link href="article/bd0c6946.html"/>
       <url>article/bd0c6946.html</url>
