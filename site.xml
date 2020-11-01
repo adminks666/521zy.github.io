@@ -1,18 +1,195 @@
-﻿<?xml version='1.0' encoding='UTF-8'?>
-<urlset>
-<url>
-<loc><![CDATA[https://www.hack-gov.com.cn]]></loc>
-<lastmod>2020-10-27</lastmod>
-<changefreq>weekly</changefreq>
-</url>
-<url>
-<loc><![CDATA[https://www.hack-gov.com.cn/link]]></loc>
-<lastmod>2020-10-27</lastmod>
-<changefreq>weekly</changefreq>
-</url>
-<url>
-<loc><![CDATA[https://www.hack-gov.com.cn/music]]></loc>
-<lastmod>2020-10-27</lastmod>
-<changefreq>weekly</changefreq>
-</url>
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Created By http://www.zhetao.com/sitemapcreator, URLs: 38 Page: 1 Generated at: 2020-11-01 12:19:55 -->
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/archives/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/music/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/movies/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/link/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/about/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/4e8f2042.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/b81fa239.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/ea5ce9e5.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/865131c6.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/c44b6dd9.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/archives/2020/10/</loc>
+    <priority>0.99</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/HEXO/</loc>
+    <priority>0.98</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/archives/2020/11/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/89bdc42e.html</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/32e626ac.html</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/QQ%E7%A9%BA%E9%97%B4/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/page/2/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</loc>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/tags/%E7%88%B1%E6%83%85/</loc>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/undefined.html</loc>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/58f7a849.html</loc>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/153fada3.html</loc>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/1f191a24.html</loc>
+    <priority>0.89</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/4a17b156.html</loc>
+    <priority>0.87</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/5c2fafc7.html</loc>
+    <priority>0.87</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/archives/page/2/</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/a871cd77.html</loc>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/e5bb3301.html</loc>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/99fedde2.html</loc>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/e7574bb7.html</loc>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/87dccd5d.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/bd0c6946.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/article/717adaf1.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/archives/2020/10/page/2/</loc>
+    <priority>0.79</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hack-gov.com.cn/img/friend_404.gif</loc>
+    <priority>0.51</priority>
+  </url>
+
 </urlset>
