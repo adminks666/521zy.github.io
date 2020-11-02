@@ -2203,6 +2203,7 @@ blockquote footer cite:before {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
+  background: rgba(255,255,255,0.4);
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
