@@ -2042,6 +2042,7 @@ blockquote footer cite:before {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
+  background: rgba(255,255,255,0.4);
 }
 .layout > div:first-child:not(.recent-posts):hover {
   -webkit-box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
