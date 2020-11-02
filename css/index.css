@@ -2540,6 +2540,7 @@ blockquote footer cite:before {
 }
 #aside_content > .card-widget:first-child {
   margin-top: 0;
+  background: rgba(255,255,255,0.4);
 }
 @media screen and (max-width: 900px) {
   #aside_content > .card-widget:first-child {
@@ -2559,6 +2560,7 @@ blockquote footer cite:before {
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
+  background: rgba(255,255,255,0.4);
 }
 #aside_content .card-widget:hover {
   -webkit-box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
@@ -2631,7 +2633,7 @@ blockquote footer cite:before {
 }
 #aside_content .card-info #card-info-btn {
   display: block;
-  background-color: var(--btn-bg);
+  background-color: #49c1f5;
   color: var(--btn-color);
   text-align: center;
   line-height: 2.4;
