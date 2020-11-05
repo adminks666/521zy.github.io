@@ -2433,6 +2433,7 @@ blockquote footer cite:before {
   background: var(--card-bg);
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
+  background: rgba(255,255,255,0.4);
 }
 @media screen and (max-width: 768px) {
   #error-wrap .error-content {
