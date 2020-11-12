@@ -2248,7 +2248,6 @@ blockquote footer cite:before {
   -o-transition: all 0.6s;
   -ms-transition: all 0.6s;
   transition: all 0.6s;
-  object-fit: cover;
 }
 #recent-posts > .recent-post-item .post_cover img.post_bg:hover {
   -webkit-transform: scale(1.1);
