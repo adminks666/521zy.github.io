@@ -1,0 +1,240 @@
+
+/*  添加图标颜色 ===========================================*/
+/* 哔哩哔哩 */
+i.iconfont.icon-CN_bilibili {
+    color: #FB7299;
+}
+
+/* 归档 */
+i.fas.fa-archive {
+    color: mediumslateblue;
+}
+
+/* rss订阅 */
+i.iconfont.icon-RSS {
+    color: orange;
+}
+i.fas.fa-weixin{
+    color: rgb(75, 235, 75);
+}
+
+/* 邮件信封 */
+i.fas.fa-envelope {
+    color: darkorange;
+}
+
+/* aside icons color settings */
+/* 历史 */
+i.fas.fa-history {
+    color: mediumturquoise;
+}
+
+/* 网站数据 */
+i.fas.fa-chart-line {
+    color: blue;
+}
+
+/* 图标颜色结束  end===================================================== */
+
+/*  设置banner底部阴影===============================================*/
+header#page-header.full_page {
+    box-shadow: 0 -80px 10px -2px #ffffff83 inset;
+    box-sizing: border-box;
+}
+
+/* end============================================================= */
+
+#nav #blog_name{
+    font-size: x-large;
+}
+#nav:not(.fixed) #menus{
+    font-size: large;
+}
+
+/* 滚动条优化 ===============================================================*/
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(55, 99, 106, 0.699);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0097d8d5;
+    background-image: -webkit-linear-gradient(45deg,
+            rgb(29 255 245 / 40%) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgb(255 255 255 / 40%) 50%,
+            rgb(255 255 242 / 84%) 75%,
+            transparent 75%,
+            transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #ec29f3;
+}
+
+/* end=================================================== */
+
+
+/*kbd====================================================*/
+kbd {
+    display: inline-block;
+    color: #666;
+    font: bold 9pt arial;
+    text-decoration: none;
+    text-align: center;
+    padding: 2px 5px;
+    margin: 0 5px;
+    background: #eff0f2;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-top: 1px solid #f5f5f5;
+    -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,
+        0 1px 2px #333;
+    -moz-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,
+        0 1px 2px #333;
+    -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,
+        0 1px 2px #333;
+    box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9,
+        0 1px 2px #333;
+    text-shadow: 0 1px 0 #f5f5f5;
+}
+
+/* end=================================================== */
+
+/* 页码底色======================================= */
+#pagination .page-number {
+    background-color: cornsilk;
+}
+#pagination .pagination{
+    border-radius: 8px;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.57);
+    box-shadow: 0 0px 10px 5px #fffefe inset;
+}
+#pagination .pagination:hover{
+    -webkit-box-shadow: 0 4px 12px 12px rgba(245, 20, 215, 0.3);
+    /* box-shadow: 0 4px 12px 12px rgba(245, 20, 215, 0.3); */
+    box-shadow: 0 0px 10px 3px #74e0fcc7 inset;
+    background-color: #fffefec4;
+}
+a.extend.net {
+    background-color: cornsilk;
+}
+
+/* ================================================ */
+
+/* md图片样式 =======================================*/
+img[src*='#img-radius'] {
+    border-radius: 9px;
+}
+/* 给图片加圆角 */
+img{
+    border-radius: 9px;
+}
+/* 悬浮鼠标显示颜色边框 */
+img:hover{
+    box-shadow: 0 0px 10px 5px #22ec2c;
+}
+#article-container figure.highlight:hover{
+    box-shadow: 0 0px 10px 5px #deec22;
+}
+/* end==================================================== */
+
+/* 去掉全局顶部图片 */
+#page-header {
+    background: transparent !important;
+}  */
+
+/* 侧边栏 */
+#aside_content .card-widget:hover {
+    -webkit-box-shadow: 0 4px 12px 12px rgba(245, 20, 215, 0.3);
+    /* box-shadow: 0 4px 12px 12px rgba(245, 20, 215, 0.3); */
+    box-shadow: 0 0px 10px 5px #06d8fdc7 inset, 0 0px 10px 5px #06d8fdc7;
+    background-color: #fffefec4;
+}
+
+[data-theme='light'] {
+    --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+div.card-content {
+    box-shadow: 0 0px 10px 5px #fffeff inset;
+}
+
+/*=======================================================================  */
+
+/* 文章详情页===================================================== */
+div#post {
+    /* background-color: rgba(165, 165, 165, 0.57); */
+    font-size: 16px;
+    box-shadow: 0 0px 10px 5px #fffefe inset;
+}
+
+div#post:hover {
+    -webkit-box-shadow: 0 4px 12px 12px #fffefe inset;
+    /* box-shadow: 0 0px 10px 5px #fffefe inset,0 0px 10px 5px #fffefe ; */
+    box-shadow: 0 0px 10px 5px #fffefe inset, 0 0px 10px 5px #06d8fde8;
+    /* background-color: #04fcf08a; */
+}
+
+/* 文章详情========================================================= */
+
+/* 去掉footer背景================================================*/
+#footer {
+    background: transparent !important;
+}
+
+/* end========================================================= */
+
+.read-mode #web_bg {
+    /* 背景颜色 */
+    background: #fdf6e3;
+}
+
+/* 主页面div框设置透明加边框 */
+/* main#content-inner.layout {
+    border-width: 30px;
+    padding-top: 20px;
+    background-color: #ffffff5e;
+    box-shadow: 0px 5px 10px 8px #ffffff;
+    margin: auto;
+} */
+
+
+#page-header.not-index-bg {
+    height: 36rem;
+    box-shadow: 0 -80px 10px -2px #ffffff83 inset;
+    box-sizing: border-box;
+}
+
+/* 波浪特效 */
+.hans-container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+    z-index: -1;
+}
+
+/* 分享按钮 */
+#post .tag_share .post-meta__tags {
+    background: #e5f1f8;
+}
+
+#post .post-copyright {
+    background: palegreen;
+}
+/*========================================================== */
+
