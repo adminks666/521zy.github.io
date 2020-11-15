@@ -6,14 +6,14 @@ const catalogMagnet = new Vue({
 		postnum:[],
 		//这里是磁贴背景图片
 		img:[
-			"/images/b1.JPG",
-			"/images/b2.JPG",
-			"/images/b3.JPG",
-			"/images/b4.JPG",
-			"/images/b5.JPG",
-			"/images/b6.JPG",
-			"/images/b7.JPG",
-			"/images/b8.JPG",
+			"https://zfe.space/images/b1.JPG",
+			"https://zfe.space/images/b2.JPG",
+			"https://zfe.space/images/b3.JPG",
+			"https://zfe.space/images/b4.JPG",
+			"https://zfe.space/images/b5.JPG",
+			"https://zfe.space/images/b6.JPG",
+			"https://zfe.space/images/b7.JPG",
+			"https://zfe.space/images/b8.JPG",
 		],
 		//这里是磁贴描述信息
 		describe:[
