@@ -1,9 +1,9 @@
 #aside_content .card-info img {
-    border-radius: 0
-    object-fit: contain
-    width: auto
-    height: 110px
-    transform-origin: bottom
-    transform: scale(1.4)
-    margin-top: 20px
+    border-radius: 0;
+    object-fit: contain;
+    width: auto;
+    height: 110px;
+    transform-origin: bottom;
+    transform: scale(1.4);
+    margin-top: 20px;
 }
