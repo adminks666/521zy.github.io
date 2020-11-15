@@ -1,12 +1,12 @@
 #recent-posts{
 	margin-top:-1rem;  /*头部为空时抵消间隔，若有磁贴或日历请注释掉该行*/
-	height: 0px; */  /*首页文章数不足20篇时开启该属性，超过20篇或者布局错位时注释掉该属性*/
+	/*height: 0px; */  /*首页文章数不足20篇时开启该属性，超过20篇或者布局错位时注释掉该属性*/
 	display: flex;
     flex-wrap: wrap; /*规定灵活的项目在必要的时候拆行或拆列。*/
     justify-content: space-between; /*。*/
 }
 #recent-posts > .recent-post-item {
-  max-height:324px;*/  /*文章容器最大高度*/
+  /*max-height:324px;*/  /*文章容器最大高度*/
   margin-top: 1rem; /*最小间距*/
   display: inline-block;
   height:auto; /*高度自动*/
