@@ -1,8 +1,15 @@
 #aside_content .card-info img {
-    /* border-radius: 0; */
-    /* object-fit: contain; */
-    /* width: auto; */
-    /* height: 110px; */
-    /* transform-origin: bottom; */
+    border-radius: 0; */
+    object-fit: contain; */
+    width: auto; */
+    height: 110px; */
+    transform-origin: bottom; */
     transform: scale(1.4);
     margin-top: 20px;
+.avatar-img {
+  /* -webkit-animation: avatar_turn_around 2s linear infinite; */
+  -moz-animation: avatar_turn_around 2s linear infinite;
+  -o-animation: avatar_turn_around 2s linear infinite;
+  -ms-animation: avatar_turn_around 2s linear infinite;
+  /* animation: avatar_turn_around 2s linear infinite; */
+}
