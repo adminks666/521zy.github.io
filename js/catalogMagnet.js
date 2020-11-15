@@ -1,7 +1,7 @@
 const catalogMagnet = new Vue({
 	el:'#catalogMagnet',
 	data:{
-		message:'你好！欢迎访问我的主页zfe.space!',
+		message:'你好！欢迎访问我的主页https://www.hack-gov.com.cn/',
 		link: [],
 		postnum:[],
 		//这里是磁贴背景图片
@@ -17,9 +17,9 @@ const catalogMagnet = new Vue({
 		],
 		//这里是磁贴描述信息
 		describe:[
-			"日本早安新闻",
-			"vue学习记录",
-			"我的各种作品",
+			"HEXO教程",
+			"信息安全资讯",
+			"网络安全资讯",
 			"我的学习整理",
 			"我的各种教程",
 			"我的游戏评测",
