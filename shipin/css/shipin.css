@@ -25,8 +25,8 @@ ul {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  width: 877px;
-  height: 317px;
+  width: 750px;
+  height: 320px;
   border-radius: 75px;
   display: grid;
   grid-template-columns: 15% 1fr 15%;
