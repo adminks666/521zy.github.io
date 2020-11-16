@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美国国家安全局（NSA）发布《中国黑客目前正在利用的25大漏洞列表》 | 海客GO</title><meta name="keywords" content="网络安全"><meta name="author" content="xwcker"><meta name="copyright" content="xwcker"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="0x01 新闻背景10月20日，美国国家安全局发布的网络安全公告，详细列出了中国黑客目前正在利用的25个公开漏洞。美方认为这些恶意的网络活动由中国黑客发起，主要针对国家安全系统、国防工业基地、国防部展开攻击，并敦促受网络威胁的相关者采取漏洞修补等缓解措施。 0x02 公告详情A. 前言对美国国家安全系统(NSS)、美国国防工业基地(DIB)和美国国防部的信息网络产生最大威胁之一的恶意网络活动是由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美国国家安全局（NSA）发布《中国黑客目前正在利用的25大漏洞列表》">
+<meta property="og:url" content="https://www.hack-gov.com.cn/article/32e626ac.html">
+<meta property="og:site_name" content="海客GO">
+<meta property="og:description" content="0x01 新闻背景10月20日，美国国家安全局发布的网络安全公告，详细列出了中国黑客目前正在利用的25个公开漏洞。美方认为这些恶意的网络活动由中国黑客发起，主要针对国家安全系统、国防工业基地、国防部展开攻击，并敦促受网络威胁的相关者采取漏洞修补等缓解措施。 0x02 公告详情A. 前言对美国国家安全系统(NSS)、美国国防工业基地(DIB)和美国国防部的信息网络产生最大威胁之一的恶意网络活动是由">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-77cfbc9554088a3155695f84bf304be4_720w.jpg">
+<meta property="article:published_time" content="2020-10-31T10:59:52.000Z">
+<meta property="article:modified_time" content="2020-11-15T04:43:04.702Z">
+<meta property="article:author" content="xwcker">
+<meta property="article:tag" content="网络安全">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-77cfbc9554088a3155695f84bf304be4_720w.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.hack-gov.com.cn/article/32e626ac"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="yandex-verification" content="{&quot;theme_color&quot;:{&quot;enable&quot;:false,&quot;main&quot;:&quot;#49B1F5&quot;,&quot;paginator&quot;:&quot;#00c4b6&quot;,&quot;button_hover&quot;:&quot;#FF7242&quot;,&quot;text_selection&quot;:&quot;#00c4b6&quot;,&quot;link_color&quot;:&quot;#99a9bf&quot;,&quot;meta_color&quot;:&quot;#858585&quot;,&quot;hr_color&quot;:&quot;#A4D8FA&quot;,&quot;code_foreground&quot;:&quot;#F47466&quot;,&quot;code_background&quot;:&quot;rgba(27, 31, 35, .05)&quot;,&quot;toc_color&quot;:&quot;#00c4b6&quot;,&quot;blockquote_padding_color&quot;:&quot;#49b1f5&quot;,&quot;blockquote_background_color&quot;:&quot;#49b1f5&quot;}}"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: xwcker","link":"链接: ","source":"来源: 海客GO","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2020-11-15 12:43:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'true'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/Lete.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/footer.min.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/mystyle.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/catalogMagnet.css"/><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/cardlistpost.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/css/GalMenu.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/cover.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/div.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/touxiang.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/gitcalendar.css"><link rel="stylesheet" href="https://www.hack-gov.com.cn/css/card_botui.css" /><div class="aplayer" data-id="604677986" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 5.2.0"></head><body>
+<div id='loader'>
+    
+    <div class="outer_box">
+    <div class='loader_overlay'></div>
+    <div class='loader_cogs'>
+        <div class='loader_cogs__top'>
+            <div class='top_part'></div>
+            <div class='top_part'></div>
+            <div class='top_part'></div>
+            <div class='top_hole'></div>
+        </div>
+        <div class='loader_cogs__left'>
+            <div class='left_part'></div>
+            <div class='left_part'></div>
+            <div class='left_part'></div>
+            <div class='left_hole'></div>
+        </div>
+        <div class='loader_cogs__bottom'>
+            <div class='bottom_part'></div>
+            <div class='bottom_part'></div>
+            <div class='bottom_part'></div>
+            <div class='bottom_hole'></div>
+        </div>
+        <p style="text-align:center">&nbsp;&nbsp;&nbsp;loading...</p>
+    </div>
+    </div>
+  
+</div>
+
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load',endLoading);
+</script>
+<div id="web_bg"></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://img.antmoe.com/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">23</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 多媒体</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/stars/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div><div class="menus_item"><a class="site-page" href="/site.xml"><span> 地图</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pic1.zhimg.com/80/v2-77cfbc9554088a3155695f84bf304be4_720w.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">海客GO</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 多媒体</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/stars/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div><div class="menus_item"><a class="site-page" href="/site.xml"><span> 地图</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">美国国家安全局（NSA）发布《中国黑客目前正在利用的25大漏洞列表》</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2020-10-31T10:59:52.000Z" title="undefined 2020-10-31 18:59:52">2020-10-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>16分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/5f6d95248bbfdcb05af7843586618e06.png#pic_center" alt="在这里插入图片描述"></p>
+<p>0x01 新闻背景<br>10月20日，美国国家安全局发布的网络安全公告，详细列出了中国黑客目前正在利用的25个公开漏洞。美方认为这些恶意的网络活动由中国黑客发起，主要针对国家安全系统、国防工业基地、国防部展开攻击，并敦促受网络威胁的相关者采取漏洞修补等缓解措施。</p>
+<p>0x02 公告详情<br>A. 前言<br>对美国国家安全系统(NSS)、美国国防工业基地(DIB)和美国国防部的信息网络产生最大威胁之一的恶意网络活动是由中国政府支持黑客发起的。这些网络恶意活动采用中国政府支持的网络行为者所使用的一整套战术和技术，入侵拥有知识产权、经济、政治和军事等敏感信息的由于这些技术包括利用公开已知的漏洞，因此网络防御者应当优先采取补丁和其他缓解措施。</p>
+<p>黑客通常首先确定一个目标，收集有关目标的信息，确定与目标相关的任何漏洞，开发或重用漏洞利用，然后启动漏洞利用操作。</p>
+<p>此公告提供了已知最近被利用或被执行扫描的CVE列表。下面列出的大多数漏洞均可以被利用，并可以通过把访问互联网的产品当做内部网络的网关，获得对内部网络的访问权限。这类产品大多数用于用于远程访问(T1133)，或者外部web服务(T1190)，应该优先考虑漏洞修补。以下是一些基本缓解措施：<br>1 . 在补丁发布后，尽快更新系统和产品并打补丁<br>2 . 数据被盗或被篡改(包括凭证、帐户和软件)不会因为打补丁而减少，因此更改密码和检查帐户是一种良好的做法<br>3 . 禁用外部管理功能并设置带外管理网络<br>4 .在网络边缘禁用过时的或未使用的协议<br>5 .在DMZ区隔离面向互联网的服务，以减少内部网络的暴露<br>6 .启用面向互联网服务的日志记录，并监视日志以发现异常迹象</p>
+<p>B. 详细的漏洞列表和缓解措施<br>以下是正在被使用的CVE列表，包括漏洞的描述、建议的缓解措施：</p>
+<p>1.CVE-2019-11510：</p>
+<p>漏洞描述：存在于Pulse Secure VPN中，未经身份验证的远程攻击者可以发送特殊设计的URI来执行任意文件读取漏洞，这可能会导致密钥或密码暴露</p>
+<p>建议指南：CSA – Mitigating Recent VPN Vulnerabilities U/OO/196888-19；CSA – Advisory – APT29 target COVID-19 research organizations U/OO/152680-20</p>
+<p>影响：Pulse Connect Secure (PCS) 8.2 8.2R12.1之前， 8.3 8.3R7.1之前， 9.0 9.0R3.4之前版本。</p>
+<p>缓解措施：注意，打补丁并不能解决在应用补丁之前可能丢失的凭证。NSA不鼓励使用专有的SSLVPN/TLSVPN协议，因为这些协议不符合CNSS策略。将SSLVPN/TLSVPN部署到符合IETF标准的TLS的单个应用程序上，或者部署到IKE/IPsec VPN上。最好使用经过评估的TLS软件或国家信息担保伙伴关系(NIAP)产品列表(PCL)中列出的IPsec VPN网关/客户端。</p>
+<p>2.CVE-2020-5902</p>
+<p>漏洞描述：存在于F5 BIG-IP中，代理/负载均衡器设备，流量管理用户界面(TMUI)——也称为配置实用程序——存在远程代码执行漏洞（RCE）</p>
+<p>建议指南：CSI – Harden Network Devices U/OO/171339-16； CSI – Perform Out-of-Band Network Management U/OO/169570-20</p>
+<p>影响：F5 BIG-IP 版本15.0.0-15.1.0.3， 14.1.0-14.1.2.5， 13.1.0-13.1.3.3， 12.1.0-12.1.5.1， 11.6.1-11.6.5.1</p>
+<p>缓解措施：默认情况下，TMUI可以通过外部和内部管理接口访问，最好是禁用外部接口并配置带外管理网络。NSA在U/OO/171339-16、U/OO/169570-20建议书中发布了相关指导意见。</p>
+<p>3.CVE-2019-19781</p>
+<p>漏洞描述：存在于Citrix ADC和网关，允许目录遍历，导致远程代码在没有凭据的情况下执行</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20 ；CSA – Advisory – APT29 target COVID-19 research organizations U/OO/152680-20 ；CSA – Mitigate CVE-2019-19781 U/OO/103100-20</p>
+<p>影响：Citrix ADC 和 Gateway 13.0.47.24， 12.1.55.18， 12.0.63.13， 11.1.63.15 之前版本以及10.5.70.12； SD-WAN WANOP 4000-WO， 4100-WO， 5000-WO， 5100-WO 10.2.6b 11.0.3b之前版本</p>
+<p>4.CVE-2020-8193、CVE-2020-8195、CVE-2020-8196</p>
+<p>漏洞描述：不适当的访问控制和输入验证，存在于Citrix ADC、Citrix Gateway、Citrix SDWAN WAN-OP，允许未经身份验证访问某些URL端点和向低特权用户披露信息</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20 ；CSA – Advisory – APT29 target COVID-19 research organizations U/OO/152680-20 ；CSA – Mitigate CVE-2019-19781 U/OO/103100-20</p>
+<p>影响：Citrix ADC 和 Gateway 13.0.47.24， 12.1.55.18， 12.0.63.13， 11.1.63.15 ， 10.5.70.12 之前版本； SD-WAN WANOP 4000-WO， 4100-WO， 5000-WO， 5100-WO 10.2.6b 11.0.3b之前版本</p>
+<p>5.CVE-2019-0708</p>
+<p>漏洞描述：Remote Desktop Services10存在远程代码执行漏洞，未经身份验证的攻击者可以使用RDP连接到目标系统，并发送特制的请求</p>
+<p>建议指南：CSA – Patch Remote Desktop Services on Legacy Versions of Windows U/OO/152674-19； ORN – Outdated Software and Protocols Continue to Result in Endpoint and Network Compromise U/OO/802041-16</p>
+<p>影响：Microsoft Windows XP – 7， Microsoft Windows Server 2003 – 2008</p>
+<p>缓解措施：关闭TCP 3389端口，特别是针对暴露在互联网上的周边防火墙，这个端口由远程桌面协议(RDP)使用，关闭端口将阻止连接建立。如无需要，禁用远程桌面服务，禁用未使用和不需要的服务有助于减少安全漏洞的暴露，即使没有BlueKeep威胁。启用网络级身份验证，启用NLA后，攻击者首先必须对RDS进行身份验证，才能成功利用该漏洞。NLA可用于Windows 7，Windows Server 2008和Windows Server 2008 R2操作系统。</p>
+<p>6.CVE-2020-15505</p>
+<p>漏洞描述：MobileIron 移动设备管理(MDM)中的远程代码执行漏洞，允许远程攻击者通过未指定的向量执行任意代码的软件</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：MobileIron Core and Connector 10.6 及更早版本 Sentry 9.8 及更早版本</p>
+<p>7.CVE-2020-1350</p>
+<p>漏洞描述：Windows域名系统服务器不能正确处理请求时，存在远程代码执行漏洞</p>
+<p>建议指南：CSA – Patch Critical Vulnerability in Windows Servers® using DNS Server Role U/OO/152726-20</p>
+<p>影响：Microsoft Windows Server 2008 – 2019</p>
+<p>缓解措施：保持系统和产品的更新和补丁。在无法立即更新的情况下，根据微软的建议，配置Windows DNS服务器，以限制TCP上可接受的DNS消息包的大小为65，280字节防止该漏洞被利用，(0xFF00)，应用此解决方案需要重新启动DNS服务。应当尽快应用补丁，并在应用补丁后删除工作区。具体方案：启动PowerShell输入：“Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\DNS\Parameters -Name TcpReceivePacketSize -Type DWord -Value 0xFF00”。</p>
+<p>8.CVE-2020-1472</p>
+<p>漏洞描述：当攻击者建立到域控制器的易受攻击的Netlogon通道连接时，存在特权提升漏洞，使用远程协议(MS-NRPC)，又名“Netlogon特权提升”。</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：Microsoft Windows Server 2008 – 2019</p>
+<p>缓解措施：安装补丁并应用Microsoft KB4557222文章中的附加说明。</p>
+<p>9.CVE-2019-1040</p>
+<p>漏洞描述：Microsoft Windows 中的篡改漏洞，中间人攻击者能够成功绕过NTLM MIC(消息完整性)保护</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19 ；ORN – Outdated Software and Protocols Continue to Result in Endpoint and Network Compromise U/OO/802041-16</p>
+<p>影响：Microsoft Windows 7 – 10， Microsoft Windows Server 2008 – 2019</p>
+<p>缓解措施：尽可能地限制NTLM的使用并停止使用NTLMv1。</p>
+<p>10.CVE-2018-6789</p>
+<p>漏洞描述：向Exim邮件传输代理发送特制的消息可能会导致缓冲区溢出，可以用于远程代码执行</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：Exim 4.90.1之前版本。</p>
+<p>11.CVE-2018-0688</p>
+<p>漏洞描述：当Microsoft Exchange不能正确处理内存中的对象时，存在验证密钥远程代码执行漏洞</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Microsoft Exchange Server 2010 Service Pack 3 Update Rollup 29 以及之前版本， 2013 Cumulative Update 22 以及之前版本， 2016 Cumulative Update 13 以及之前版本， 2019 Cumulative Update 2 以及之前版本。</p>
+<p>12.CVE-2018-4939</p>
+<p>漏洞描述：Adobe ColdFusion 14版本存在可利用的反序列化漏洞数据，可能导致任意代码执行漏洞</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：Adobe ColdFusion (2016 release) Update 5 以及之前版本， ColdFusion 11 Update 13 以及之前版本。</p>
+<p>13.CVE-2015-4852</p>
+<p>漏洞描述：Oracle WebLogic 15中的WLS安全组件服务器允许远程攻击者通过精心设计的序列化Java 16对象实现任意命令执行漏洞</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Oracle WebLogic Server 10.3.6.0， 12.1.2.0， 12.1.3.0， 12.2.1.0</p>
+<p>14.CVE-2020-2555</p>
+<p>漏洞描述：Oracle Fusion中间件Oracle Coherence存在的漏洞，允许未经认证的攻击者通过T3进行网络访问，从而危及Oracle一致性。</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Oracle Coherence 3.7.1.0， 12.1.3.0.0， 12.2.1.3.0，12.2.1.4.0</p>
+<p>15.CVE-2019-3396</p>
+<p>漏洞描述：Atlassian Confluence 中的Widget Connector macro服务允许远程攻击者在Confluence服务器上实现路径遍历和远程代码执行，或者通过服务器端模板注入数据中心实例</p>
+<p>建议指南：CSA – Patch Critical Vulnerability In Atlassian Confluence ；CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Atlassian Confluence 6.6.12之前版本， 6.7.0 至 6.12.3， 6.13.0 至 6.13.3， 6.14.0 至 6.14.2。</p>
+<p>16.CVE-2019-11580</p>
+<p>漏洞描述：能够向Atlassian Crowd或Crowd数据中心实例发送请求的攻击者，可以利用此漏洞安装任意插件，允许远程代码执行</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Atlassian Crowd 2.1.0 至 3.0.5， 3.1.0 至 3.1.6， 3.2.0 至 3.2.8， 3.3.0至 3.3.5， 3.4.0 至 3.4.4。</p>
+<p>17.CVE-2020-10189</p>
+<p>漏洞描述：通过对不可信数据的反序列化，Zoho ManageEngine Desktop Central允许远程代码执行</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Zoho ManageEngine Desktop Central 10.0.479之前版本。</p>
+<p>18.CVE-2019-18935</p>
+<p>漏洞描述：Progress Telerik UI for <a target="_blank" rel="noopener" href="http://asp.net/">http://ASP.NET</a> AJAX 存在.NET反序列化漏洞，利用漏洞可能导致远程代码执行</p>
+<p>建议指南：CSI – Detect and Prevent Web Shell Malware U/OO/134094-20</p>
+<p>影响：Progress Telerik UI for <a target="_blank" rel="noopener" href="http://asp.net/">http://ASP.NET</a> AJAX 2019.3.1023</p>
+<p>缓解措施：NSA同意Tenable’s 文档中的建议：“当加密密钥已知，由于存在CVE-2017-11317或CVE-2017-11357或其他手段，利用可能导致远程代码执行 (在2020.1.114版本中，默认设置可以防止攻击。在2019.3.1023版本中，并非更早的版本，非默认设置可以防止漏洞利用）。</p>
+<p>19.CVE-2020-0601</p>
+<p>漏洞描述：欺骗漏洞存在于Windows CryptoAPI (Crypt32.dll) 椭圆曲线加密(ECC)证书。攻击者可以利用该漏洞，使用欺骗的代码签名证书对恶意的可执行文件进行签名，伪造可信的合法来源</p>
+<p>建议指南：CSA – Patch Critical Cryptographic Vulnerability in Microsoft Windows® Clients and Servers U/OO/104201-20</p>
+<p>影响：Microsoft Windows 10， Server 2016 – 2019</p>
+<p>缓解措施：此外，如果遇到可疑证书，可以使用Windows证书实用程序(certutil)和OpenSSL 21实用程序检查明确定义或非标准椭圆曲线参数的证书。</p>
+<p>20.CVE-2019-0803</p>
+<p>漏洞描述：当Win32k组件不能正确处理内存中的对象时，Windows会产生特权提升漏洞</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：Microsoft Windows 10， Server 2016 – 2019。</p>
+<p>21.CVE-2017-6327</p>
+<p>漏洞描述： Symantec Messaging Gateway可能会遇到远程代码执行问题</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响：Symantec Messaging Gateway 10.6.3-267之前版本</p>
+<p>缓解措施：在可能的情况下，以最低权限运行，以限制潜在利用。</p>
+<p>22.CVE-2020-3118</p>
+<p>漏洞描述： Cisco Discovery Protocol implementation for Cisco IOS XR允许未经身份验证的邻近攻击者执行任意代码或导致受影响设备重启</p>
+<p>建议指南：CSI – Harden Network Devices U/OO/171339-16</p>
+<p>影响： Cisco IOS XR 5.2.5， 6.5.2， 6.5.3， 6.6.25， 7.0.1</p>
+<p>缓解措施：在许多设备上，Cisco Discovery Protocol是默认启用的。根据 Harden Network Devices CSI，NSA建议全局禁用该协议。要确定CDP是否启用，使用“show running-config | include cdp”命令。</p>
+<p>23.CVE-2020-8515</p>
+<p>漏洞描述： DrayTek Vigor 设备允许通过shell元字符作为根程序(无需认证)实现远程执行代码。</p>
+<p>建议指南：CSI – Update and Upgrade Software Immediately U/OO/181147-19</p>
+<p>影响： : Vigor2960 1.3.1_Beta， Vigor3900®1.4.4_Beta， Vigor300B1.3.3_Beta， 1.4.2.1_Beta， 1.4.4_Beta</p>
+<p>缓解措施：在系统打补丁后，检查以确保没有额外的管理员用户或远程访问配置文件被添加，确认没有对访问控制列表进行更改。</p>
+<p>C. 结语<br>美国国家安全局认为，国家安全系统、国防工业基地和国防部网络不断受到中国黑客的扫描、定位和漏洞利用。NSA建议关键系统所有者优先考虑上述，以减少可能的敏感信息的丢失，从而影响到美国在政策、战略、计划和竞争上的优势。此外，这些部门的各种系统和网络还可能受到不在本公告信息中的漏洞的影响，美国国家安全局建议优先考虑针对上述CVE采取防御措施。</p>
+<p>0x03 资讯简评<br>中国国家互联网应急中心日前发布的2020年上半年中国互联网网络安全监测数据分析报告显示，中国遭受来自境外的网络攻击持续增加，美国是针对中国网络攻击的最大来源国，我国仍是全球网络攻击的主要受害者之一。</p>
+<p>根据外交部9月29日的外交部例行记者会发布的相关内容，“中国在网络安全领域面临的一些突出挑战。首先，中国仍是网络攻击的主要受害者之一，在疫情期间遭受的网络攻击有增无减。其次，美国是针对中国网络攻击的最大来源国。从境外计算机恶意程序捕获次数、境外恶意程序控制服务器数量、境外拒绝服务攻击（DDoS）次数、向中国境内网站植入后门等多项指标看，美国都高居首位。第三，针对中国关键信息基础设施的网络侦察值得关注。中国工业控制系统的网络资产持续遭受来自境外的扫描嗅探，日均超过2万次，目标涉及境内能源、制造、通信等重点行业的联网工业控制设备和系统。”</p>
+<p>在10月21日外交部例行记者会上，发言人赵立坚对美国国家安全局20日发表的这份安全公告声明进行回应：“作为‘棱镜计划’主要实施单位和全球最大的网络窃密机构，美国国家安全局公开指责别国从事网络窃密，这确实是一条具有讽刺意味的新闻。美国国家安全局多年来一直从事全球最大规模网络攻击和窃密行动，甚至连自己的盟友都不放过。众所周知，美在信息技术软硬件方面占据领先地位，也掌握了最多的软硬件漏洞，在利用漏洞从事网络攻击和窃密上拥有天然优势。斯诺登曾公开表示，美国国家安全局应当列入“最坏的犯罪组织之列。今年3月，360公司发布的报告表明，美国攻击组织APT-C-39曾对中国航空航天、科研机构、石油行业、大型互联网公司以及政府机构等关键领域进行了长达11年的网络渗透攻击。美国和中国谁是受害者，显而易见。谎言重复一千遍也变不成真理。美国这个‘黑客帝国’应该立即停止贼喊捉贼的把戏。”</p>
+<p>从全球网络安全形势看，网络攻击是各国面临的共同挑战，我国一贯主张各国在相互尊重、平等互利的基础上加强对话合作，共同应对这一挑战。美国，在特朗普政府上台后，积极推行“向前防御”的网络作战思想，简化网络攻击流程，更主动地采用网络战，配合现实空间作战。从长远看，由于政治体制、国家利益和地缘竞争等因素，美国在网络空间针对伊朗、俄罗斯以及我国等国家保持进攻态势将会是一贯的、长期的。因此，我国也需要围绕大国间网络空间斗争博弈的新常态，针对美军网络作战思想和手段，预有准备，提前布局，打主动仗，以争夺网络空间国家对抗的主导权。</p>
+<p>参考文献<br><a target="_blank" rel="noopener" href="https://www.nsa.gov/News-Features/News-Stories/Article-View/Article/2387347/nsa-warns-chinese-state-sponsored-malicious-cyber-actors-exploiting-25-cves/">https://www.nsa.gov/News-Features/News-Stories/Article-View/Article/2387347/nsa-warns-chinese-state-sponsored-malicious-cyber-actors-exploiting-25-cves/</a></p>
+<p><a target="_blank" rel="noopener" href="https://media.defense.gov/2020/Oct/20/2002519884/-1/-1/0/CSA_CHINESE_EXPLOIT_VULNERABILITIES_UOO179811.PDF">https://media.defense.gov/2020/Oct/20/2002519884/-1/-1/0/CSA_CHINESE_EXPLOIT_VULNERABILITIES_UOO179811.PDF</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cac.gov.cn/2020-09/26/c_1602682854845452.htm">http://www.cac.gov.cn/2020-09/26/c_1602682854845452.htm</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.xinhuanet.com/world/2020-09/29/c_1126560042.htm">http://www.xinhuanet.com/world/2020-09/29/c_1126560042.htm</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/16750">https://www.secrss.com/articles/16750</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">xwcker</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.hack-gov.com.cn/article/32e626ac.html">https://www.hack-gov.com.cn/article/32e626ac.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.hack-gov.com.cn" target="_blank">海客GO</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></div><div class="post_share"><div class="social-share" data-image="https://pic1.zhimg.com/80/v2-77cfbc9554088a3155695f84bf304be4_720w.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/article/89bdc42e.html"><img class="prev-cover" data-lazy-src="https://img-blog.csdnimg.cn/20201101103217299.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" onerror="onerror=null;src='/img/timg.gif'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">一文看懂新时期美军网络战特点</div></div></a></div><div class="next-post pull-right"><a href="/article/153fada3.html"><img class="next-cover" data-lazy-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3637372319,3082850924&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/timg.gif'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《2020中国网络安全产业分析报告》发布</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/article/153fada3.html" title="《2020中国网络安全产业分析报告》发布"><img class="cover" data-lazy-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3637372319,3082850924&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">《2020中国网络安全产业分析报告》发布</div></div></a></div><div><a href="/article/978fdfca.html" title="“双十一”即将来临，这份网络安全提示一定要知道！"><img class="cover" data-lazy-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605508844555&di=6611694a2cf9745285b5d47b3253ce83&imgtype=0&src=http%3A%2F%2Fwww.xuanliwang.com%2Fuploadfile%2F2018%2F0929%2F20180929010143240.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-16</div><div class="title">“双十一”即将来临，这份网络安全提示一定要知道！</div></div></a></div><div><a href="/article/865131c6.html" title="个人信息保护法草案全文公布"><img class="cover" data-lazy-src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=977098167,4003631739&fm=11&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">个人信息保护法草案全文公布</div></div></a></div><div><a href="/article/369117ce.html" title="国联易安受邀出席江苏互联网大会暨网络安全高峰论坛"><img class="cover" data-lazy-src="https://www.hack-gov.com.cn/img/1.gif" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">国联易安受邀出席江苏互联网大会暨网络安全高峰论坛</div></div></a></div><div><a href="/article/2c21ecd9.html" title="图解｜速读2020年上半年我国互联网网络安全监测数据分析报告（下）"><img class="cover" data-lazy-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604306842297&di=1c4a8d483d18b72d8f62389266d5f075&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180918%2Fdb74ecc2586c453eb255f8cd87fc71a6.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">图解｜速读2020年上半年我国互联网网络安全监测数据分析报告（下）</div></div></a></div><div><a href="/article/6c16d44a.html" title="工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”"><img class="cover" data-lazy-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=337823996,473222403&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”</div></div></a></div><div><a href="/article/c44b6dd9.html" title="工信部通报今年第五批131款侵害用户权益行为APP"><img class="cover" data-lazy-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3333182379,677841540&fm=11&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">工信部通报今年第五批131款侵害用户权益行为APP</div></div></a></div><div><a href="/article/da198093.html" title="教你如何防范网络情感诈骗"><img class="cover" data-lazy-src="https://www.hack-gov.com.cn/img/2.gif" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">教你如何防范网络情感诈骗</div></div></a></div><div><a href="/article/a780a979.html" title="木链科技荣获“2020军工信息安全护航先锋”"><img class="cover" data-lazy-src="http://www.uchuanbo.com/ueditor/php/upload/image/20201102/1604289772381605.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2020-11-15</div><div class="title">木链科技荣获“2020军工信息安全护航先锋”</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://img.antmoe.com/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">xwcker</div><div class="author-info__description">当历史只剩罪恶，唯有推倒重来</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">23</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://www.hack-gov.com.cn/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1358685263@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1358685263&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fa fa-quora"></i></a><a class="social-icon" href="https://www.hack-gov.com.cn/img/2wm.png" target="_blank" title="weixin"><i class="fa fa-weixin"></i></a><a class="social-icon" href="https://www.hack-gov.com.cn/music/" target="_blank" title="music"><i class="fa fa-music"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">我的云上博客<img src="/img/zhuye.gif"></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/article/9cf3c56b.html" title="男士防诈骗指南"><img data-lazy-src="https://www.hack-gov.com.cn/img/3.gif" onerror="this.onerror=null;this.src='/img/timg.gif'" alt="男士防诈骗指南"/></a><div class="content"><a class="title" href="/article/9cf3c56b.html" title="男士防诈骗指南">男士防诈骗指南</a><time datetime="2020-11-14T04:15:59.000Z" title="发表于 2020-11-14 12:15:59">2020-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/da198093.html" title="教你如何防范网络情感诈骗"><img data-lazy-src="https://www.hack-gov.com.cn/img/2.gif" onerror="this.onerror=null;this.src='/img/timg.gif'" alt="教你如何防范网络情感诈骗"/></a><div class="content"><a class="title" href="/article/da198093.html" title="教你如何防范网络情感诈骗">教你如何防范网络情感诈骗</a><time datetime="2020-11-13T08:28:03.000Z" title="发表于 2020-11-13 16:28:03">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/369117ce.html" title="国联易安受邀出席江苏互联网大会暨网络安全高峰论坛"><img data-lazy-src="https://www.hack-gov.com.cn/img/1.gif" onerror="this.onerror=null;this.src='/img/timg.gif'" alt="国联易安受邀出席江苏互联网大会暨网络安全高峰论坛"/></a><div class="content"><a class="title" href="/article/369117ce.html" title="国联易安受邀出席江苏互联网大会暨网络安全高峰论坛">国联易安受邀出席江苏互联网大会暨网络安全高峰论坛</a><time datetime="2020-11-13T08:11:54.000Z" title="发表于 2020-11-13 16:11:54">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/fe78f51d.html" title="没有结果的选举日：特朗普和拜登都认为自己有希望胜出"><img data-lazy-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1604558935965&amp;di=569a4adfa23405c9ed93c95f17a16872&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190618%2F996e3d0ccb6a4540aba4fddddb40acc6.jpg" onerror="this.onerror=null;this.src='/img/timg.gif'" alt="没有结果的选举日：特朗普和拜登都认为自己有希望胜出"/></a><div class="content"><a class="title" href="/article/fe78f51d.html" title="没有结果的选举日：特朗普和拜登都认为自己有希望胜出">没有结果的选举日：特朗普和拜登都认为自己有希望胜出</a><time datetime="2020-11-05T03:55:33.000Z" title="发表于 2020-11-05 11:55:33">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/6c16d44a.html" title="工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”"><img data-lazy-src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=337823996,473222403&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/timg.gif'" alt="工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”"/></a><div class="content"><a class="title" href="/article/6c16d44a.html" title="工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”">工业互联网安全成果展：卡奥斯三重防御变“事后补救”为“事前防控”</a><time datetime="2020-11-05T03:43:35.000Z" title="发表于 2020-11-05 11:43:35">2020-11-05</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic1.zhimg.com/80/v2-77cfbc9554088a3155695f84bf304be4_720w.jpg)"><div id="footer-wrap"><div class="copyright">&copy;1996 - 2020 By xwcker</div><div class="framework-info"><span>自豪的使用 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo程序框架</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div id="running-time"></div><script>setInterval(()=>{let create_time=Math.round(new Date(Date.UTC(2020,01,03,0,0,0)).getTime()/1000);let timestamp=Math.round((new Date().getTime()+8*60*60*1000)/1000);let second=timestamp-create_time;let time=new Array(0,0,0,0,0);if(second>=365*24*3600){time[0]=parseInt(second/(365*24*3600));second%=365*24*3600;}if(second>=24*3600){time[1]=parseInt(second/(24*3600));second%=24*3600;}if(second>=3600){time[2]=parseInt(second/3600);second%=3600;}if(second>=60){time[3]=parseInt(second/60);second%=60;}if(second>0){time[4]=second;}currentTimeHtml='本站已安全运行 '+time[0]+' 年 '+time[1]+' 天 '+time[2]+' 时 '+time[3]+' 分 '+time[4]+' 秒';document.getElementById("running-time").innerHTML=currentTimeHtml;},1000);  </script><div class="footer_custom_text">Hi, welcome to my <a href="https://www.hack-gov.com.cn/">BOLG</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script><script src="https://www.hack-gov.com.cn/live2d-widget/autoload.js"></script><script src="https://www.hack-gov.com.cn/js/Lete.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/js/pool.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/hideCategory.min.js"></script><link rel="stylesheet" href="https://www.hack-gov.com.cn/js/Lete.js"></script><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/js/upjiang.js"></script><script src="https://cdn.jsdelivr.net/gh/sunchaser-lilu/sunchaser-cdn@master/js/circleMagic.min.js"></script><script src="https://www.hack-gov.com.cn/js/vue.min.js"></script><script src="https://www.hack-gov.com.cn/js/catalogMagnet.js"></script><script src="https://www.hack-gov.com.cn/js/gitcalendar.js"></script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script>
+       <div class="GalMenu GalDropDown">
+          <div class="circle" id="gal">
+            <div class="ring">
+              <a href="/" class="menuItem">首页</a>
+              <a href="javascript:history.go(1);" class="menuItem">前进</a>
+              <a href="javascript:$('html,body').animate({scrollTop:0},500);" class="menuItem">顶部</a>
+              <a href="javascript:location.reload();" class="menuItem">刷新</a>
+              <a href="/Message/" class="menuItem">留言</a>
+              <a href="javascript:history.go(-1);" class="menuItem">后退</a>
+            </div>
+            
+                <audio id="audio" src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/audio/niconiconi.mp3"></audio>
+            
+          </div>
+    </div>
+    <script type="text/javascript">
+    var items = document.querySelectorAll('.menuItem'); 
+    for (var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+      }
+    </script>
+    <script>window.jQuery || document.write('<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/jquery-2.1.1.min.js"></script>')</script>    
+    
+<script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@master/hexo/js/GalMenu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('body').GalMenu({
+          'menu': 'GalDropDown'
+        })
+      });
+    </script>
