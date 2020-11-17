@@ -12,7 +12,7 @@ body {
 }
 
 .blog-slider {
-  width: 95%;
+  width: 100%;
   position: relative;
   max-width: 877px;
   margin: auto;
