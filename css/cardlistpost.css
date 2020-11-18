@@ -30,7 +30,6 @@ display:none;/*隐藏文章详情*/
   -webkit-flex-direction: column; /*容器内部纵向排列*/
   -ms-flex-direction: column; /*容器内部纵向排列*/
   flex-direction: column; /*容器内部纵向排列*/
-
 }
 #recent-posts > .recent-post-item .left_radius {
     border-radius: 8px 8px 0 0;/*圆角修改*/
