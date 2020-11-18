@@ -4,7 +4,7 @@ let swiper = new Swiper('.blog-slider', {
 	loop: true,
     autoplay: {
     disableOnInteraction: true,
-	delay:3000
+	delay:6000
     },
 	mousewheel: {
 		invert: false,
