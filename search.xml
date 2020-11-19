@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Butterfl主题新建自定义视频div及自定义div</title>
+      <link href="article/67313867.html"/>
+      <url>article/67313867.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>以上为本博客自定义div：<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201119104955230.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h1 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h1><p>此教程涉及到html语法转为pug语法，可进入此<a href="https://pughtml.com/">转换网站</a>转换为pug语法</p><h2 id="转换以后开始第一步自定义div："><a href="#转换以后开始第一步自定义div：" class="headerlink" title="转换以后开始第一步自定义div："></a>转换以后开始第一步自定义div：</h2><p>在你的<code>blog\themes\butterfly\layout</code>文件夹下新建pug文件(文件名自定义)，将一下代码复制到pug：</p><blockquote><p>（此为自定义div）</p></blockquote><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;iframe</span> <span class="string">width=&quot;100%&quot;</span> <span class="string">height=&quot;394</span> <span class="string">&quot; src=&quot;</span><span class="string">https://cybermap.kaspersky.com/cn/widget/dynamic/dark&quot;</span> <span class="string">frameborder=&quot;0&quot;&gt;&lt;/div&gt;&lt;div</span> <span class="string">class=&quot;recent-post-item&quot;</span> <span class="string">style=&quot;width:100%;min-height:600px&quot;&gt;&lt;iframe</span> <span class="string">src=&quot;//player.bilibili.com/player.html?aid=499578926&amp;amp;bvid=BV1YK411K7Ri&amp;amp;cid=235056114&amp;amp;page=1&quot;</span> <span class="string">scrolling=&quot;no&quot;</span> <span class="string">border=&quot;0&quot;</span> <span class="string">frameborder=&quot;no&quot;</span> <span class="string">framespacing=&quot;0&quot;</span> <span class="string">allowfullscreen</span> <span class="string">style=&quot;height:96.5%;width:97.5%;border-radius:12px</span> <span class="string">8px</span> <span class="string">8px</span> <span class="string">12px;margin:10px&quot;&gt;&lt;/iframe&gt;</span></span><br></pre></td></tr></table></figure><p><code>&lt;iframe width=&quot;100%&quot; height=&quot;394 &quot;</code> （iframe框架宽度可自定义为自己想要的大小）<br><code>div class=&quot;recent-post-item&quot; style=&quot;width:100%;min-height:600px</code> （视频及自定义div宽度可自定义为自己想要的大小）</p><h2 id="第二步自定义div："><a href="#第二步自定义div：" class="headerlink" title="第二步自定义div："></a>第二步自定义div：</h2><p>打开<code>blog\themes\butterfly\layout/index.pug </code><br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020111910451499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>然后将一下代码：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.recent-post-item(style=&#x27;width:100%;min-height:400px&#x27;)</span></span><br><span class="line">   <span class="string">include</span> <span class="string">gongji.pug</span></span><br></pre></td></tr></table></figure><p>粘贴到以下位置：<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201119104823599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>（注意空格，pug文件强烈要求tab空格语法）<br>然后<code>hexo clean  hexo g  hexo d</code></p><h1 id="以上教程为自定义div效果，下一步开始自定义视频div教程："><a href="#以上教程为自定义div效果，下一步开始自定义视频div教程：" class="headerlink" title="以上教程为自定义div效果，下一步开始自定义视频div教程："></a>以上教程为自定义div效果，下一步开始自定义视频div教程：</h1><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201119104955508.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><h2 id="自定义视频div："><a href="#自定义视频div：" class="headerlink" title="自定义视频div："></a>自定义视频div：</h2><p>打开<code>blog\themes\butterfly\layout/index.pug </code><br>将以下代码复制到此位置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.recent-post-item(style=&#x27;width:100%;min-height:600px&#x27;)</span></span><br><span class="line">   <span class="string">iframe(src=&#x27;https://hair.jingpin88.com/share/cn3nEgL7rQxgZmmG&#x27;,</span> <span class="string">scrolling=&#x27;no&#x27;,</span> <span class="string">border=&#x27;0&#x27;,</span> <span class="string">frameborder=&#x27;no&#x27;,</span> <span class="string">framespacing=&#x27;0&#x27;,</span> <span class="string">allowfullscreen,</span> <span class="string">style=&quot;height:96.5%;width:97.5%;border-radius:12px</span> <span class="string">8px</span> <span class="string">8px</span> <span class="string">12px;margin:10px&quot;)</span></span><br><span class="line"><span class="string">.recent-post-item(style=&#x27;height:auto;width:100%;border-radius:25px;&#x27;)</span></span><br></pre></td></tr></table></figure><p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/2020111910531252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTMzOTg2OTA=,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>（注意空格，pug文件强烈要求tab空格语法）<br>然后<code>hexo clean  hexo g  hexo d</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> HEXO </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HEXO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用于可视化数字威胁事件的前15个实时网络攻击图</title>
       <link href="article/2dd164dc.html"/>
       <url>article/2dd164dc.html</url>
