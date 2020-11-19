@@ -6,10 +6,10 @@ const catalogMagnet = new Vue({
 		postnum:[],
 		//这里是磁贴背景图片
 		img:[
-			"https://www.hack-gov.com.cn/img/lanse.jpg",
-			"https://www.hack-gov.com.cn/img/lvse.jpg",
-			"https://www.hack-gov.com.cn/img/hese.jpg",
-			"https://www.hack-gov.com.cn/img/zise.jpg",
+			"https://cdn.jsdelivr.net/gh/adminks666/jsd@v1.0/lanse.jpg",
+			"https://cdn.jsdelivr.net/gh/adminks666/jsd@v1.0/lvse.jpg",
+			"https://cdn.jsdelivr.net/gh/adminks666/jsd@v1.0/hese.jpg",
+			"https://cdn.jsdelivr.net/gh/adminks666/jsd@v1.0/zise.jpg",
 			"https://zfe.space/images/b5.JPG",
 			"https://zfe.space/images/b6.JPG",
 			"https://zfe.space/images/b7.JPG",
