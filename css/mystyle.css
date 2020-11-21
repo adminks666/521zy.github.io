@@ -170,7 +170,7 @@ img:hover{
 }
 
 div.card-content {
-    box-shadow: 0 0px 10px 5px #fffeff inset;
+    /* box-shadow: 0 0px 10px 5px #fffeff inset; */
 }
 
 /*=======================================================================  */
@@ -234,7 +234,7 @@ div#post:hover {
 }
 
 #post .post-copyright {
-    background: palegreen;
+    /* background: palegreen; */
 }
 /*========================================================== */
 

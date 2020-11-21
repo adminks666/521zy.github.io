@@ -2,20 +2,20 @@ function botui_init() {
   var botui = new BotUI("hello-akilar");
   botui.message.add({
     delay: 800,
-    content: "Hi, 欢迎光临Akilarの糖果屋😊"
+    content: "Hi, 欢迎光临海客GO"
   }).then(function() {
     botui.message.add({
       delay: 1100,
-      content: "我是店长Akilar😄"
+      content: "我是店长xwcker"
     }).then(function() {
       botui.message.add({
         delay: 1100,
-        content: "你也可以叫我Aki~😋"
+        content: "你也可以叫我海客😋"
       }).then(function() {
         botui.action.button({
           delay: 1600,
           action: [{
-            text: "我想知道更多关于糖果屋的故事!😃",
+            text: "我想知道更多关于海客GO!😃",
             value: "sure"
           }, {
             text: "好的，就这样吧，拜拜！🙄",
@@ -45,11 +45,11 @@ function botui_init() {
     secondpart = function() {
       botui.message.add({
         delay: 5000,
-        content: "首先呢，很感谢您肯在这里驻足片刻❤️。Akilarの糖果屋是一个个人性质的博客，我会在这里发表各种各样的内容。"
+        content: "首先呢，很感谢您肯在这里驻足片刻❤️。海客GO是一个个人性质的博客，我会在这里发表各种各样的内容。"
       }).then(function() {
         botui.message.add({
           delay: 15000,
-          content: "起这个名字是因为想到了安卓的命名方式，安卓历代版本都用甜品的名字命名🍰，例如9是Pineapple cake(菠萝蛋糕)🍰，8是Oreo(奥利奥)🍩，那我干脆就甜到底了。因此可以看到我的分类里面都是糖。之后就发现了一个很纠结的问题，除了巧克力，我想不到其他的不带糖字的糖果。当然了，无伤大雅。才怪咯！超难受的好么！偏偏我那么喜欢巧克力🍫，我是不会把它删掉的。"
+          content: "起这个名字是因为想到了海客，指徒步旅行者。一般指有自主创业意念，有户外徒步旅行，自驾游等户外活动精神享受爱好的青年一族吧。海客也指跨越不同文化，体验全球化生活方式，拥有国际触觉、爱好新鲜事物，讲求生活品质、充满生活热情的人群。"
         }).then(function() {
           botui.message.add({
             delay: 5000,
@@ -57,21 +57,21 @@ function botui_init() {
           }).then(function() {
             botui.message.add({
               delay: 8000,
-              content: "比如巧克力是Ubuntu的教程，棉花糖是windows的教程，糖葫芦就是各种通用教程啦！🎉"
+              content: "比如是HEXO的教程，网络安全的教程，信息安全胡教程啦！🎉"
             }).then(function() {
               botui.message.add({
                 delay: 5000,
-                content: "泡泡糖是个人日记哦，流水账一样的，不要看，很羞耻的。😶"
+                content: "QQ空间是个人日记哦，流水账一样的，不要看，很羞耻的。😶"
               }).then(function() {
                 botui.message.add({
                   delay: 4000,
-                  content: "我个人最推荐的是太妃糖版块哦，这里可都是我引以为豪的作品呢💝！马卡龙酌情观看吧，长篇连载对我来说是个挑战，很可能断更。👻"
+                  content: "我个人最推荐的是网络安全版块哦，这里可都是我引以为豪的作品呢💝！帮助人们识别网络攻击方式已经如何防守。👻"
                 }).then(function() {
                   botui.action.button({
                     delay: 1100,
                     action: [{
-                      text: "为什么叫Akilarの糖果屋呢？🤔",
-                      value: "why-mashiro"
+                      text: "为什么叫海客GO呢？🤔",
+                      value: "因为喜欢这个海客其中内含的故事与含义"
                     }]
                   }).then(function(a) {
                     thirdpart()
@@ -86,12 +86,12 @@ function botui_init() {
     thirdpart = function() {
       botui.message.add({
         delay: 1e3,
-        content: "诶？Akilar是我的英文名啊😏，糖果屋，emm🤔，大概是因为我在现实中也很想开一家糖果屋吧。"
+        content: "诶？海客GO是我的别名啊😏，海客GO，emm🤔，海客，指徒步旅行者。一般指有自主创业意念，有户外徒步旅行，自驾游等户外活动精神享受爱好的青年一族吧。"
       }).then(function() {
         botui.action.button({
           delay: 1500,
           action: [{
-            text: "😲，那英文名为什么叫Akilar呢？",
+            text: "😲，那英文名为什么叫xwcker呢？",
             value: "why-cat"
           }]
         }).then(function(a) {
@@ -102,11 +102,11 @@ function botui_init() {
     fourthpart = function() {
       botui.message.add({
         delay: 3000,
-        content: "这个是因为我的名字的释义用日文发音，其中有一节是Akira，用英文谐音拼写就是Akilar了 "
+        content: " "
       }).then(function() {
         botui.message.add({
           delay: 3000,
-          content: "灵感来自于刀剑神域~"
+          content: "灵感来自yxcker大佬胡中国黑客部"
         }).then(function() {
           botui.action.button({
             delay: 1500,
@@ -123,11 +123,11 @@ function botui_init() {
     fifthpart = function() {
       botui.message.add({
         delay: 5000,
-        content: "emmmm,流水幽吟绕耳边，煦风馨语抚心弦，挥臂欲揽冰钩月，银星斟酌醉人涎~"
+        content: "emmmm,还是叫我xwcker吧"
       }).then(function() {
         botui.message.add({
           delay: 3000,
-          content: "只是一介无名小卒而已^_^"
+          content: "一名网络安全爱好者而已^_^"
         })
       })
     }
