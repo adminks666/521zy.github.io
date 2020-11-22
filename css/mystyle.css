@@ -120,8 +120,8 @@ kbd {
 #pagination .pagination{
     border-radius: 8px;
     padding: 3px;
-    background-color: rgba(255, 255, 255, 0.57);
-    box-shadow: 0 0px 10px 5px #fffefe inset;
+    /* background-color: rgba(255, 255, 255, 0.57); */
+    /* box-shadow: 0 0px 10px 5px #fffefe inset; */
 }
 #pagination .pagination:hover{
     -webkit-box-shadow: 0 4px 12px 12px rgba(245, 20, 215, 0.3);
@@ -143,15 +143,6 @@ img[src*='#img-radius'] {
 img{
     border-radius: 9px;
 }
-/* 悬浮鼠标显示颜色边框 */
-img:hover{
-    box-shadow: 0 0px 10px 5px #22ec2c;
-}
-#article-container figure.highlight:hover{
-    box-shadow: 0 0px 10px 5px #deec22;
-}
-/* end==================================================== */
-
 /* 去掉全局顶部图片 */
 #page-header {
     background: transparent !important;
