@@ -2527,6 +2527,11 @@ _:future,
   left: 0;
   right: 0;
   margin: auto;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 #nav .menus_items .menus_item {
   position: relative;
