@@ -4258,3 +4258,16 @@ hr {
     border-bottom: solid 1px rgb(28, 29, 38);
     margin: 3em 0;
 }
+/* md图片样式 =======================================*/
+img[src*='#img-radius'] {
+    border-radius: 9px;
+}
+/* 给图片加圆角 */
+img{
+    border-radius: 9px;
+}
+/*  设置banner底部阴影===============================================*/
+header#page-header.full_page {
+    box-shadow: 0 -80px 10px -2px #ffffff83 inset;
+    box-sizing: border-box;
+}
