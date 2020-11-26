@@ -4266,8 +4266,3 @@ img[src*='#img-radius'] {
 img{
     border-radius: 9px;
 }
-/*  设置banner底部阴影===============================================*/
-header#page-header.full_page {
-    box-shadow: 0 -80px 10px -2px #ffffff83 inset;
-    box-sizing: border-box;
-}
