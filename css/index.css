@@ -1584,9 +1584,9 @@ blockquote footer cite:before {
   box-shadow: 0 4px 12px 12px rgba(7,17,27,0.15);
 }
 #aside_content .card-info img {
-  width: 110px;
+  width: 456px;
   height: 110px;
-  border-radius: 70px;
+  border-radius: 20px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -2767,9 +2767,9 @@ _:future,
   text-align: center;
 }
 #mobile-sidebar #mobile-sidebar-menus > .mobile_author_icon img {
-  width: 110px;
+  width: 456px;
   height: 110px;
-  border-radius: 70px;
+  border-radius: 20px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
