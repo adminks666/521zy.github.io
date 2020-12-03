@@ -1,9 +1,9 @@
 <html>
 	<head>
-		<title>hexo-theme-butterfly主题优秀开发魔改致敬 - 海客GO - 爱牟 听着海客的瀛谈（海客谈瀛洲）</title>
+		<title>hexo-theme-butterfly主题优秀开发魔改致敬 - 海客GO,爱牟 听着海客的瀛谈（海客谈瀛洲）</title>
 		<meta charset="utf-8" />
-		<meta name="keywords" content="hexo,hexo-theme-butterfly,butterfly,jerryc,jerryc127,乐特,小康,lete,魔改hexo">
-        <meta name="description" content="本页面为致敬hexo-theme-butterfly主题优秀开发魔改人员">
+		<meta name="keywords" content="hexo,hexo-theme-butterfly,butterfly,jerryc,jerryc127butterfly.js.org,乐特lete114.top,小康https://www.antmoe.com/,lete,魔改hexohexo.io,akilar.top,糖果屋,小冰zfe.space,张洪HEOblog.zhheo.com,ccknbc.cc">
+        <meta name="description" content="本页面为致敬hexo-theme-butterfly主题优秀开发魔改人员-jerryc-乐特-小康-akilar-小冰-张洪heo">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js" tppabs="/assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v4.0/zhijing/assets/css/main3.css" tppabs="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v4.0/zhijing/assets/css/main3.css" />
