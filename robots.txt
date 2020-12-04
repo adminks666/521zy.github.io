@@ -1,56 +1,43 @@
-http://www.hack-gov.com.cn/article/9cf3c56b.html
-http://www.hack-gov.com.cn/page/2
-http://www.hack-gov.com.cn/categories
-http://www.hack-gov.com.cn/stars
-http://www.hack-gov.com.cn/article/275b22a2.html
-http://www.hack-gov.com.cn/about
-https://www.hack-gov.com.cn/article/da198093.html
-https://wpa.qq.com/msgrd?v=3&uin=1358685263&site=qq&menu=yes
-http://www.hack-gov.com.cn/categories/HEXO
-http://www.hack-gov.com.cn/tags
-https://github.com/xxxxxx
-http://www.hack-gov.com.cn/Message
-http://www.hack-gov.com.cn/tags/HEXO
-https://www.hack-gov.com.cn/
-http://www.hack-gov.com.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8
-http://www.hack-gov.com.cn/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8
-http://www.hack-gov.com.cn/tags/%E7%A7%91%E6%8A%80%E6%9D%82%E8%B0%88
-http://www.hack-gov.com.cn/tags/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3
-http://www.hack-gov.com.cn/link
-http://www.hack-gov.com.cn/music
-http://www.hack-gov.com.cn/article/f621e100.html
-http://www.hack-gov.com.cn/categories/QQ%E7%A9%BA%E9%97%B4
-http://www.hack-gov.com.cn/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8
-http://www.hack-gov.com.cn/Gallery
-http://www.hack-gov.com.cn/categories/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3
-http://www.hack-gov.com.cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE
-http://www.hack-gov.com.cn/article/3ecffc69.html
-https://www.hack-gov.com.cn/music/
-http://www.hack-gov.com.cn/tags/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C
-http://www.hack-gov.com.cn/comments
-http://www.hack-gov.com.cn/article/67313867.html
-http://www.hack-gov.com.cn/categories/%E7%A7%91%E6%8A%80%E6%9D%82%E8%B0%88
-http://www.hack-gov.com.cn/article/369117ce.html
-http://www.hack-gov.com.cn/article/2dd164dc.html
-http://www.hack-gov.com.cn/tags/QQ%E7%A9%BA%E9%97%B4
-http://www.hack-gov.com.cn/site.xml
-https://www.hack-gov.com.cn/article/2dd164dc.html
-http://www.hack-gov.com.cn/article/da198093.html
-https://www.hack-gov.com.cn/article/67313867.html
-http://www.hack-gov.com.cn/categories/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C
-mailto:1358685263@qq.com
-http://www.hack-gov.com.cn/archives/2020/11
-http://www.hack-gov.com.cn/article/808e6b70.html
-http://www.hack-gov.com.cn/
-http://www.hack-gov.com.cn/zhijing
-http://www.hack-gov.com.cn/archives
-https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v5.0/img/2wm.png
-https://github.com/jerryc127/hexo-theme-butterfly
-https://www.hack-gov.com.cn/article/9cf3c56b.html
-http://www.hack-gov.com.cn/page/3
-http://www.hack-gov.com.cn/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE
-http://www.hack-gov.com.cn/article/75a0c27f.html
-https://hexo.io
-http://www.hack-gov.com.cn/movies
-http://www.hack-gov.com.cn/archives/2020/10
-http://www.hack-gov.com.cn/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8
+# robots.txt generated at http://www.w3cschool.cn/
+User-agent: Googlebot
+Disallow: 
+User-agent: googlebot-image
+Disallow: 
+User-agent: googlebot-mobile
+Disallow: 
+User-agent: MSNBot
+Disallow: 
+User-agent: Slurp
+Disallow: 
+User-agent: Teoma
+Disallow: 
+User-agent: twiceler
+Disallow: 
+User-agent: Gigabot
+Disallow: 
+User-agent: Scrubby
+Disallow: 
+User-agent: Robozilla
+Disallow: 
+User-agent: Nutch
+Disallow: 
+User-agent: ia_archiver
+Disallow: 
+User-agent: baiduspider
+Disallow: 
+User-agent: naverbot
+Disallow: 
+User-agent: yeti
+Disallow: 
+User-agent: yahoo-mmcrawler
+Disallow: 
+User-agent: psbot
+Disallow: 
+User-agent: asterias
+Disallow: 
+User-agent: yahoo-blogs/v3.9
+Disallow: 
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: www.hack-gov.com.cn/robots.txt
