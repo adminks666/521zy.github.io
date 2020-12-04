@@ -1,43 +1,83 @@
-# robots.txt generated at http://www.w3cschool.cn/
-User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: Teoma
-Disallow: 
-User-agent: twiceler
-Disallow: 
-User-agent: Gigabot
-Disallow: 
-User-agent: Scrubby
-Disallow: 
-User-agent: Robozilla
-Disallow: 
-User-agent: Nutch
-Disallow: 
-User-agent: ia_archiver
-Disallow: 
-User-agent: baiduspider
-Disallow: 
-User-agent: naverbot
-Disallow: 
-User-agent: yeti
-Disallow: 
-User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: psbot
-Disallow: 
-User-agent: asterias
-Disallow: 
-User-agent: yahoo-blogs/v3.9
-Disallow: 
-User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: www.hack-gov.com.cn/robots.txt
+﻿https://www.hack-gov.com.cn
+https://www.hack-gov.com.cn/about/
+https://www.hack-gov.com.cn/archives/
+https://www.hack-gov.com.cn/archives/2020/10/
+https://www.hack-gov.com.cn/archives/2020/11/
+https://www.hack-gov.com.cn/archives/2020/11/page/2/
+https://www.hack-gov.com.cn/archives/2020/11/page/3/
+https://www.hack-gov.com.cn/archives/page/2/
+https://www.hack-gov.com.cn/archives/page/3/
+https://www.hack-gov.com.cn/archives/page/4/
+https://www.hack-gov.com.cn/article/153fada3.html
+https://www.hack-gov.com.cn/article/1ce5130d.html
+https://www.hack-gov.com.cn/article/275b22a2.html
+https://www.hack-gov.com.cn/article/2c21ecd9.html
+https://www.hack-gov.com.cn/article/2dd164dc.html
+https://www.hack-gov.com.cn/article/32e626ac.html
+https://www.hack-gov.com.cn/article/369117ce.html
+https://www.hack-gov.com.cn/article/3ecffc69.html
+https://www.hack-gov.com.cn/article/4e8f2042.html
+https://www.hack-gov.com.cn/article/53144872.html
+https://www.hack-gov.com.cn/article/58f7a849.html
+https://www.hack-gov.com.cn/article/67313867.html
+https://www.hack-gov.com.cn/article/6c16d44a.html
+https://www.hack-gov.com.cn/article/717adaf1.html
+https://www.hack-gov.com.cn/article/75a0c27f.html
+https://www.hack-gov.com.cn/article/808e6b70.html
+https://www.hack-gov.com.cn/article/865131c6.html
+https://www.hack-gov.com.cn/article/89bdc42e.html
+https://www.hack-gov.com.cn/article/978fdfca.html
+https://www.hack-gov.com.cn/article/99fedde2.html
+https://www.hack-gov.com.cn/article/9cf3c56b.html
+https://www.hack-gov.com.cn/article/a780a979.html
+https://www.hack-gov.com.cn/article/a871cd77.html
+https://www.hack-gov.com.cn/article/b81fa239.html
+https://www.hack-gov.com.cn/article/bc2092e0.html
+https://www.hack-gov.com.cn/article/c44b6dd9.html
+https://www.hack-gov.com.cn/article/da198093.html
+https://www.hack-gov.com.cn/article/ea5ce9e5.html
+https://www.hack-gov.com.cn/article/f2a18896.html
+https://www.hack-gov.com.cn/article/f621e100.html
+https://www.hack-gov.com.cn/article/fe78f51d.html
+https://www.hack-gov.com.cn/article/undefined.html
+https://www.hack-gov.com.cn/catalogMagnet.link[index]
+https://www.hack-gov.com.cn/categories/
+https://www.hack-gov.com.cn/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/
+https://www.hack-gov.com.cn/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/
+https://www.hack-gov.com.cn/categories/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/
+https://www.hack-gov.com.cn/categories/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3/
+https://www.hack-gov.com.cn/categories/%E7%A7%91%E6%8A%80%E6%9D%82%E8%B0%88/
+https://www.hack-gov.com.cn/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/
+https://www.hack-gov.com.cn/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/page/2/
+https://www.hack-gov.com.cn/categories/HEXO/
+https://www.hack-gov.com.cn/categories/QQ%E7%A9%BA%E9%97%B4/
+https://www.hack-gov.com.cn/comments
+https://www.hack-gov.com.cn/comments/
+https://www.hack-gov.com.cn/Gallery/
+https://www.hack-gov.com.cn/Gallery/WeChat
+https://www.hack-gov.com.cn/Gallery/xiamen
+https://www.hack-gov.com.cn/link/
+https://www.hack-gov.com.cn/Message/
+https://www.hack-gov.com.cn/movies/
+https://www.hack-gov.com.cn/music/
+https://www.hack-gov.com.cn/page/2/
+https://www.hack-gov.com.cn/page/2/catalogMagnet.link[index]
+https://www.hack-gov.com.cn/page/3/
+https://www.hack-gov.com.cn/page/3/catalogMagnet.link[index]
+https://www.hack-gov.com.cn/page/4/
+https://www.hack-gov.com.cn/page/4/catalogMagnet.link[index]
+https://www.hack-gov.com.cn/praise/
+https://www.hack-gov.com.cn/site.xml
+https://www.hack-gov.com.cn/stars/
+https://www.hack-gov.com.cn/tags/
+https://www.hack-gov.com.cn/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/
+https://www.hack-gov.com.cn/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/
+https://www.hack-gov.com.cn/tags/%E5%BF%83%E7%90%86%E5%AD%A6/
+https://www.hack-gov.com.cn/tags/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/
+https://www.hack-gov.com.cn/tags/%E7%9F%A5%E8%AF%86%E7%A7%91%E6%99%AE/
+https://www.hack-gov.com.cn/tags/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3/
+https://www.hack-gov.com.cn/tags/%E7%A7%91%E6%8A%80%E6%9D%82%E8%B0%88/
+https://www.hack-gov.com.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/
+https://www.hack-gov.com.cn/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/page/2/
+https://www.hack-gov.com.cn/tags/HEXO/
+https://www.hack-gov.com.cn/tags/QQ%E7%A9%BA%E9%97%B4/
