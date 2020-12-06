@@ -1654,6 +1654,7 @@ blockquote footer cite:before {
   color: var(--btn-color);
   text-align: center;
   line-height: 2.4;
+  margin-top: 10px;
 }
 #aside_content .card-info #card-info-btn span {
   padding-left: 0.5rem;
