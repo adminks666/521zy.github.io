@@ -61,14 +61,6 @@ font-family: 'Schoolbell', cursive;
 font-family: 'Fredoka One', cursive;
 */
 
-@import url('fontawesome-all.css');
-@import url('animate.css');
-@import url('flaticon.css');
-@import url('owl.css');
-@import url('jquery.touchspin.css');
-@import url('jquery-ui.css');
-@import url('jquery.fancybox.min.css');
-
 /*** 
 
 ====================================================================
@@ -479,7 +471,6 @@ img{
 	width: 225px;
 	height: 50px;
 	margin: 0 auto;
-	background-image:url(../images/icons/curve.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align:center;
@@ -505,7 +496,6 @@ img{
 	display: inline-block;
 	height: 30px;
 	width: 20px;
-	background-image: url(../images/icons/icon-arrow.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-transform: rotate(180deg);
@@ -698,7 +688,6 @@ img{
 	margin: 0 auto;
 	height: 68px;
 	width: 320px;
-	background-image: url(../images/icons/logo-curve.png);
 	background-repeat:no-repeat;
 	background-position: center;
 	content: "";
@@ -1695,7 +1684,6 @@ img{
 	bottom: 0;
 	height: 6px;
 	width: 58px;
-	background-image: url(../images/icons/line-2.png);
 	background-position: center;
 	animation: slide 10s linear infinite;
 	-webkit-animation: slide 10s linear infinite;
@@ -1730,8 +1718,6 @@ img{
 	color: #ffffff;
 }
 
-.sec-title.light h2:before{
-	background-image: url(../images/icons/line-3.png);
 }
 
 /*** 
@@ -2382,7 +2368,6 @@ img{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/pattern.png);
 	background-repeat: repeat;
 	background-position: center;
 	content: "";
@@ -3743,17 +3728,11 @@ img{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/pattern.png);
 	background-repeat: repeat;
 	background-position: bottom;
 	content: "";
 	opacity: .30;
 }
-
-.fluid-section-two .contact-column .sec-title h2:before{
-	background-image: url(../images/icons/line-2.png);
-}
-
 .fluid-section-two .contact-column .inner-column{
 	position:relative;
 	float: right;
@@ -4149,7 +4128,6 @@ img{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/pattern.png);
 	background-position: center;
 	content: "";
 }
@@ -4959,7 +4937,6 @@ img{
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(../images/icons/pattern.png);
 	background-position: center;
 	content: "";
 	opacity: .20;
