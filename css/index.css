@@ -2542,7 +2542,7 @@ _:future,
   color: var(--white);
 }
 #nav a {
-  color: var(--light-grey);
+  color: #000;
 }
 #nav a:hover {
   color: var(--white);
@@ -2601,6 +2601,9 @@ _:future,
   -o-transform: translateY(-20px);
   -ms-transform: translateY(-20px);
   transform: translateY(-20px);
+  background: var(--card-bg);
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 #nav .menus_items .menus_item {
   position: relative;
