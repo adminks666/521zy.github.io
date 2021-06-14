@@ -1,0 +1,142 @@
+<html lang="en"><head>
+        <meta http-equiv="content-type" content="text/html; charset=gb2312">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link href="css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/juicyslider.css" type="text/css">
+        <style type="text/css">
+
+            /* Sticky footer styles
+            -------------------------------------------------- */
+
+            html,
+            body {
+                height: 100%;
+                background-color: #ebebeb;
+                /* The html and body elements cannot have any padding or margin. */
+            }
+
+            /* Wrapper for page content to push down footer */
+            #wrap {
+                min-height: 100%;
+                height: auto !important;
+                height: 100%;
+                /* Negative indent footer by it's height */
+                margin: 0 auto -60px;
+            }
+
+            /* Set the fixed height of the footer here */
+            #push,
+            #footer {
+                height: 60px;
+            }
+            #footer {
+                background-color: #f5f5f5;
+            }
+
+            /* Lastly, apply responsive CSS fixes as necessary */
+            @media (max-width: 767px) {
+                #footer {
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+
+            /* Custom page CSS
+            -------------------------------------------------- */
+            /* Not required for template or sticky footer method. */
+
+            #wrap > .container {
+                padding-top: 0px;
+            }
+            .container .credit {
+                margin: 20px 0;
+            }
+
+            code {
+                font-size: 80%;
+            }
+
+            /* Some adjustments for Bootstrap */
+
+            .lead {
+                font-size: 18px;
+            }
+
+            .btn {
+                margin: 5px 2px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- Begin page content -->
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="pagination-centered">
+                        <div id="myslider0" class="juicyslider" style="background-color: rgb(0, 0, 0); width: 100%; height: 400px;">
+                            <ul>
+                                <li style=""><img src="data/0.jpg" alt="" class="maxw" style="top: -2.84217e-14px; left: 0px;"></li>
+                            </ul>
+                            <div class="nav next"></div>
+                            <div class="nav prev"></div>
+                            <div class="mask" style="background-image: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            <br><br>
+            
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.min123.js"></script>
+        <script src="js/jquery-ui.min123.js"></script>
+        <script src="js/bootstrap.min123.js"></script>
+        <script type="text/javascript" src="js/juicyslider.js"></script>
+        <!-- initialize Juicy Slider with a jQuery doc ready -->
+        <script type="text/javascript">
+            // start to run when document ready
+             $(function() {
+                $('#myslider0').juicyslider({
+                    width: '100%',
+                    height: 400,
+                    mask : 'none',
+                    autoplay: false,
+                    shuffle: true,
+                });
+                 $('#myslider1').juicyslider({
+                    width: '100%',
+                    height: 200,
+                });
+                $('#myslider2').juicyslider({
+                    width: '100%',
+                    height: 200,
+                    mask: 'square',
+                    show: {effect: 'drop', duration: 3000},
+                    hide: {effect: 'drop', duration: 3000},
+                });
+                  $('#myslider3').juicyslider({
+                    width: '100%',
+                    height: 200,
+                    mask: 'strip',
+                    show: {effect: 'puff', duration: 3000},
+                    hide: {effect: 'puff', duration: 3000},
+                });
+            });
+        </script>
+        <!-- end of Juicy Slider -->
+
+
+</body></html>
