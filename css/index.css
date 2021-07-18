@@ -4191,12 +4191,11 @@ li.categoryBar-list-item {
   font-size: inherit;
 }
 #nav.hide-menu .menus_items {
-  position: absolute;
+  position: initial;
   left: 0;
-  visibility: hidden;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
 #nav.hide-menu #search-button span {
   display: none !important;
