@@ -1,0 +1,470 @@
+.outline_up_container {
+    overflow: hidden;
+    height: 426px;
+    margin: 40px auto 0;
+}
+
+.outline_up_box_left {
+    float: left;
+    margin-left: 30px;
+}
+
+.outline_up_box_right {
+    float: left;
+}
+
+.outline_up_title span {
+    font-size: 18px;
+    color: #5fa579;
+    float: left;
+    display: block;
+}
+
+.outline_up_icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    /* background: url(../images/outline/icon.jpg) no-repeat; */
+    background: url("../images/outline/icon_2.jpg"/*tpa=https://www.zkaqedu.com/content/images/outline/icon_2.jpg*/) no-repeat;
+    float: left;
+}
+
+.outline_up_title {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.outline_up_icon1 {
+    background-position: 0 0;
+}
+
+.outline_up_icon2 {
+    background-position: -20px 0;
+}
+
+.outline_up_icon3 {
+    background-position: -40px 0;
+}
+
+.outline_up_icon4 {
+    background-position: -60px 0;
+}
+
+.outline_up_icon5 {
+    background-position: -80px 0;
+}
+
+.outline_up_icon6 {
+    background-position: -100px 0;
+}
+
+.outline_up_box p {
+    display: block;
+    width: 540px;
+    color: #999999;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+.outline_up_line {
+    width: 540px;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 24px 0 24px -10px;
+}
+
+.outline_line2 {
+    float: left;
+    height: 400px;
+    width: 1px;
+    margin: 14px 39px 0 40px;
+    background: #e5e5e5; 
+}
+
+.outline_up_line3 {
+    width: 540px;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 24px 0 24px 10px;
+}
+
+.outline_bottom_box1 {
+    background: url("../images/outline/bottom1.jpg"/*tpa=https://www.zkaqedu.com/content/images/outline/bottom1.jpg*/) no-repeat;
+    margin-top: 44px;
+    height: 146px;
+    width: 1220px;
+}
+
+.outline_bottom_box1 span {
+    display: block;
+    font-size: 20px;
+    color: #53a477;
+    margin-left: 466px;
+    line-height: 58px;
+}
+
+.outline_bottom_box {
+    overflow: hidden;
+}
+
+.outline_bottom_box2 {
+    float: left;
+    margin-right: 12px;
+}
+
+.outline_bottom_box22 {
+    margin-right: 0px;
+}
+
+.outline_blue {
+    background: #75a1e8;
+    border: #b3d1ef solid 1px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.outline_blue:hover {
+    background: #648fd6;
+    border: #98bce2 solid 1px;
+}
+
+.outline_blue_210,.outline_green_210 {
+    width: 210px;
+}
+
+.outline_blue_220,.outline_green_220 {
+    width: 175px;
+}
+
+.outline_blue_152,.outline_green_152 {
+    width: 219px;
+}
+
+.outline_blue_190,.outline_green_190 {
+    width: 217px;
+}
+
+.outline_blue_224,.outline_green_224 {
+    width: 158px;
+}
+
+.outline_blue_154,.outline_green_154 {
+    width: 152px;
+}
+
+.blue_left {
+    background: #b9dbf8;
+    width: 4px;
+    height: 48px;
+    float: left;
+}
+
+.blue_icon {
+    width: 16px;
+    height: 16px;
+    margin: 16px 12px 0 13px; 
+    background: url("../images/outline/blue_icon.png"/*tpa=https://www.zkaqedu.com/content/images/outline/blue_icon.png*/) no-repeat;
+    float: left;
+}
+
+.blue_icon1 {
+    background-position: 0 0;
+}
+
+.blue_icon2 {
+    background-position: -16px 0;
+}
+
+.blue_icon3 {
+    background-position: -32px 0;
+}
+
+.blue_icon4 {
+    background-position: -48px 0;
+}
+
+.blue_icon5 {
+    background-position: -64px 0;
+}
+
+.blue_icon6 {
+    background-position: -80px 0;
+}
+
+.outline_blue span {
+    color: #fff;
+    font-size: 10px;
+    line-height: 48px;
+    display: block;
+}
+
+.blue_line {
+    width: 24px;
+    height: 4px;
+    background: #75a1e8;
+    margin: 18px 0 20px 0;
+}
+
+.outline_green {
+    background: #eef7f4;
+    border: #87c1ae solid 1px;
+    height: 49px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.outline_green:hover {
+    background: #e0f3ed;
+    border: #69a591 solid 1px;
+}
+
+.green_left {
+    background: #4ebb97;
+    width: 4px;
+    height: 48px;
+    float: left;
+}
+
+
+
+.green_icon1 {
+    background-position: 0 0;
+}
+
+.outline_green span {
+    color: #53a477;
+    font-size: 15px;
+    display: block;
+}
+
+.outlin_more {
+    color: #53a477;
+    font-size: 18px;
+    line-height: 20px;
+    display: block;
+    margin-left: 48px;
+}
+
+.green_icon {
+    width: 16px;
+    height: 16px;
+    margin: 5px 12px 0 13px;
+    background: url("../images/outline/green_icon.png"/*tpa=https://www.zkaqedu.com/content/images/outline/green_icon.png*/) no-repeat;
+    float: left;
+}
+
+.green_icon11 {
+    background-position: 0 0;
+}
+
+.green_icon12 {
+    background-position: -16px 0;
+}
+
+.green_icon13 {
+    background-position: -32px 0;
+}
+
+.green_icon14 {
+    background-position: -48px 0;
+}
+
+.green_icon15 {
+    background-position: -64px 0;
+}
+
+.green_icon16 {
+    background-position: -80px 0;
+}
+
+.green_icon21 {
+    background-position: 0 -16px;
+}
+
+.green_icon22 {
+    background-position: -16px -16px;
+}
+
+.green_icon23 {
+    background-position: -32px -16px;
+}
+
+.green_icon24 {
+    background-position: -48px -16px;
+}
+
+.green_icon25 {
+    background-position: -64px -16px;
+}
+
+.green_icon26 {
+    background-position: -80px -16px;
+}
+
+.green_icon27 {
+    background-position: -96px -16px;
+}
+
+.green_icon28 {
+    background-position: -112px -16px;
+}
+
+.green_icon29 {
+    background-position: -128px -16px;
+}
+
+.green_icon29 {
+    background-position: -128px -16px;
+}
+
+.green_icon31 {
+    background-position: 0 -32px;
+}
+
+.green_icon32 {
+    background-position: -16px -32px;
+}
+
+.green_icon33 {
+    background-position: -32px -32px;
+}
+
+.green_icon34 {
+    background-position: -48px -32px;
+}
+
+.green_icon35 {
+    background-position: -64px -32px;
+}
+
+.green_icon36 {
+    background-position: -80px -32px;
+}
+
+.green_icon37 {
+    background-position: -96px -32px;
+}
+
+.green_icon38 {
+    background-position: -112px -32px;
+}
+
+.green_icon39 {
+    background-position: -128px -32px;
+}
+
+.green_icon41 {
+    background-position: 0 -48px;
+}
+
+.green_icon42 {
+    background-position: -16px -48px;
+}
+
+.green_icon43 {
+    background-position: -32px -48px;
+}
+
+.green_icon44 {
+    background-position: -48px -48px;
+}
+
+.green_icon45 {
+    background-position: -64px -48px;
+}
+
+.green_icon46 {
+    background-position: -80px -48px;
+}
+
+.green_icon47 {
+    background-position: -96px -48px;
+}
+
+.green_icon48 {
+    background-position: -112px -48px;
+}
+
+.green_icon49 {
+    background-position: -128px -48px;
+}
+
+.green_icon410 {
+    background-position: -144px -48px;
+}
+
+.green_icon411 {
+    background-position: -160px -48px;
+}
+
+.green_icon412 {
+    background-position: -176px -48px;
+}
+
+.green_icon51 {
+    background-position: 0 -64px;
+}
+
+.green_icon52 {
+    background-position: -16px -64px;
+}
+
+.green_icon53 {
+    background-position: -32px -64px;
+}
+
+.green_icon54 {
+    background-position: -48px -64px;
+}
+
+.green_icon55 {
+    background-position: -64px -64px;
+}
+
+.green_icon56 {
+    background-position: -80px -64px;
+}
+
+.green_icon57 {
+    background-position: -96px -64px;
+}
+
+.green_icon58 {
+    background-position: -112px -64px;
+}
+
+.green_icon61 {
+    background-position: 0 -80px;
+}
+
+.green_icon62 {
+    background-position: -16px -80px;
+}
+
+.green_icon63 {
+    background-position: -32px -80px;
+}
+
+.green_icon64 {
+    background-position: -48px -80px;
+}
+
+.green_icon65 {
+    background-position: -64px -80px;
+}
+
+.green_icon66 {
+    background-position: -80px -80px;
+}
+
+.outline_btn {
+    width: 284px;
+    height: 53px;
+    background: url("../images/outline/button2.png"/*tpa=https://www.zkaqedu.com/content/images/outline/button2.png*/) no-repeat;
+    background-position: 0px 0px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 36px;
+}
+
+

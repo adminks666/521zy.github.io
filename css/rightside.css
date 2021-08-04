@@ -1,0 +1,61 @@
+#rightside {
+  position: fixed;
+  right: -38px;
+  bottom: 40px;
+  z-index: 100;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#rightside #rightside-config-hide {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  -ms-transition: -ms-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: translate(35px, 0);
+  -moz-transform: translate(35px, 0);
+  -o-transform: translate(35px, 0);
+  -ms-transform: translate(35px, 0);
+  transform: translate(35px, 0);
+}
+#rightside #rightside-config-hide.show {
+  -webkit-transform: translate(0, 0) !important;
+  -moz-transform: translate(0, 0) !important;
+  -o-transform: translate(0, 0) !important;
+  -ms-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important;
+}
+#rightside > div > button,
+#rightside > div > a {
+  display: block;
+  margin-bottom: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  text-align: center;
+  font-size: 16px;
+}
+#rightside > div > button:hover,
+#rightside > div > a:hover {
+  background-color: var(--btn-hover-color);
+}
+#rightside #mobile-toc-button {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  #rightside #mobile-toc-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 900px) {
+  #rightside #hide-aside-btn {
+    display: none;
+  }
+}

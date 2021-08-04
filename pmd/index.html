@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper轮播</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="mn-wrap">
+        <div class="swiper-container mn-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-color:#276041">Slide 1</div>
+                <div class="swiper-slide" style="background-color:#40528C">Slide 2</div>
+                <div class="swiper-slide" style="background-color:#A85050">Slide 3</div>
+                <div class="swiper-slide" style="background-color:#3E3190">Slide 4</div>
+            </div>        
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev arrow-left"></div>
+            <div class="swiper-button-next arrow-right"></div>
+        </div>
+    </div>
+</body>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+     //轮播图
+     var mySwiper = new Swiper('.mn-swiper', {
+        autoplay: true,
+        touchRatio:1,
+        speed:3000,  //匀速时间
+        loop : true,
+        freeMode:true,  //设置为true则变为free模式
+        slidesPerView:4,
+        slidesPerGroup:1,
+    })
+   //--  如果需要前进后退按钮 --
+    $('.arrow-left').click(function(){
+        mySwiper.swipePrev();
+    });
+    $('.arrow-right').click(function(){
+        mySwiper.swipeNext();
+    });
+    //鼠标移入悬停
+    $('.swiper-container').on('mouseenter', function(){
+        mySwiper.stopAutoplay();
+    })
+    //鼠标移出滚动
+    $('.swiper-container').on('mouseleave', function(){
+        mySwiper.startAutoplay();
+    })
+</script>
+</html>

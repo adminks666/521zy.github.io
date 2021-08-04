@@ -1,0 +1,27 @@
+#aside_content .card-info img {
+    border-radius: 0;
+    object-fit: contain;
+    width: auto;
+    height: 110px;
+    transform-origin: bottom;
+    transform: scale(1.4);
+    margin-top: 20px;
+}
+#mobile-sidebar #mobile-sidebar-menus > .mobile_author_icon {
+  padding: 1.3rem 1.5rem 0;
+  text-align: center;
+#mobile-sidebar #mobile-sidebar-menus > .mobile_author_icon img {
+  width: 456px;
+  height: 110px;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#sidebar #sidebar-menus > .avatar-img {
+  margin: 1rem auto;
+  padding: 1.3rem 1.5rem 0;
+  text-align: center;
+}  

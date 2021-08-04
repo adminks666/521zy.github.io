@@ -1,0 +1,303 @@
+@import url("../../../../../../fonts.googleapis.com/css-family=Lato&display=swap.css"/*tpa=https://fonts.googleapis.com/css?family=Lato&display=swap*/);
+canvas {
+  position: absolute;
+  background: transparent;
+  transition: all 1.2s 0.3s cubic-bezier(0.6, 0.005, 0.525, 0.99);
+  left: 0;
+  pointer-events: none;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+  top: 230px;
+  left: 390px;
+  z-index: 100;
+  cursor: pointer;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  transition: all .6s;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+.arrow:hover {
+  border: 2px solid white;
+}
+@-webkit-keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px white;
+  }
+  to {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px white;
+  }
+  to {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+.arrow img {
+  width: 20px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.coverA {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 1.2s 0.2s cubic-bezier(0.6, 0.005, 0.525, 0.99);
+  background-size: cover !important;
+  background-position: center;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 98%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 98%, 100% 100%);
+}
+
+.coverOne {
+  background: url("../img/Marvel_Avengers_Infinity_War_China_cropped.jpg"/*tpa=https://www.17sucai.com/preview/1750622/2019-07-08/particle/img/Marvel_Avengers_Infinity_War_China_cropped.jpg*/);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.coverTwo {
+  background: url("../img/V1_.jpg"/*tpa=https://www.17sucai.com/preview/1750622/2019-07-08/particle/img/V1_.jpg*/);
+}
+
+.coverThree {
+  background: url("../img/Annabelle-Comes-Home.jpg"/*tpa=https://www.17sucai.com/preview/1750622/2019-07-08/particle/img/Annabelle-Comes-Home.jpg*/);
+}
+
+.coverFour {
+  background: url("../img/Dark-Phoenix-Review.jpg"/*tpa=https://www.17sucai.com/preview/1750622/2019-07-08/particle/img/Dark-Phoenix-Review.jpg*/);
+}
+
+.coverFive {
+  background: url("../img/Marvel_Avengers_Infinity_War_China_cropped.jpg"/*tpa=https://www.17sucai.com/preview/1750622/2019-07-08/particle/img/Marvel_Avengers_Infinity_War_China_cropped.jpg*/);
+}
+
+.logo {
+  color: white;
+  position: absolute;
+  font-family: lato;
+  z-index: 10;
+  font-size: 12px;
+  top: 20px;
+  left: 25px;
+  opacity: 0.6;
+}
+
+.cover {
+  position: fixed;
+  height: 261px;
+  background: linear-gradient(-90deg, #0d040e 52%, transparent);
+  width: 20%;
+  z-index: 11;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateZ(100px);
+  transform: translateY(-50%) translateZ(100px);
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background: #0d040e;
+}
+
+canvas {
+  -webkit-transform: translateZ(10px);
+          transform: translateZ(10px);
+}
+
+canvas#textOne, canvas#textOne--pre {
+  -webkit-transform: translateY(-70px) translateZ(13px);
+          transform: translateY(-70px) translateZ(13px);
+  position: absolute;
+}
+
+canvas#textTwo, canvas#textTwo--pre {
+  -webkit-transform: translateY(-227px) translateZ(13px);
+          transform: translateY(-227px) translateZ(13px);
+  position: absolute;
+  opacity: 0;
+}
+
+canvas#textThree, canvas#textThree--pre {
+  -webkit-transform: translateY(-384px) translateZ(13px);
+          transform: translateY(-384px) translateZ(13px);
+  position: absolute;
+  opacity: 0;
+}
+
+canvas#textFour, canvas#textFour--pre {
+  -webkit-transform: translateY(-541px) translateZ(13px);
+          transform: translateY(-541px) translateZ(13px);
+  position: absolute;
+  opacity: 0;
+}
+
+canvas#textFive, canvas#textFive--pre {
+  -webkit-transform: translateY(-698px) translateZ(13px);
+          transform: translateY(-698px) translateZ(13px);
+  position: absolute;
+  opacity: 0;
+}
+
+canvas#slide_one, canvas#slide_one--pre,
+canvas#slide_two, canvas#slide_two--pre,
+canvas#slide_three, canvas#slide_three--pre,
+canvas#slide_four, canvas#slide_four--pre,
+canvas#slide_five, canvas#slide_five--pre {
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+
+.scene {
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.scene_inner {
+  width: 900px;
+  box-shadow: 0 0 60px rgba(210, 49, 230, 0.0784313725);
+  height: 261px;
+  border-radius: 8px;
+  position: absolute;
+  -webkit-box-reflect: below 10px linear-gradient(to top, white -120%, rgba(255, 255, 255, 0) 25%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.scene_inner__left {
+  width: 60%;
+  height: 100%;
+  float: left;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  font-family: 'lato';
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.scene_inner__left .overlay {
+  opacity: .8;
+  position: fixed;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 60%;
+  height: 100%;
+  background: #0a0415;
+  z-index: 1;
+}
+.scene_inner__left .wrap {
+  position: absolute;
+  top: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.scene_inner__left .left {
+  width: 30%;
+  left: 60px;
+  width: 400px;
+}
+.scene_inner__left .left_title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.scene_inner__left .left_description {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.scene_inner__left .left_cta {
+  padding: 10px 20px 12px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  background: black;
+  display: inline-block;
+  margin-top: 20px;
+}
+.scene_inner__right {
+  width: 40%;
+  background: #fff;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  float: left;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.scene_inner__right h4 {
+  font-family: 'lato';
+  position: absolute;
+  font-size: 20px;
+  -webkit-transform: translateZ(20px) translateY(80px) translateX(25px);
+          transform: translateZ(20px) translateY(80px) translateX(25px);
+}
+.scene_inner__right .menu {
+  width: 18px;
+  height: 2px;
+  background: #111114;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.scene_inner__right .menu:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 2px;
+  width: 18px;
+  height: 2px;
+  background: #111114;
+}
+.scene_inner__right .menu:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 9px;
+  width: 10px;
+  height: 2px;
+  background: #111114;
+}
+.scene_inner__slider {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -560px;
+  width: 1000px;
+}
+.scene_inner__slider .slide {
+  background: #f5e0bf;
+  width: 150px;
+  height: 180px;
+  border-radius: 8px;
+  color: white;
+  font-family: 'Lato';
+  display: inline-block;
+  margin-right: 10px;
+}
+.scene_inner__slider .slide_title {
+  font-size: 14px;
+  padding: 70px 20px 0 20px;
+}
+.scene_inner__slider .slide_text {
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 20px 0 20px;
+  opacity: 0.8;
+}
