@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*menu*/
+#bottom{}
+.bottom{ border-top:3px solid #16639f; padding:20px 0 76px;}
+#menubot {display:block;  margin:auto; height:50px;}
+#menubot .mainlevel {float:left; color:#fff; font-size:14px; text-align:left;* text-align:left; display:block;background:#e6e6e6 url(../images/point2.png) 181px center no-repeat; width:200px; height:30px; line-height:30px; margin: 0 25px 0 20px;}
+#menubot .mainlevel a {text-decoration:none;color:#4c4c4c; font-size:14px;padding-left:9px;display:block;height:30px; line-height:30px; cursor:pointer;}
+#menubot .noback{background:none; width:80px;}
+#menubot .noback a{ font-weight:bold;}
+
+#menubot .mainlevel ul {position:absolute; display:none; /*IE is great need, width>=li.length*/ width:198px; height:211px; overflow-x:hidden;overflow-y:scroll;background-color:#f7f7f7; border:#ededed 1px solid; z-index:999; margin-top:-243px; }
+#menubot .mainlevel li { float:none; background:none; font-size:14px; padding:0px;width:198px; z-index:1000;line-height:26px;height:26px;}
+
+#menubot .mainlevel li a {font-size:14px; text-decoration:none; text-align:left; padding:0; margin:0; padding-left:10px; font-weight:normal; line-height:26px; background:none;display:block;width:188px; float:left;  text-overflow:ellipsis;white-space:nowrap;overflow:hidden;/*IE6 only*/ height:26px;}
+
+#menubot .mainlevel li:hover{ padding:0;}
+#menubot .mainlevel li:hover a { background-color:#D86367; color:#fff;}
+.bottable{ margin:auto; font-size:1.4rem; color:#4c4c4c;}
+.botnava{ display:inline-block; margin-left:20px;}
+
+.bottom_phone{ display:none;}
+#menubot .mainlevel_jjz{width: auto; background-image: none;}
+#menubot .mainlevel_jjz a{ padding: 0 17px;  }
+#menubot .mainlevel:hover ul{display: block;}
