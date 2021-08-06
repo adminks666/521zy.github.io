@@ -3510,28 +3510,28 @@ span.categoryBar-list-count::after {
   right: -100%;
 }
 li.categoryBar-list-item:nth-child(1) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/lanse.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(2) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/lvse.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(3) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/hese.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(4) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/zise.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(5) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/shenlan.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(6) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/chengse.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(7) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/fense.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(8) {
-  background: url('https://cdn.jsdelivr.net/gh/adminks666/jsd@v3.0/qianlan.jpg');
+  background: url('img/touming.png');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: '公平' !important;
