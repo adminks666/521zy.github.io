@@ -1,6 +1,6 @@
     var ShowMsg={  
         title:'访客公告',  
-        content:'本站每天受到”大黑阔“攻击，网站为形式而已，对于自身没有任何实质性的伤害。',  
+        content:'本站每天受到”大黑阔“攻击，网站为网络表现形式而已，对于自身没有任何实质性的伤害。',  
         width:'100%',  
         height:'120px',  
         setTitle:function(value){  
