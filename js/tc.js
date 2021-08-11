@@ -1,0 +1,1 @@
+document.writeln("<div id=\"leftDiv1\" ><a href='http://www.xiameneye.org.cn/special/zhengji/' target=_blank><img src='/templets/2014/images/zj_pf.jpg' border=0></a><div class='divclose1'><span onclick=\"$('#leftDiv1').remove()\">关闭X</span></div></div>");
