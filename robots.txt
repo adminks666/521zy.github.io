@@ -41,3 +41,4 @@ User-agent: *
 Disallow: 
 Disallow: /bin/
 Sitemap: https://www.hack-gov.com.cn/com.cn/sitemap_baidu.xml
+Sitemap: https://www.hack-gov.cn/cn/sitemap_baidu.xml
