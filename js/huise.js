@@ -24,22 +24,22 @@
 	// 2.设置4·4全国哀悼日
 	var NJ_country_startTime = "04-04 00:00:00";
 	var NJ_country_overTime = "04-05 00:00:00";
-	//2.设置汶川哀悼开始及结束 是 5月12号凌晨
+	//3.设置汶川哀悼开始及结束 是 5月12号凌晨
 	var earthquake_startTime = "05-19 00:00:00";
 	var earthquake_overTime = "05-22 00:00:00";
-	//3.设置世界慰安妇纪念日
+	//4.设置世界慰安妇纪念日
 	var earthquake_startTime = "08-14 00:00:00";
 	var earthquake_overTime = "08-15 00:00:00";	
-	//4.设置七七事变纪念日
+	//5.设置七七事变纪念日
 	var earthquake_startTime = "07-07 00:00:00";
 	var earthquake_overTime = "07-08 00:00:00";
-	//5.设置九一八事变纪念日
+	//6.设置九一八事变纪念日
 	var earthquake_startTime = "09-18 00:00:00";
 	var earthquake_overTime = "09-19 00:00:00";
-	//6.设置南京大屠杀纪念日
+	//7.设置南京大屠杀纪念日
 	var earthquake_startTime = "12-13 00:00:00";
 	var earthquake_overTime = "12-14 00:00:00";	
-	// .将变灰封装到一个函数里，需要的时候再调用
+	// 8.将变灰封装到一个函数里，需要的时候再调用
 	function grey() {
 	  $("html").css({
 	    "-webkit-filter": "grayscale(100%)",
