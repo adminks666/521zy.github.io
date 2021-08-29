@@ -1,6 +1,6 @@
     var ShowMsg={  
         title:'访客公告',  
-        content:'8月14日，是第9个世界慰安妇纪念日。昭昭前事，惕惕后人！她们的历史，不能被掩埋！她们的伤痛，不容遗忘！铭记历史，勿忘国耻！',  
+        content:'9月3日，中国人民抗日战争暨世界反法西斯战争胜利76周年纪念日,日本投降仪式在东京湾密苏里号军舰上举行，在包括中国在内的9个受降国代表注视下，日本在投降书上签字。',  
         width:'100%',  
         height:'120px',  
         setTitle:function(value){  
@@ -35,7 +35,7 @@
             //内容div  
             var _conDiv= document.createElement('div');   
                 _conDiv.id="_conDiv";    
-                _conDiv.style.cssText = 'height: 110px;font-weight: bold;/* text-decoration: underline; */display: block;bottom: 0px;width: 300px;line-height: 30px;position: fixed;border: 1px solid rgb(255, 255, 255);text-align: center;color: rgb(255, 255, 255);right: 1px !important;;left: 0px;"';    
+                _conDiv.style.cssText = 'height: 110px;font-weight: bold;/* text-decoration: underline; */display: block;bottom: 0px;width: 300px;line-height: 20px;position: fixed;border: 1px solid rgb(255, 255, 255);text-align: center;color: rgb(255, 255, 255);right: 1px !important;;left: 0px;"';    
                 _conDiv.innerHTML=this.getContent();  
                 _winPopDiv.appendChild(_conDiv);      
             document.body.appendChild(_winPopDiv);    
