@@ -1,0 +1,1007 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux系统运维命令大全 | 御网尚书</title><meta name="keywords" content="Linux系统,系统运维,Linux命令"><meta name="author" content="御网尚书"><meta name="copyright" content="御网尚书"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="收集整理Linux系统运维命令大全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统运维命令大全">
+<meta property="og:url" content="https://www.hack-gov.com.cn/48381.html">
+<meta property="og:site_name" content="御网尚书">
+<meta property="og:description" content="收集整理Linux系统运维命令大全">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.hack-gov.com.cn/news-photo/0905/1.png">
+<meta property="article:published_time" content="2021-09-05T00:59:43.000Z">
+<meta property="article:modified_time" content="2021-09-05T01:03:30.283Z">
+<meta property="article:author" content="御网尚书">
+<meta property="article:tag" content="系统安全">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hack-gov.com.cn/news-photo/0905/1.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v12/img/favicon.png"><link rel="canonical" href="https://www.hack-gov.com.cn/48381"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Linux系统运维命令大全',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-09-05 09:03:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/css/diy.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/css/zhheoblog.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://at.alicdn.com/t/font_1891866_1b4f6jn7hh9.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/css/showbb_in_index.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@main/bb/showbb_in_index.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xingjiahui/modify/pace/themes/pink/pace-theme-flash.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/css/tubiao.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/css/div.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><a href="javascript:void(0);" onclick="preloader.endLoading();" title="点击跳过动画"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><img class="load-image" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/loader/timg.gif" alt=""/></div></a><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><iframe frameborder="0" src="/menu/" width="100%" height="100%"></iframe></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">御网尚书</a></span><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)" data-pjax-state="">万物互联-安全为基    </a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.siteweb.cn/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 御网文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-90px;"><li><a class="site-page child" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span> 网络安全</span></a></li><li><a class="site-page child" href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"><span> 信息安全</span></a></li><li><a class="site-page child" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"><span> 大数据</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 御网影音</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-50px;"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影音</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 御网友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 御网项目</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-50px;"><li><a class="site-page child" href="https://www.hack-gov.com.cn/"><span> 御网尚书</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bufferfly.cn/"><span> 开发致敬</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div><div id="darkmode_navswitch"><a class="darkmode_switchbutton" onclick="navFn.switchDarkMode()" title="模式切换" data-pjax-state=""><i class="fas fa-adjust"></i></a></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Linux系统运维命令大全</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-09-05T00:59:43.000Z" title="发表于 2021-09-05 08:59:43">2021-09-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-09-05T01:03:30.283Z" title="更新于 2021-09-05 09:03:30">2021-09-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/">信息安全</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>24分钟</span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+<p>收集整理Linux系统运维命令大全</p>
+</blockquote>
+<h1 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">arch</span>      <span class="comment">#显示机器的处理器架构(1)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">uname</span> <span class="string">-m</span>  <span class="comment">#显示机器的处理器架构(2)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">uname</span> <span class="string">-r</span>  <span class="comment">#显示正在使用的内核版本</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dmidecode</span> <span class="string">-q</span>          <span class="comment">#显示硬件系统部件 - (SMBIOS / DMI)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hdparm</span> <span class="string">-i</span> <span class="string">/dev/hda</span>    <span class="comment">#罗列一个磁盘的架构特性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hdparm</span> <span class="string">-tT</span> <span class="string">/dev/sda</span>   <span class="comment">#在磁盘上执行测试性读取操作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/cpuinfo</span>     <span class="comment">#显示CPU info的信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/interrupts</span>  <span class="comment">#显示中断</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/meminfo</span>     <span class="comment">#校验内存使用</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/swaps</span>       <span class="comment">#显示哪些swap被使用</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/version</span>     <span class="comment">#显示内核的版本</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/net/dev</span>     <span class="comment">#显示网络适配器及统计</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">/proc/mounts</span>      <span class="comment">#显示已加载的文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">lspci</span> <span class="string">-tv</span>   <span class="comment">#罗列PCI设备</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">lsusb</span> <span class="string">-tv</span>   <span class="comment">#显示USB设备</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="日期显示系统日期"><a href="#日期显示系统日期" class="headerlink" title="日期显示系统日期"></a>日期显示系统日期</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cal</span> <span class="number">2007</span>              <span class="comment">#显示2007年的日历表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">date</span> <span class="number">041217002007.00</span>   <span class="comment">#设置日期和时间 - 月日时分年.秒</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">clock</span> <span class="string">-w</span>              <span class="comment">#将时间修改保存到 BIOS</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="关机重启及注销"><a href="#关机重启及注销" class="headerlink" title="关机重启及注销"></a>关机重启及注销</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">shutdown</span> <span class="string">-h</span> <span class="string">now</span>    <span class="comment">#关闭系统(1)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">init</span> <span class="number">0</span>            <span class="comment">#关闭系统(2)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">telinit</span> <span class="number">0</span>         <span class="comment">#关闭系统(3)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">shutdown</span> <span class="string">-h</span> <span class="string">hours:minutes</span> <span class="string">&amp;</span>   <span class="comment">#按预定时间关闭系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">shutdown</span> <span class="string">-c</span>       <span class="comment">#取消按预定时间关闭系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">shutdown</span> <span class="string">-r</span> <span class="string">now</span>   <span class="comment">#重启(1)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">reboot</span>   <span class="comment">#重启(2)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">logout</span>   <span class="comment">#注销</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span> <span class="string">/home</span>    <span class="comment">#进入 &#x27;/ home&#x27; 目录&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span> <span class="string">..</span>       <span class="comment">#返回上一级目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span> <span class="string">../..</span>    <span class="comment">#返回上两级目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span>          <span class="comment">#进入个人的主目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span> <span class="string">~user1</span>   <span class="comment">#进入个人的主目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd</span> <span class="bullet">-</span>       <span class="comment">#返回上次所在的目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pwd</span>        <span class="comment">#显示工作路径</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span>      <span class="comment">#查看目录中的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">-F</span>   <span class="comment">#查看目录中的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">-l</span>   <span class="comment">#显示文件和目录的详细资料</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">-a</span>   <span class="comment">#显示隐藏文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">*[0-9]*</span>   <span class="comment">#显示包含数字的文件名和目录名</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tree</span>         <span class="comment">#显示文件和目录由根目录开始的树形结构(1)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">lstree</span>       <span class="comment">#显示文件和目录由根目录开始的树形结构(2)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkdir</span> <span class="string">dir1</span>         <span class="comment">#创建一个叫做 &#x27;dir1&#x27; 的目录&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkdir</span> <span class="string">dir1</span> <span class="string">dir2</span>    <span class="comment">#同时创建两个目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkdir</span> <span class="string">-p</span> <span class="string">/tmp/dir1/dir2</span>   <span class="comment">#创建一个目录树</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rm</span> <span class="string">-f</span> <span class="string">file1</span>    <span class="comment">#删除一个叫做 &#x27;file1&#x27; 的文件&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rmdir</span> <span class="string">dir1</span>     <span class="comment">#删除一个叫做 &#x27;dir1&#x27; 的目录&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rm</span> <span class="string">-rf</span> <span class="string">dir1</span>    <span class="comment">#删除一个叫做 &#x27;dir1&#x27; 的目录并同时删除其内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rm</span> <span class="string">-rf</span> <span class="string">dir1</span> <span class="string">dir2</span>    <span class="comment">#同时删除两个目录及它们的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mv</span> <span class="string">dir1</span> <span class="string">new_dir</span>     <span class="comment">#重命名/移动 一个目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cp</span> <span class="string">file1</span> <span class="string">file2</span>     <span class="comment">#复制一个文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cp</span> <span class="string">dir/*</span> <span class="string">.</span>         <span class="comment">#复制一个目录下的所有文件到当前工作目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cp</span> <span class="string">-a</span> <span class="string">/tmp/dir1</span> <span class="string">.</span>   <span class="comment">#复制一个目录到当前工作目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cp</span> <span class="string">-a</span> <span class="string">dir1</span> <span class="string">dir2</span>     <span class="comment">#复制一个目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ln</span> <span class="string">-s</span> <span class="string">file1</span> <span class="string">lnk1</span>  <span class="comment">#创建一个指向文件或目录的软链接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ln</span> <span class="string">file1</span> <span class="string">lnk1</span>     <span class="comment">#创建一个指向文件或目录的物理链接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">touch</span> <span class="string">-t</span> <span class="number">0712250000</span> <span class="string">file1</span>   <span class="comment">#修改一个文件或目录的时间戳 - (YYMMDDhhmm)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">file</span> <span class="string">file1</span> <span class="string">outputs</span> <span class="string">the</span> <span class="string">mime</span> <span class="string">type</span> <span class="string">of</span> <span class="string">the</span> <span class="string">file</span> <span class="string">as</span> <span class="string">text</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">iconv</span> <span class="string">-l</span>   <span class="comment">#列出已知的编码</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">iconv</span> <span class="string">-f</span> <span class="string">fromEncoding</span> <span class="string">-t</span> <span class="string">toEncoding</span> <span class="string">inputFile</span> <span class="string">&gt;</span> <span class="string">outputFile</span> <span class="string">creates</span> <span class="string">a</span> <span class="string">new</span> <span class="string">from</span> <span class="string">the</span> <span class="string">given</span> <span class="string">input</span> <span class="string">file</span> <span class="string">by</span> <span class="string">assuming</span> <span class="string">it</span> <span class="string">is</span> <span class="string">encoded</span> <span class="string">in</span> <span class="string">fromEncoding</span> <span class="string">and</span> <span class="string">converting</span> <span class="string">it</span> <span class="string">to</span> <span class="string">toEncoding.</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">.</span> <span class="string">-maxdepth</span> <span class="number">1</span> <span class="string">-name</span> <span class="string">*.jpg</span> <span class="string">-print</span> <span class="string">-exec</span> <span class="string">convert</span> <span class="string">&quot;&#123;&#125;&quot;</span> <span class="string">-resize</span> <span class="string">80x60</span> <span class="string">&quot;thumbs/&#123;&#125;&quot;</span> <span class="string">\;</span> <span class="string">batch</span> <span class="string">resize</span> <span class="string">files</span> <span class="string">in</span> <span class="string">the</span> <span class="string">current</span> <span class="string">directory</span> <span class="string">and</span> <span class="string">send</span> <span class="string">them</span> <span class="string">to</span> <span class="string">a</span> <span class="string">thumbnails</span> <span class="string">directory</span> <span class="string">(requires</span> <span class="string">convert</span> <span class="string">from</span> <span class="string">Imagemagick)</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a>文件搜索</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/</span> <span class="string">-name</span> <span class="string">file1</span>     <span class="comment">#从 &#x27;/&#x27; 开始进入根文件系统搜索文件和目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/</span> <span class="string">-user</span> <span class="string">user1</span>     <span class="comment">#搜索属于用户 &#x27;user1&#x27; 的文件和目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/home/user1</span> <span class="string">-name</span> <span class="string">\*.bin</span>        <span class="comment">#在目录 &#x27;/ home/user1&#x27; 中搜索带有&#x27;.bin&#x27; 结尾的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/usr/bin</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-atime</span> <span class="string">+100</span>    <span class="comment">#搜索在过去100天内未被使用过的执行文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/usr/bin</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-mtime</span> <span class="number">-10</span>     <span class="comment">#搜索在10天内被创建或者修改过的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/</span> <span class="string">-name</span> <span class="string">\*.rpm</span> <span class="string">-exec</span> <span class="string">chmod</span> <span class="number">755</span> <span class="string">&#x27;&#123;&#125;&#x27;</span> <span class="string">\;</span>      <span class="comment">#搜索以 &#x27;.rpm&#x27; 结尾的文件并定义其权限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/</span> <span class="string">-xdev</span> <span class="string">-name</span> <span class="string">\*.rpm</span>        <span class="comment">#搜索以 &#x27;.rpm&#x27; 结尾的文件，忽略光驱、捷盘等可移动设备</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">locate</span> <span class="string">\*.ps</span>       <span class="comment">#寻找以 &#x27;.ps&#x27; 结尾的文件 - 先运行 &#x27;updatedb&#x27; 命令</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">whereis</span> <span class="string">halt</span>       <span class="comment">#显示一个二进制文件、源码或man的位置</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">which</span> <span class="string">halt</span>         <span class="comment">#显示一个二进制文件或可执行文件的完整路径</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="文件系统挂载"><a href="#文件系统挂载" class="headerlink" title="文件系统挂载"></a>文件系统挂载</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/hda2</span> <span class="string">/mnt/hda2</span>    <span class="comment">#挂载一个叫做hda2的盘 - 确定目录 &#x27;/ mnt/hda2&#x27; 已经存在</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">umount</span> <span class="string">/dev/hda2</span>            <span class="comment">#卸载一个叫做hda2的盘 - 先从挂载点 &#x27;/ mnt/hda2&#x27; 退出</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fuser</span> <span class="string">-km</span> <span class="string">/mnt/hda2</span>         <span class="comment">#当设备繁忙时强制卸载</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">umount</span> <span class="string">-n</span> <span class="string">/mnt/hda2</span>         <span class="comment">#运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/fd0</span> <span class="string">/mnt/floppy</span>        <span class="comment">#挂载一个软盘</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/cdrom</span> <span class="string">/mnt/cdrom</span>       <span class="comment">#挂载一个cdrom或dvdrom</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/hdc</span> <span class="string">/mnt/cdrecorder</span>    <span class="comment">#挂载一个cdrw或dvdrom</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/hdb</span> <span class="string">/mnt/cdrecorder</span>    <span class="comment">#挂载一个cdrw或dvdrom</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">-o</span> <span class="string">loop</span> <span class="string">file.iso</span> <span class="string">/mnt/cdrom</span>    <span class="comment">#挂载一个文件或ISO镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">-t</span> <span class="string">vfat</span> <span class="string">/dev/hda5</span> <span class="string">/mnt/hda5</span>    <span class="comment">#挂载一个Windows FAT32文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">/dev/sda1</span> <span class="string">/mnt/usbdisk</span>         <span class="comment">#挂载一个usb 捷盘或闪存设备</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">-t</span> <span class="string">smbfs</span> <span class="string">-o</span> <span class="string">username=user,password=pass</span> <span class="string">//WinClient/share</span> <span class="string">/mnt/share</span>      <span class="comment">#挂载一个windows网络共享</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="磁盘空间管理"><a href="#磁盘空间管理" class="headerlink" title="磁盘空间管理"></a>磁盘空间管理</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">df</span> <span class="string">-h</span>           <span class="comment">#显示已经挂载的分区列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">-lSr</span> <span class="string">|more</span>    <span class="comment">#以尺寸大小排列文件和目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">du</span> <span class="string">-sh</span> <span class="string">dir1</span>      <span class="comment">#估算目录 &#x27;dir1&#x27; 已经使用的磁盘空间&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">du</span> <span class="string">-sk</span> <span class="string">*</span> <span class="string">|</span> <span class="string">sort</span> <span class="string">-rn</span>     <span class="comment">#以容量大小为依据依次显示文件和目录的大小</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-q</span> <span class="string">-a</span> <span class="string">--qf</span> <span class="string">&#x27;%10&#123;SIZE&#125;t<span class="template-variable">%&#123;NAME&#125;</span>n&#x27;</span> <span class="string">|</span> <span class="string">sort</span> <span class="string">-k1,1n</span> </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg-query</span> <span class="string">-W</span> <span class="string">-f=&#x27;$&#123;Installed-Size;10&#125;t$&#123;Package&#125;n&#x27;</span> <span class="string">|</span> <span class="string">sort</span> <span class="string">-k1,1n</span> </span><br><span class="line"><span class="comment">#以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a>用户和群组</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">groupadd</span> <span class="string">group_name</span>   <span class="comment">#创建一个新用户组</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">groupdel</span> <span class="string">group_name</span>   <span class="comment">#删除一个用户组</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">groupmod</span> <span class="string">-n</span> <span class="string">new_group_name</span> <span class="string">old_group_name</span>   <span class="comment">#重命名一个用户组</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">useradd</span> <span class="string">-c</span> <span class="string">&quot;Name Surname &quot;</span> <span class="string">-g</span> <span class="string">admin</span> <span class="string">-d</span> <span class="string">/home/user1</span> <span class="string">-s</span> <span class="string">/bin/bash</span> <span class="string">user1</span>     <span class="comment">#创建一个属于 &quot;admin&quot; 用户组的用户</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">useradd</span> <span class="string">user1</span>      <span class="comment">#创建一个新用户</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">userdel</span> <span class="string">-r</span> <span class="string">user1</span>   <span class="comment">#删除一个用户 ( &#x27;-r&#x27; 排除主目录)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">usermod</span> <span class="string">-c</span> <span class="string">&quot;User FTP&quot;</span> <span class="string">-g</span> <span class="string">system</span> <span class="string">-d</span> <span class="string">/ftp/user1</span> <span class="string">-s</span> <span class="string">/bin/nologin</span> <span class="string">user1</span>   <span class="comment">#修改用户属性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">passwd</span>         <span class="comment">#修改口令</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">passwd</span> <span class="string">user1</span>   <span class="comment">#修改一个用户的口令 (只允许root执行)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chage</span> <span class="string">-E</span> <span class="number">2005-12-31 </span><span class="string">user1</span>    <span class="comment">#设置用户口令的失效期限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">pwck</span>     <span class="comment">#检查 &#x27;/etc/passwd&#x27; 的文件格式和语法修正以及存在的用户</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">grpck</span>    <span class="comment">#检查 &#x27;/etc/passwd&#x27; 的文件格式和语法修正以及存在的群组</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">newgrp</span> <span class="string">group_name</span>     <span class="comment">#登陆进一个新的群组以改变新创建文件的预设群组</span></span><br></pre></td></tr></table></figure>
+<h1 id="文件权限管理"><a href="#文件权限管理" class="headerlink" title="文件权限管理"></a>文件权限管理</h1><blockquote>
+<p>使用 “+” 设置权限，使用 “-“ 用于取消</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">-lh</span>    <span class="comment">#显示权限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ls</span> <span class="string">/tmp</span> <span class="string">|</span> <span class="string">pr</span> <span class="string">-T5</span> <span class="string">-W$COLUMNS</span>   <span class="comment">#将终端划分成5栏显示</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">ugo+rwx</span> <span class="string">directory1</span>      <span class="comment">#设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">go-rwx</span> <span class="string">directory1</span>      <span class="comment">#删除群组(g)与其他人(o)对目录的读写执行权限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chown</span> <span class="string">user1</span> <span class="string">file1</span>            <span class="comment">#改变一个文件的所有人属性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chown</span> <span class="string">-R</span> <span class="string">user1</span> <span class="string">directory1</span>    <span class="comment">#改变一个目录的所有人属性并同时改变改目录下所有文件的属性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chgrp</span> <span class="string">group1</span> <span class="string">file1</span>          <span class="comment">#改变文件的群组</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chown</span> <span class="string">user1:group1</span> <span class="string">file1</span>     <span class="comment">#改变一个文件的所有人和群组属性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/</span> <span class="string">-perm</span> <span class="string">-u+s</span>           <span class="comment">#罗列一个系统中所有使用了SUID控制的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">u+s</span> <span class="string">/bin/file1</span>        <span class="comment">#设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">u-s</span> <span class="string">/bin/file1</span>        <span class="comment">#禁用一个二进制文件的 SUID位</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">g+s</span> <span class="string">/home/public</span>      <span class="comment">#设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">g-s</span> <span class="string">/home/public</span>      <span class="comment">#禁用一个目录的 SGID 位</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">o+t</span> <span class="string">/home/public</span>      <span class="comment">#设置一个文件的 STIKY 位 - 只允许合法所有人删除文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chmod</span> <span class="string">o-t</span> <span class="string">/home/public</span>      <span class="comment">#禁用一个目录的 STIKY 位</span></span><br></pre></td></tr></table></figure>
+<h1 id="文件的特殊属性管理"><a href="#文件的特殊属性管理" class="headerlink" title="文件的特殊属性管理"></a>文件的特殊属性管理</h1><blockquote>
+<ul>
+<li>使用 “+” 设置权限，使用 “-“ 用于取消</li>
+</ul>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+a</span> <span class="string">file1</span>   <span class="comment">#只允许以追加方式读写文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+c</span> <span class="string">file1</span>   <span class="comment">#允许这个文件能被内核自动压缩/解压</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+d</span> <span class="string">file1</span>   <span class="comment">#在进行文件系统备份时，dump程序将忽略这个文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+i</span> <span class="string">file1</span>   <span class="comment">#设置成不可变的文件，不能被删除、修改、重命名或者链接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+s</span> <span class="string">file1</span>   <span class="comment">#允许一个文件被安全地删除</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+S</span> <span class="string">file1</span>   <span class="comment">#一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">chattr</span> <span class="string">+u</span> <span class="string">file1</span>   <span class="comment">#若文件被删除，系统会允许你在以后恢复这个被删除的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">lsattr</span>           <span class="comment">#显示特殊的属性</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="解压缩文件"><a href="#解压缩文件" class="headerlink" title="解压缩文件"></a>解压缩文件</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">bunzip2</span> <span class="string">file1.bz2</span>   <span class="comment">#解压一个叫做 &#x27;file1.bz2&#x27;的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">bzip2</span> <span class="string">file1</span>         <span class="comment">#压缩一个叫做 &#x27;file1&#x27; 的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">gunzip</span> <span class="string">file1.gz</span>     <span class="comment">#解压一个叫做 &#x27;file1.gz&#x27;的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">gzip</span> <span class="string">file1</span>          <span class="comment">#压缩一个叫做 &#x27;file1&#x27;的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">gzip</span> <span class="number">-9</span> <span class="string">file1</span>       <span class="comment">#最大程度压缩</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rar</span> <span class="string">a</span> <span class="string">file1.rar</span> <span class="string">test_file</span>          <span class="comment">#创建一个叫做 &#x27;file1.rar&#x27; 的包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rar</span> <span class="string">a</span> <span class="string">file1.rar</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">dir1</span>   <span class="comment">#同时压缩 &#x27;file1&#x27;, &#x27;file2&#x27; 以及目录 &#x27;dir1&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rar</span> <span class="string">x</span> <span class="string">file1.rar</span>     <span class="comment">#解压rar包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">unrar</span> <span class="string">x</span> <span class="string">file1.rar</span>   <span class="comment">#解压rar包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-cvf</span> <span class="string">archive.tar</span> <span class="string">file1</span>   <span class="comment">#创建一个非压缩的 tarball</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-cvf</span> <span class="string">archive.tar</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">dir1</span>  <span class="comment">#创建一个包含了 &#x27;file1&#x27;, &#x27;file2&#x27; 以及 &#x27;dir1&#x27;的档案文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-tf</span> <span class="string">archive.tar</span>    <span class="comment">#显示一个包中的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-xvf</span> <span class="string">archive.tar</span>   <span class="comment">#释放一个包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-xvf</span> <span class="string">archive.tar</span> <span class="string">-C</span> <span class="string">/tmp</span>     <span class="comment">#将压缩包释放到 /tmp目录下</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-cvfj</span> <span class="string">archive.tar.bz2</span> <span class="string">dir1</span>   <span class="comment">#创建一个bzip2格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-jxvf</span> <span class="string">archive.tar.bz2</span>        <span class="comment">#解压一个bzip2格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-cvfz</span> <span class="string">archive.tar.gz</span> <span class="string">dir1</span>    <span class="comment">#创建一个gzip格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-zxvf</span> <span class="string">archive.tar.gz</span>         <span class="comment">#解压一个gzip格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">zip</span> <span class="string">file1.zip</span> <span class="string">file1</span>    <span class="comment">#创建一个zip格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">zip</span> <span class="string">-r</span> <span class="string">file1.zip</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">dir1</span>    <span class="comment">#将几个文件和目录同时压缩成一个zip格式的压缩包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">unzip</span> <span class="string">file1.zip</span>    <span class="comment">#解压一个zip格式压缩包</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="RPM-包-（Fedora-Redhat及类似系统）"><a href="#RPM-包-（Fedora-Redhat及类似系统）" class="headerlink" title="RPM 包 - （Fedora, Redhat及类似系统）"></a>RPM 包 - （Fedora, Redhat及类似系统）</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-ivh</span> <span class="string">package.rpm</span>    <span class="comment">#安装一个rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-ivh</span> <span class="string">--nodeeps</span> <span class="string">package.rpm</span>   <span class="comment">#安装一个rpm包而忽略依赖关系警告</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-U</span> <span class="string">package.rpm</span>        <span class="comment">#更新一个rpm包但不改变其配置文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-F</span> <span class="string">package.rpm</span>        <span class="comment">#更新一个确定已经安装的rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-e</span> <span class="string">package_name.rpm</span>   <span class="comment">#删除一个rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qa</span>      <span class="comment">#显示系统中所有已经安装的rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qa</span> <span class="string">|</span> <span class="string">grep</span> <span class="string">httpd</span>    <span class="comment">#显示所有名称中包含 &quot;httpd&quot; 字样的rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qi</span> <span class="string">package_name</span>    <span class="comment">#获取一个已安装包的特殊信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qg</span> <span class="string">&quot;System Environment/Daemons&quot;</span>     <span class="comment">#显示一个组件的rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-ql</span> <span class="string">package_name</span>       <span class="comment">#显示一个已经安装的rpm包提供的文件列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qc</span> <span class="string">package_name</span>       <span class="comment">#显示一个已经安装的rpm包提供的配置文件列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-q</span> <span class="string">package_name</span> <span class="string">--whatrequires</span>     <span class="comment">#显示与一个rpm包存在依赖关系的列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-q</span> <span class="string">package_name</span> <span class="string">--whatprovides</span>    <span class="comment">#显示一个rpm包所占的体积</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-q</span> <span class="string">package_name</span> <span class="string">--scripts</span>         <span class="comment">#显示在安装/删除期间所执行的脚本l</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-q</span> <span class="string">package_name</span> <span class="string">--changelog</span>       <span class="comment">#显示一个rpm包的修改历史</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qf</span> <span class="string">/etc/httpd/conf/httpd.conf</span>    <span class="comment">#确认所给的文件由哪个rpm包所提供</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qp</span> <span class="string">package.rpm</span> <span class="string">-l</span>    <span class="comment">#显示由一个尚未安装的rpm包提供的文件列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">--import</span> <span class="string">/media/cdrom/RPM-GPG-KEY</span>    <span class="comment">#导入公钥数字证书</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">--checksig</span> <span class="string">package.rpm</span>      <span class="comment">#确认一个rpm包的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-qa</span> <span class="string">gpg-pubkey</span>      <span class="comment">#确认已安装的所有rpm包的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-V</span> <span class="string">package_name</span>     <span class="comment">#检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-Va</span>                 <span class="comment">#检查系统中所有已安装的rpm包- 小心使用</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-Vp</span> <span class="string">package.rpm</span>     <span class="comment">#确认一个rpm包还未安装</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm2cpio</span> <span class="string">package.rpm</span> <span class="string">|</span> <span class="string">cpio</span> <span class="string">--extract</span> <span class="string">--make-directories</span> <span class="string">*bin*</span>   <span class="comment">#从一个rpm包运行可执行文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpm</span> <span class="string">-ivh</span> <span class="string">/usr/src/redhat/RPMS/`arch`/package.rpm</span>    <span class="comment">#从一个rpm源码安装一个构建好的包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rpmbuild</span> <span class="string">--rebuild</span> <span class="string">package_name.src.rpm</span>       <span class="comment">#从一个rpm源码构建一个 rpm 包</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="YUM-软件包升级器-（Fedora-RedHat及类似系统）"><a href="#YUM-软件包升级器-（Fedora-RedHat及类似系统）" class="headerlink" title="YUM 软件包升级器 - （Fedora, RedHat及类似系统）"></a>YUM 软件包升级器 - （Fedora, RedHat及类似系统）</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">package_name</span>             <span class="comment">#下载并安装一个rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">localinstall</span> <span class="string">package_name.rpm</span>    <span class="comment">#将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">update</span> <span class="string">package_name.rpm</span>    <span class="comment">#更新当前系统中所有安装的rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">update</span> <span class="string">package_name</span>        <span class="comment">#更新一个rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">remove</span> <span class="string">package_name</span>        <span class="comment">#删除一个rpm包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">list</span>                   <span class="comment">#列出当前系统中安装的所有包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">search</span> <span class="string">package_name</span>     <span class="comment">#在rpm仓库中搜寻软件包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">clean</span> <span class="string">packages</span>          <span class="comment">#清理rpm缓存删除下载的包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">clean</span> <span class="string">headers</span>           <span class="comment">#删除所有头文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">clean</span> <span class="string">all</span>                <span class="comment">#删除所有缓存的包和头文件</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="DEB-包-Debian-Ubuntu-以及类似系统"><a href="#DEB-包-Debian-Ubuntu-以及类似系统" class="headerlink" title="DEB 包 (Debian, Ubuntu 以及类似系统)"></a>DEB 包 (Debian, Ubuntu 以及类似系统)</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-i</span> <span class="string">package.deb</span>     <span class="comment">#安装/更新一个 deb 包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-r</span> <span class="string">package_name</span>    <span class="comment">#从系统删除一个 deb 包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-l</span>                 <span class="comment">#显示系统中所有已经安装的 deb 包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-l</span> <span class="string">|</span> <span class="string">grep</span> <span class="string">httpd</span>    <span class="comment">#显示所有名称中包含 &quot;httpd&quot; 字样的deb包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-s</span> <span class="string">package_name</span>    <span class="comment">#获得已经安装在系统中一个特殊包的信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-L</span> <span class="string">package_name</span>    <span class="comment">#显示系统中已经安装的一个deb包所提供的文件列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">--contents</span> <span class="string">package.deb</span>    <span class="comment">#显示尚未安装的一个包所提供的文件列表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dpkg</span> <span class="string">-S</span> <span class="string">/bin/ping</span>              <span class="comment">#确认所给的文件由哪个deb包提供</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="APT-软件工具-Debian-Ubuntu-以及类似系统"><a href="#APT-软件工具-Debian-Ubuntu-以及类似系统" class="headerlink" title="APT 软件工具 (Debian, Ubuntu 以及类似系统)"></a>APT 软件工具 (Debian, Ubuntu 以及类似系统)</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">install</span> <span class="string">package_name</span>      <span class="comment">#安装/更新一个 deb 包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-cdrom</span> <span class="string">install</span> <span class="string">package_name</span>    <span class="comment">#从光盘安装/更新一个 deb 包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">update</span>      <span class="comment">#升级列表中的软件包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">upgrade</span>     <span class="comment">#升级所有已安装的软件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">remove</span> <span class="string">package_name</span>     <span class="comment">#从系统删除一个deb包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">check</span>     <span class="comment">#确认依赖的软件仓库正确</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-get</span> <span class="string">clean</span>     <span class="comment">#从下载的软件包中清理缓存</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">apt-cache</span> <span class="string">search</span> <span class="string">searched-package</span>    <span class="comment">#返回包含所要搜索字符串的软件包名称</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">file1</span>      <span class="comment">#从第一个字节开始正向查看文件的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tac</span> <span class="string">file1</span>      <span class="comment">#从最后一行开始反向查看一个文件的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">more</span> <span class="string">file1</span>     <span class="comment">#查看一个长文件的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">less</span> <span class="string">file1</span>     <span class="comment">#类似于 &#x27;more&#x27; 命令，但是它允许在文件中和正向操作一样的反向操作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">head</span> <span class="number">-2</span> <span class="string">file1</span>    <span class="comment">#查看一个文件的前两行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tail</span> <span class="number">-2</span> <span class="string">file1</span>    <span class="comment">#查看一个文件的最后两行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tail</span> <span class="string">-f</span> <span class="string">/var/log/messages</span>     <span class="comment">#实时查看被添加到一个文件中的内容</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">...</span> <span class="string">|</span> <span class="string">command</span> <span class="string">&lt;&gt;</span> <span class="string">file1_in.txt_or_file1_out.txt</span> <span class="string">general</span> <span class="string">syntax</span> <span class="string">for</span> <span class="string">text</span> <span class="string">manipulation</span> <span class="string">using</span> <span class="string">PIPE,</span> <span class="string">STDIN</span> <span class="string">and</span> <span class="string">STDOUT</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">file1</span> <span class="string">|</span> <span class="string">command(</span> <span class="string">sed,</span> <span class="string">grep,</span> <span class="string">awk,</span> <span class="string">grep,</span> <span class="string">etc...)</span> <span class="string">&gt;</span> <span class="string">result.txt</span> </span><br><span class="line"><span class="comment">#合并一个文件的详细说明文本，并将简介写入一个新文件中</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">file1</span> <span class="string">|</span> <span class="string">command(</span> <span class="string">sed,</span> <span class="string">grep,</span> <span class="string">awk,</span> <span class="string">grep,</span> <span class="string">etc...)</span> <span class="string">&gt;&gt;</span> <span class="string">result.txt</span> </span><br><span class="line"><span class="comment">#合并一个文件的详细说明文本，并将简介写入一个已有的文件中</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">grep</span> <span class="string">Aug</span> <span class="string">/var/log/messages</span>     <span class="comment">#在文件 &#x27;/var/log/messages&#x27;中查找关键词&quot;Aug&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">grep</span> <span class="string">^Aug</span> <span class="string">/var/log/messages</span>    <span class="comment">#在文件 &#x27;/var/log/messages&#x27;中查找以&quot;Aug&quot;开始的词汇</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">grep</span> [<span class="number">0</span><span class="number">-9</span>] <span class="string">/var/log/messages</span>   <span class="comment">#选择 &#x27;/var/log/messages&#x27; 文件中所有包含数字的行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">grep</span> <span class="string">Aug</span> <span class="string">-R</span> <span class="string">/var/log/*</span>         <span class="comment">#在目录 &#x27;/var/log&#x27; 及随后的目录中搜索字符串&quot;Aug&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">&#x27;s/stringa1/stringa2/g&#x27;</span> <span class="string">example.txt</span> </span><br><span class="line"><span class="comment">#将example.txt文件中的 &quot;string1&quot; 替换成 &quot;string2&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">&#x27;/^$/d&#x27;</span> <span class="string">example.txt</span>           <span class="comment">#从example.txt文件中删除所有空白行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">&#x27;/ *#/d; /^$/d&#x27;</span> <span class="string">example.txt</span>   <span class="comment">#从example.txt文件中删除所有注释和空白行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">echo</span> <span class="string">&#x27;esempio&#x27;</span> <span class="string">|</span> <span class="string">tr</span> <span class="string">&#x27;[:lower:]&#x27;</span> <span class="string">&#x27;[:upper:]&#x27;</span>    <span class="comment">#合并上下单元格内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-e</span> <span class="string">&#x27;1d&#x27;</span> <span class="string">result.txt</span>          <span class="comment">#从文件example.txt 中排除第一行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-n</span> <span class="string">&#x27;/stringa1/p&#x27;</span>            <span class="comment">#查看只包含词汇 &quot;string1&quot;的行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-e</span> <span class="string">&#x27;s/ *$//&#x27;</span> <span class="string">example.txt</span>    <span class="comment">#删除每一行最后的空白字符</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-e</span> <span class="string">&#x27;s/stringa1//g&#x27;</span> <span class="string">example.txt</span>  </span><br><span class="line"><span class="comment">#从文档中只删除词汇 &quot;string1&quot; 并保留剩余全部</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-n</span> <span class="string">&#x27;1,5p;5q&#x27;</span> <span class="string">example.txt</span>     <span class="comment">#查看从第一行到第5行内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-n</span> <span class="string">&#x27;5p;5q&#x27;</span> <span class="string">example.txt</span>       <span class="comment">#查看第5行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sed</span> <span class="string">-e</span> <span class="string">&#x27;s/00*/0/g&#x27;</span> <span class="string">example.txt</span>   <span class="comment">#用单个零替换多个零</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">-n</span> <span class="string">file1</span>       <span class="comment">#标示文件的行数</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">example.txt</span> <span class="string">|</span> <span class="string">awk</span> <span class="string">&#x27;NR%2==1&#x27;</span>      <span class="comment">#删除example.txt文件中的所有偶数行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">echo</span> <span class="string">a</span> <span class="string">b</span> <span class="string">c</span> <span class="string">|</span> <span class="string">awk</span> <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>        <span class="comment">#查看一行第一栏</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">echo</span> <span class="string">a</span> <span class="string">b</span> <span class="string">c</span> <span class="string">|</span> <span class="string">awk</span> <span class="string">&#x27;&#123;print $1,$3&#125;&#x27;</span>     <span class="comment">#查看一行的第一和第三栏</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">paste</span> <span class="string">file1</span> <span class="string">file2</span>           <span class="comment">#合并两个文件或两栏的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">paste</span> <span class="string">-d</span> <span class="string">&#x27;+&#x27;</span> <span class="string">file1</span> <span class="string">file2</span>    <span class="comment">#合并两个文件或两栏的内容，中间用&quot;+&quot;区分</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sort</span> <span class="string">file1</span> <span class="string">file2</span>              <span class="comment">#排序两个文件的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sort</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">|</span> <span class="string">uniq</span>       <span class="comment">#取出两个文件的并集(重复的行只保留一份)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sort</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">|</span> <span class="string">uniq</span> <span class="string">-u</span>    <span class="comment">#删除交集，留下其他的行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">sort</span> <span class="string">file1</span> <span class="string">file2</span> <span class="string">|</span> <span class="string">uniq</span> <span class="string">-d</span>    <span class="comment">#取出两个文件的交集(只留下同时存在于两个文件中的文件)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">comm</span> <span class="number">-1</span> <span class="string">file1</span> <span class="string">file2</span>    <span class="comment">#比较两个文件的内容只删除 &#x27;file1&#x27; 所包含的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">comm</span> <span class="number">-2</span> <span class="string">file1</span> <span class="string">file2</span>    <span class="comment">#比较两个文件的内容只删除 &#x27;file2&#x27; 所包含的内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">comm</span> <span class="number">-3</span> <span class="string">file1</span> <span class="string">file2</span>    <span class="comment">#比较两个文件的内容只删除两个文件共有的部分</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="字符设置和文件格式转换"><a href="#字符设置和文件格式转换" class="headerlink" title="字符设置和文件格式转换"></a>字符设置和文件格式转换</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dos2unix</span> <span class="string">filedos.txt</span> <span class="string">fileunix.txt</span>      <span class="comment">#将一个文本文件的格式从MSDOS转换成UNIX</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">unix2dos</span> <span class="string">fileunix.txt</span> <span class="string">filedos.txt</span>      <span class="comment">#将一个文本文件的格式从UNIX转换成MSDOS</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">recode</span> <span class="string">..HTML</span> <span class="string">&lt;</span> <span class="string">page.txt</span> <span class="string">&gt;</span> <span class="string">page.html</span>   <span class="comment">#将一个文本文件转换成html</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">recode</span> <span class="string">-l</span> <span class="string">|</span> <span class="string">more</span>                       <span class="comment">#显示所有允许的转换格式</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="文件系统分析"><a href="#文件系统分析" class="headerlink" title="文件系统分析"></a>文件系统分析</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">badblocks</span> <span class="string">-v</span> <span class="string">/dev/hda1</span>    <span class="comment">#检查磁盘hda1上的坏磁块</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fsck</span> <span class="string">/dev/hda1</span>            <span class="comment">#修复/检查hda1磁盘上linux文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fsck.ext2</span> <span class="string">/dev/hda1</span>       <span class="comment">#修复/检查hda1磁盘上ext2文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">e2fsck</span> <span class="string">/dev/hda1</span>          <span class="comment">#修复/检查hda1磁盘上ext2文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">e2fsck</span> <span class="string">-j</span> <span class="string">/dev/hda1</span>       <span class="comment">#修复/检查hda1磁盘上ext3文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fsck.ext3</span> <span class="string">/dev/hda1</span>       <span class="comment">#修复/检查hda1磁盘上ext3文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fsck.vfat</span> <span class="string">/dev/hda1</span>       <span class="comment">#修复/检查hda1磁盘上fat文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fsck.msdos</span> <span class="string">/dev/hda1</span>      <span class="comment">#修复/检查hda1磁盘上dos文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dosfsck</span> <span class="string">/dev/hda1</span>         <span class="comment">#修复/检查hda1磁盘上dos文件系统的完整性</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化文件系统"><a href="#初始化文件系统" class="headerlink" title="初始化文件系统"></a>初始化文件系统</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkfs</span> <span class="string">/dev/hda1</span>        <span class="comment">#在hda1分区创建一个文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mke2fs</span> <span class="string">/dev/hda1</span>      <span class="comment">#在hda1分区创建一个linux ext2的文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mke2fs</span> <span class="string">-j</span> <span class="string">/dev/hda1</span>   <span class="comment">#在hda1分区创建一个linux ext3(日志型)的文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkfs</span> <span class="string">-t</span> <span class="string">vfat</span> <span class="number">32</span> <span class="string">-F</span> <span class="string">/dev/hda1</span>   <span class="comment">#创建一个 FAT32 文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">fdformat</span> <span class="string">-n</span> <span class="string">/dev/fd0</span>           <span class="comment">#格式化一个软盘</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkswap</span> <span class="string">/dev/hda3</span>               <span class="comment">#创建一个swap文件系统</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="SWAP文件系统"><a href="#SWAP文件系统" class="headerlink" title="SWAP文件系统"></a>SWAP文件系统</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkswap</span> <span class="string">/dev/hda3</span>             <span class="comment">#创建一个swap文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">swapon</span> <span class="string">/dev/hda3</span>             <span class="comment">#启用一个新的swap文件系统</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">swapon</span> <span class="string">/dev/hda2</span> <span class="string">/dev/hdb3</span>   <span class="comment">#启用两个swap分区</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dump</span> <span class="string">-0aj</span> <span class="string">-f</span> <span class="string">/tmp/home0.bak</span> <span class="string">/home</span>    <span class="comment">#制作一个 &#x27;/home&#x27; 目录的完整备份</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dump</span> <span class="string">-1aj</span> <span class="string">-f</span> <span class="string">/tmp/home0.bak</span> <span class="string">/home</span>    <span class="comment">#制作一个 &#x27;/home&#x27; 目录的交互式备份</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">restore</span> <span class="string">-if</span> <span class="string">/tmp/home0.bak</span>          <span class="comment">#还原一个交互式备份</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rsync</span> <span class="string">-rogpav</span> <span class="string">--delete</span> <span class="string">/home</span> <span class="string">/tmp</span>    <span class="comment">#同步两边的目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rsync</span> <span class="string">-rogpav</span> <span class="string">-e</span> <span class="string">ssh</span> <span class="string">--delete</span> <span class="string">/home</span> <span class="string">ip_address:/tmp</span>           <span class="comment">#通过SSH通道rsync</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rsync</span> <span class="string">-az</span> <span class="string">-e</span> <span class="string">ssh</span> <span class="string">--delete</span> <span class="string">ip_addr:/home/public</span> <span class="string">/home/local</span>    <span class="comment">#通过ssh和压缩将一个远程目录同步到本地目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rsync</span> <span class="string">-az</span> <span class="string">-e</span> <span class="string">ssh</span> <span class="string">--delete</span> <span class="string">/home/local</span> <span class="string">ip_addr:/home/public</span>    <span class="comment">#通过ssh和压缩将本地目录同步到远程目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd</span> <span class="string">bs=1M</span> <span class="string">if=/dev/hda</span> <span class="string">|</span> <span class="string">gzip</span> <span class="string">|</span> <span class="string">ssh</span> <span class="string">user@ip_addr</span> <span class="string">&#x27;dd of=hda.gz&#x27;</span>  </span><br><span class="line"><span class="comment">#通过ssh在远程主机上执行一次备份本地磁盘的操作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd</span> <span class="string">if=/dev/sda</span> <span class="string">of=/tmp/file1</span> </span><br><span class="line"><span class="comment">#备份磁盘内容到一个文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">-Puf</span> <span class="string">backup.tar</span> <span class="string">/home/user</span> <span class="string">执行一次对</span> <span class="string">&#x27;/home/user&#x27;</span> </span><br><span class="line"><span class="comment">#目录的交互式备份操作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">(</span> <span class="string">cd</span> <span class="string">/tmp/local/</span> <span class="string">&amp;&amp;</span> <span class="string">tar</span> <span class="string">c</span> <span class="string">.</span> <span class="string">)</span> <span class="string">|</span> <span class="string">ssh</span> <span class="string">-C</span> <span class="string">user@ip_addr</span> <span class="string">&#x27;cd /home/share/ &amp;&amp; tar x -p&#x27;</span> </span><br><span class="line"><span class="comment">#通过ssh在远程目录中复制一个目录内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">(</span> <span class="string">tar</span> <span class="string">c</span> <span class="string">/home</span> <span class="string">)</span> <span class="string">|</span> <span class="string">ssh</span> <span class="string">-C</span> <span class="string">user@ip_addr</span> <span class="string">&#x27;cd /home/backup-home &amp;&amp; tar x -p&#x27;</span> </span><br><span class="line"><span class="comment">#通过ssh在远程目录中复制一个本地目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tar</span> <span class="string">cf</span> <span class="bullet">-</span> <span class="string">.</span> <span class="string">|</span> <span class="string">(cd</span> <span class="string">/tmp/backup</span> <span class="string">;</span> <span class="string">tar</span> <span class="string">xf</span> <span class="bullet">-</span> <span class="string">)</span> </span><br><span class="line"><span class="comment">#本地将一个目录复制到另一个地方，保留原有权限及链接</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/home/user1</span> <span class="string">-name</span> <span class="string">&#x27;*.txt&#x27;</span> <span class="string">|</span> <span class="string">xargs</span> <span class="string">cp</span> <span class="string">-av</span> <span class="string">--target-directory=/home/backup/</span> <span class="string">--parents</span> </span><br><span class="line"><span class="comment">#从一个目录查找并复制所有以 &#x27;.txt&#x27; 结尾的文件到另一个目录</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">find</span> <span class="string">/var/log</span> <span class="string">-name</span> <span class="string">&#x27;*.log&#x27;</span> <span class="string">|</span> <span class="string">tar</span> <span class="string">cv</span> <span class="string">--files-from=-</span> <span class="string">|</span> <span class="string">bzip2</span> <span class="string">&gt;</span> <span class="string">log.tar.bz2</span> </span><br><span class="line"><span class="comment">#查找所有以 &#x27;.log&#x27; 结尾的文件并做成一个bzip包</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd</span> <span class="string">if=/dev/hda</span> <span class="string">of=/dev/fd0</span> <span class="string">bs=512</span> <span class="string">count=1</span> </span><br><span class="line"><span class="comment">#做一个将 MBR (Master Boot Record)内容复制到软盘的动作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd</span> <span class="string">if=/dev/fd0</span> <span class="string">of=/dev/hda</span> <span class="string">bs=512</span> <span class="string">count=1</span> </span><br><span class="line"><span class="comment">#从已经保存到软盘的备份中恢复MBR内容</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="光盘管理"><a href="#光盘管理" class="headerlink" title="光盘管理"></a>光盘管理</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cdrecord</span> <span class="string">-v</span> <span class="string">gracetime=2</span> <span class="string">dev=/dev/cdrom</span> <span class="string">-eject</span> <span class="string">blank=fast</span> <span class="string">-force</span> </span><br><span class="line"><span class="comment">#清空一个可复写的光盘内容</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkisofs</span> <span class="string">/dev/cdrom</span> <span class="string">&gt;</span> <span class="string">cd.iso</span>             <span class="comment">#在磁盘上创建一个光盘的iso镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkisofs</span> <span class="string">/dev/cdrom</span> <span class="string">|</span> <span class="string">gzip</span> <span class="string">&gt;</span> <span class="string">cd_iso.gz</span>    <span class="comment">#在磁盘上创建一个压缩了的光盘iso镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkisofs</span> <span class="string">-J</span> <span class="string">-allow-leading-dots</span> <span class="string">-R</span> <span class="string">-V</span> <span class="string">&quot;Label CD&quot;</span> <span class="string">-iso-level</span> <span class="number">4</span> <span class="string">-o</span> <span class="string">./cd.iso</span> <span class="string">data_cd</span> </span><br><span class="line"><span class="comment">#创建一个目录的iso镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cdrecord</span> <span class="string">-v</span> <span class="string">dev=/dev/cdrom</span> <span class="string">cd.iso</span>               <span class="comment">#刻录一个ISO镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">gzip</span> <span class="string">-dc</span> <span class="string">cd_iso.gz</span> <span class="string">|</span> <span class="string">cdrecord</span> <span class="string">dev=/dev/cdrom</span> <span class="bullet">-</span>  <span class="comment">#刻录一个压缩了的ISO镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mount</span> <span class="string">-o</span> <span class="string">loop</span> <span class="string">cd.iso</span> <span class="string">/mnt/iso</span>                  <span class="comment">#挂载一个ISO镜像文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd-paranoia</span> <span class="string">-B</span>             <span class="comment">#从一个CD光盘转录音轨到 wav 文件中</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cd-paranoia</span> <span class="string">--</span> <span class="string">&quot;-3&quot;</span>        <span class="comment">#从一个CD光盘转录音轨到 wav 文件中（参数-3）</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cdrecord</span> <span class="string">--scanbus</span>         <span class="comment">#扫描总线以识别scsi通道</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd</span> <span class="string">if=/dev/hdc</span> <span class="string">|</span> <span class="string">md5sum</span>    <span class="comment">#校验一个设备的md5sum编码，例如一张 CD</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="网络管理-（以太网和WIFI无线）"><a href="#网络管理-（以太网和WIFI无线）" class="headerlink" title="网络管理 （以太网和WIFI无线）"></a>网络管理 （以太网和WIFI无线）</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ifconfig</span> <span class="string">eth0</span>    <span class="comment">#显示一个以太网卡的配置</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ifup</span> <span class="string">eth0</span>        <span class="comment">#启用一个 &#x27;eth0&#x27; 网络设备</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ifdown</span> <span class="string">eth0</span>      <span class="comment">#禁用一个 &#x27;eth0&#x27; 网络设备</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ifconfig</span> <span class="string">eth0</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span> <span class="string">netmask</span> <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>     <span class="comment">#控制IP地址</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ifconfig</span> <span class="string">eth0</span> <span class="string">promisc</span>     <span class="comment">#设置 &#x27;eth0&#x27; 成混杂模式以嗅探数据包 (sniffing)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dhclient</span> <span class="string">eth0</span>            <span class="comment">#以dhcp模式启用 &#x27;eth0&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">route</span> <span class="string">-n</span>    <span class="comment">#查看路由表</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">route</span> <span class="string">add</span> <span class="string">-net</span> <span class="number">0</span><span class="string">/0</span> <span class="string">gw</span> <span class="string">IP_Gateway</span>    <span class="comment">#配置默认网关</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">route</span> <span class="string">add</span> <span class="string">-net</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.0</span> <span class="string">netmask</span> <span class="number">255.255</span><span class="number">.0</span><span class="number">.0</span> <span class="string">gw</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span> </span><br><span class="line"><span class="comment">#配置静态路由到达网络&#x27;192.168.0.0/16&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">route</span> <span class="string">del</span> <span class="number">0</span><span class="string">/0</span> <span class="string">gw</span> <span class="string">IP_gateway</span>        <span class="comment">#删除静态路由</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">hostname</span> <span class="comment">#查看机器名</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">host</span> <span class="string">www.xxxxxxx.com</span>       <span class="comment">#把一个主机名解析到一个网络地址或把一个网络地址解析到一个主机名。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">nslookup</span> <span class="string">www.xxxxxx.com</span>   <span class="comment">#用于查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ip</span> <span class="string">link</span> <span class="string">show</span>            <span class="comment">#查看网卡信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mii-tool</span>                <span class="comment">#用于查看、管理介质的网络接口的状态</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">ethtool</span>                 <span class="comment">#用于查询和设置网卡配置</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">netstat</span> <span class="string">-tupl</span>           <span class="comment">#用于显示TCP/UDP的状态信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">tcpdump</span> <span class="string">tcp</span> <span class="string">port</span> <span class="number">80</span>     <span class="comment">#显示所有http协议的流量</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="JPS工具"><a href="#JPS工具" class="headerlink" title="JPS工具"></a>JPS工具</h1><blockquote>
+<p>jps(Java Virtual Machine Process Status Tool)是JDK<br>1.5提供的一个显示当前所有java进程pid的命令，简单实用，非常适合在linux/unix平台上简单察看当前java进程的一些简单情况。 使用方法：在当前命令行下打 jps(需要JAVA_HOME，没有的话，到改程序的目录下打) 。</p>
+</blockquote>
+<p>jps存放在JAVA_HOME/bin/jps，使用时为了方便请将JAVA_HOME/bin/加入到Path.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">$&gt;</span> <span class="string">jps</span></span><br><span class="line"><span class="number">23991</span> <span class="string">Jps</span></span><br><span class="line"><span class="number">23789</span> <span class="string">BossMain</span></span><br><span class="line"><span class="number">23651</span> <span class="string">Resin</span></span><br></pre></td></tr></table></figure>
+
+<p>比较常用的参数：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-q 只显示pid，不显示class名称,jar文件名和传递给main 方法的参数</span></span><br><span class="line"></span><br><span class="line"><span class="string">$&gt;</span> <span class="string">jps</span> <span class="string">-q</span></span><br><span class="line"><span class="number">28680</span></span><br><span class="line"><span class="number">23789</span></span><br><span class="line"><span class="number">23651</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#-m 输出传递给main 方法的参数，在嵌入式jvm上可能是null</span></span><br><span class="line"><span class="string">$&gt;</span> <span class="string">jps</span> <span class="string">-m</span></span><br><span class="line"><span class="number">28715</span> <span class="string">Jps</span> <span class="string">-m</span></span><br><span class="line"><span class="number">23789</span> <span class="string">BossMain</span></span><br><span class="line"><span class="number">23651</span> <span class="string">Resin</span> <span class="string">-socketwait</span> <span class="number">32768</span> <span class="string">-stdout</span> <span class="string">/data/aoxj/resin/log/stdout.log</span> <span class="string">-stderr</span> <span class="string">/data/aoxj/resin/log/stderr.log</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#-l 输出应用程序main class的完整package名 或者 应用程序的jar文件完整路径名</span></span><br><span class="line"><span class="string">$&gt;</span> <span class="string">jps</span> <span class="string">-l</span></span><br><span class="line"><span class="number">28729</span> <span class="string">sun.tools.jps.Jps</span></span><br><span class="line"><span class="number">23789</span> <span class="string">com.asiainfo.aimc.bossbi.BossMain</span></span><br><span class="line"><span class="number">23651</span> <span class="string">com.caucho.server.resin.Resin</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#-v 输出传递给JVM的参数</span></span><br><span class="line"><span class="string">$&gt;</span> <span class="string">jps</span> <span class="string">-v</span></span><br><span class="line"></span><br><span class="line"><span class="number">23789</span> <span class="string">BossMain</span></span><br><span class="line"></span><br><span class="line"><span class="number">28802</span> <span class="string">Jps</span> <span class="string">-Denv.class.path=/data/aoxj/bossbi/twsecurity/java/trustwork140.jar:/data/aoxj/bossbi/twsecurity/java/:/data/aoxj/bossbi/twsecurity/java/twcmcc.jar:/data/aoxj/jdk15/lib/rt.jar:/data/aoxj/jd</span></span><br><span class="line"></span><br><span class="line"><span class="string">k15/lib/tools.jar</span> <span class="string">-Dapplication.home=/data/aoxj/jdk15</span> <span class="string">-Xms8m</span></span><br><span class="line"></span><br><span class="line"><span class="number">23651</span> <span class="string">Resin</span> <span class="string">-Xss1m</span> <span class="string">-Dresin.home=/data/aoxj/resin</span> <span class="string">-Dserver.root=/data/aoxj/resin</span> <span class="string">-Djava.util.logging.manager=com.caucho.log.LogManagerImpl</span> <span class="bullet">-</span></span><br><span class="line"></span><br><span class="line"><span class="string">Djavax.management.builder.initial=com.caucho.jmx.MBeanServerBuilderImpl</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">jps</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.77</span></span><br><span class="line"><span class="comment">#列出远程服务器192.168.0.77机器所有的jvm实例，采用rmi协议，默认连接端口为1099（前提是远程服务器提供jstatd服务）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注：jps命令有个地方很不好，似乎只能显示当前用户的java进程，要显示其他用户的还是只能用unix/linux的ps命令</span></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">御网尚书</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.hack-gov.com.cn/48381.html">https://www.hack-gov.com.cn/48381.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.hack-gov.com.cn" target="_blank">御网尚书</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/">系统安全</a></div><div class="post_share"><div class="social-share" data-image="/news-photo/0905/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/65099.html"><img class="prev-cover" src="/news-photo/0822/2.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/timg.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">全国网站举报受理渠道</div></div></a></div></nav></div></main><footer id="footer"><div class="footer"><div class="footer-intro"><img src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/reai.png" alt="愿景 — 不断创造黑科技，做全方位守护者"></div>
+<div id="heo-footer">
+<div class="footer-group"><h3 class="footer-title">运行</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" data-pjax-state="">框架-Hexo</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly" data-pjax-state="">主题-Butterfly</a></div>
+</div><div class="footer-group"><h3 class="footer-title">设计</h3><div class="footer-links"><a class="footer-item" href="/tags/Heocan/" data-pjax-state="">Heocan</a><a class="footer-item" href="/tags/Sketch/" data-pjax-state="">Sketch教程</a><a class="footer-item" href="/tags/优质报告/" data-pjax-state="">设计报告</a><a class="footer-item" href="/tags/Photoshop/" data-pjax-state="">Photoshop</a></div>
+</div><div class="footer-group"><h3 class="footer-title">项目</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://www.siteweb.cn/" data-pjax-state="">WEB主页</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.hack-gov.cn/" data-pjax-state="">御网尚书</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.bufferfly.cn/" data-pjax-state="">主题致敬</a></div>
+</div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/music/" data-pjax-state="">音乐榜单🔥</a><a class="footer-item" href="/movies/" data-pjax-state="">我的电影</a><a class="footer-item" href="/bb/" data-pjax-state="">即刻短文</a></div>
+</div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/经验分享/" data-pjax-state="">经验分享</a><a class="footer-item" href="/categories/资源中心/" data-pjax-state="">资源中心</a><a class="footer-item" href="/categories/翻译内容/" data-pjax-state="">翻译内容</a><a class="footer-item" href="/categories/我的开发/" data-pjax-state="">我的开发</a><a class="footer-item" href="/categories/" data-pjax-state="">全部分类</a></div>
+</div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/" data-pjax-state="">友情链接</a><a class="footer-item" href="/com.cn/sitemap.txt" data-pjax-state="">网站地图一</a><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="/cn/sitemap.txt">网站地图二</a><a class="footer-item" href="/com.cn/rss.xml" data-pjax-state="">国际RSS订阅</a><a class="footer-item" href="/cn/rss.xml" data-pjax-state="">国内RSS订阅</a></div>
+</div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/" data-pjax-state="">隐私协议</a><a class="footer-item" href="/privacy/#Cookie-的使用" data-pjax-state="">Cookies</a><a class="footer-item" href="/notice/" data-pjax-state="">版权协议</a></div></div></div><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 御网尚书</div><div class="framework-info"><span> </span><a target="_blank" rel="noopener" href="http://www.gov.cn/">中国政府网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="https://www.12377.cn/">互联网举报中心</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="https://www.12321.cn/">12321举报受理中心</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.shdf.gov.cn/">中国扫黄打非网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.djbh.net/webdev/web/HomeWebAction.do?p=init">网络安全等级保护网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.cyberpolice.cn/wfjb/">网络违法犯罪举报网站</a></div><div class="footer_custom_text">严肃声明：本站基于网络安全法范围内不提供非法使用服务，请勿访问触犯法律性质的一切网站，本站概不负责使用后果。</a></div><div id="footer_deal"><a class="deal_link" href="mailto:1358685263@qq.com" rel="external nofollow noreferrer" title="mail" data-pjax-state=""><i class="iconfont icon-mail1"></i></a><a class="deal_link" target="_blank" href="/index.html" title="微博" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-weibo"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="facebook"><i class="iconfont icon-facebook"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="dribbble"><i class="iconfont icon-dribbble"></i></a><img class="footer_mini_logo entered loading" title="返回顶部" onclick="btf.scrollToDest(0,500)" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/footer.png" data-lazy-src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/loading.gif" data-ll-status="loading"><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="github"><i class="iconfont icon-github"></i></a><a class="deal_link" target="_blank" href="/index.html" title="pinterest" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-pinterest"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="bilibili"><i class="iconfont icon-bilibili"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="instagram"><i class="iconfont icon-insgram"></i></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'none';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 2500);</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script></div><script defer src="js/huise.js"></script><script defer src="http://code.jquery.com/jquery-1.8.3.js"></script><script defer src="/js/notice_pop.js"></script><script defer src="https://blog.zhheo.com/zhheo/travelling.js"></script><script defer src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/js/zhheo.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/gh/xingjiahui/modify/pace/pace.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script defer src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/js/vue.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="GalMenu GalDropDown"><div class="circle" id="gal"><div class="ring"><a class="menuItem" target="_blank" rel="noopener" href="https://www.hack-gov.cn"><span>首页</span></a><a class="menuItem" href="javascript:location.reload();"><span>刷新</span></a><a class="menuItem" href="javascript:history.go(1);"><span>前进</span></a><a class="menuItem" href="javascript:history.go(-1);"><span>后退</span></a><a class="menuItem" href="/random/"><span>随机文章</span></a></div></div></div><script defer="defer" src="https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@bf_3.3.0_12/js/custom/galmenu.min.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script data-pjax>
+                        function butterfly_swiper_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/12135.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/20201127/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="/12135.html" alt="">大数据“杀熟”详细介绍</a><div class="blog-slider__text">大数据杀熟的详细介绍以及如何防范被杀熟</div><a class="blog-slider__button" href="/12135.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/50261.html" alt=""><img width="48" height="48" src="/news-photo/1127/2.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="/50261.html" alt="">从飞鸽传书到有线通信的诞生与发展</a><div class="blog-slider__text">随着现代科技的大力发展我们的日常生活中已经离不开手机，电脑，微信，QQ这些时代的产物。</div><a class="blog-slider__button" href="/50261.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/795.html" alt=""><img width="48" height="48" src="/news-photo/1127/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="/795.html" alt="">人类对时间的终极想象，都在这九部科幻作品的设定里</a><div class="blog-slider__text">人类对时间的终极想象，都在这九部科幻作品的设定里</div><a class="blog-slider__button" href="/795.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/39800.html" alt=""><img width="48" height="48" src="/news-photo/1030/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="/39800.html" alt="">个人信息保护法草案全文公布</a><div class="blog-slider__text">10月21日，全国人大法工委公开就《中华人民共和国个人信息保护法(草案)》征求意见，以下是草案全文和说明。</div><a class="blog-slider__button" href="/39800.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/14644.html" alt=""><img width="48" height="48" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2654426274,289454165&amp;fm=26&amp;gp=0.jpg" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="/14644.html" alt="">网络安全法图解解析</a><div class="blog-slider__text">一图读懂网络安全法</div><a class="blog-slider__button" href="/14644.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/2dd164dc.html" alt=""><img width="48" height="48" src="/news-photo/20201118/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-18</span><a class="blog-slider__title" href="/2dd164dc.html" alt="">用于可视化数字威胁事件的前15个实时网络攻击图</a><div class="blog-slider__text">分布式拒绝服务（DDoS）攻击是一种恶意的尝试，通过用来自多个源的流量淹没目标服务器来扰乱目标服务器的典型Internet流量。DDoS攻击针对从银行到新闻网站等大量重要资源，对确保Internet用户可以发布和访问重要信息提出了重大挑战。DDoS攻击类似于高速公路上的交通拥堵，可防止典型的交通流。</div><a class="blog-slider__button" href="/2dd164dc.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/58432.html" alt=""><img width="48" height="48" src="/news-photo/1101/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="/58432.html" alt="">中华人民共和国网络安全法</a><div class="blog-slider__text">《中华人民共和国网络安全法》是为保障网络安全，维护网络空间主权和国家安全、社会公共利益，保护公民、法人和其他组织的合法权益，促进经济社会信息化健康发展而制定的法律。</div><a class="blog-slider__button" href="/58432.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/35815.html" alt=""><img width="48" height="48" src="https://img-blog.csdnimg.cn/img_convert/768539f5b69a5186f54b5ff935c73919.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-10-30</span><a class="blog-slider__title" href="/35815.html" alt="">个人信息保护法草案如何捍卫个人信息安全</a><div class="blog-slider__text">10月13日，备受关注的个人信息保护法草案提请十三届全国人大常委会初次审议</div><a class="blog-slider__button" href="/35815.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="/54739.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0718/2.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-06-10</span><a class="blog-slider__title" href="/54739.html" alt="">中华人民共和国反外国制裁法</a><div class="blog-slider__text">是我国为了坚决维护国家主权、尊严和核心利益，反对西方霸权主义和强权政治而制定的一部专门的反外国制裁法，为我国依法反制外国歧视性措施提供有力的法治支撑和保障</div><a class="blog-slider__button" href="/54739.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+                          console.log('已挂载butterfly_swiper')
+                          // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+                          }
+                        if( document.getElementById('recent-posts') && (location.pathname ==='all'|| 'all' ==='all')){
+                        butterfly_swiper_injector_config()
+                        }
+                      </script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper_init.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+                        function gitcalendar_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+                          console.log('已挂载gitcalendar')
+                          }
+
+                        if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+                            gitcalendar_injector_config()
+                            GitCalendarInit("https://gitcalendar.akilar.top/api?adminks666",['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06'],'adminks666')
+                        }
+                      </script><!-- hexo injector body_end end --></body></html>
