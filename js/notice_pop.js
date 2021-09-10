@@ -1,6 +1,6 @@
     var ShowMsg={  
         title:'访客公告',  
-        content:'9月3日，中国人民抗日战争暨世界反法西斯战争胜利76周年纪念日,日本投降仪式在东京湾密苏里号军舰上举行，在包括中国在内的9个受降国代表注视下，日本在投降书上签字。',  
+        content:'1931年9月18日夜，盘踞在中国东北的日本关东军按照精心策划的阴谋，由铁道“守备队”炸毁沈阳柳条湖附近日本修筑的南满铁路路轨，并嫁祸于中国军队，日军以此为借口，炮轰中国东北军北大营，制造了震惊中外的“九一八事变”。',  
         width:'100%',  
         height:'120px',  
         setTitle:function(value){  
@@ -35,7 +35,7 @@
             //内容div  
             var _conDiv= document.createElement('div');   
                 _conDiv.id="_conDiv";    
-                _conDiv.style.cssText = 'height: 110px;font-weight: bold;/* text-decoration: underline; */display: block;bottom: 0px;width: 300px;line-height: 20px;position: fixed;border: 1px solid rgb(255, 255, 255);text-align: center;color: rgb(255, 255, 255);right: 1px !important;;left: 0px;"';    
+                _conDiv.style.cssText = 'height: 150px;font-weight: bold;/* text-decoration: underline; */display: block;bottom: 0px;width: 300px;line-height: 20px;position: fixed;border: 1px solid rgb(255, 255, 255);text-align: center;color: rgb(255, 255, 255);right: 1px !important;;left: 0px;"';    
                 _conDiv.innerHTML=this.getContent();  
                 _winPopDiv.appendChild(_conDiv);      
             document.body.appendChild(_winPopDiv);    
