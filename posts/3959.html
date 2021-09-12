@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CC攻击的原理及防御 | 御网尚书</title><meta name="keywords" content="CC攻击,DDOS攻击,黑客攻击,攻击网站"><meta name="author" content="御网尚书"><meta name="copyright" content="御网尚书"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="详细介绍网络攻击之CC攻击的原理以及如何防御">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CC攻击的原理及防御">
+<meta property="og:url" content="https://www.hack-gov.com.cn/posts/3959.html">
+<meta property="og:site_name" content="御网尚书">
+<meta property="og:description" content="详细介绍网络攻击之CC攻击的原理以及如何防御">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0810/1.png">
+<meta property="article:published_time" content="2021-08-10T05:33:59.000Z">
+<meta property="article:modified_time" content="2021-08-11T03:24:28.079Z">
+<meta property="article:author" content="御网尚书">
+<meta property="article:tag" content="黑客攻击">
+<meta property="article:tag" content="CC攻击">
+<meta property="article:tag" content="安全知识点">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0810/1.png"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v12/img/favicon.png"><link rel="canonical" href="https://www.hack-gov.com.cn/posts/3959"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CC攻击的原理及防御',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-11 11:24:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/css/diy.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/css/zhheoblog.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://at.alicdn.com/t/font_1891866_1b4f6jn7hh9.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/css/showbb_in_index.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@main/bb/showbb_in_index.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xingjiahui/modify/pace/themes/pink/pace-theme-flash.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/css/tubiao.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/css/div.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><a href="javascript:void(0);" onclick="preloader.endLoading();" title="点击跳过动画"><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><img class="load-image" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/loader/timg.gif" alt=""/></div></a><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><iframe frameborder="0" src="/menu/" width="100%" height="100%"></iframe></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">御网尚书</a></span><div id="page-name"><a id="page-name-text" onclick="btf.scrollToDest(0,500)" data-pjax-state="">万物互联-安全为基    </a></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.siteweb.cn/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 御网文库</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-90px;"><li><a class="site-page child" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><span> 网络安全</span></a></li><li><a class="site-page child" href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"><span> 信息安全</span></a></li><li><a class="site-page child" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"><span> 大数据</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 御网影音</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-50px;"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影音</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 御网友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 御网项目</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child" style="left:-90px;"><li><a class="site-page child" href="https://www.hack-gov.com.cn/"><span> 御网尚书</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bufferfly.cn/"><span> 开发致敬</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.siteweb.cn/"><span> WEB主页</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div><div id="darkmode_navswitch"><a class="darkmode_switchbutton" onclick="navFn.switchDarkMode()" title="模式切换" data-pjax-state=""><i class="fas fa-adjust"></i></a></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">CC攻击的原理及防御</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-10T05:33:59.000Z" title="发表于 2021-08-10 13:33:59">2021-08-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-11T03:24:28.079Z" title="更新于 2021-08-11 11:24:28">2021-08-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span></div></div></div><article class="post-content" id="article-container"><p><strong>随着网络技术的迅猛发展和普及，网络已改变每一个人的生活和工作方式，网络安全问题也越来越严重。<br>近几年，网络入侵的频率不断增加,危害性日趋严重,其中<a target="_blank" rel="noopener" href="https://www.hack-gov.cn/2dd164dc.html">分布式拒绝服务攻击（DDoS）</a>的危害最大，DDoS攻击能在短时间内使得被攻击的网络主机彻底丧失正常服务的能力。</strong></p>
+<ul>
+<li>CC攻击(ChallengeCoHapsar，挑战黑洞)是DDoS攻击的一种常见类型，攻击者控制某些主机不停地发送大量数据包给对方服务器造成服务器资源耗尽，一直到宕机崩溃。 </li>
+<li>CC攻击主要针对WEB服务器发送大量并发请求，重点针对应用程序中比较消耗资源的功能，占用大量系统资源。</li>
+<li>CC攻击的攻击技术含量和成本很低， 只要有上百个IP，每个IP弄几个进程，就可以有上千个并发请求，很容易让被攻击目标服务器资源耗尽，从而造成网站宕机。<h1 id="CC攻击的原理："><a href="#CC攻击的原理：" class="headerlink" title="CC攻击的原理："></a>CC攻击的原理：</h1></li>
+<li> CC攻击的原理就是攻击者控制某些主机不停地发大量数据包给对方服务器造成服务器资源耗尽，一直到宕机崩溃。
+　　</li>
+<li>CC主要是用来消耗服务器资源的，每个人都有这样的体验：当一个网页访问的人数特别多的时候，打开网页就慢了，CC就是模拟多个用户(多少线程就是多少用户)不停地进行访问那些需要大量数据操作(就是需要大量CPU时间)的页面，造成服务器资源的浪费，CPU长时间处于100%，永远都有处理不完的连接直至就网络拥塞，正常的访问被中止。<h1 id="CC攻击的种类："><a href="#CC攻击的种类：" class="headerlink" title="CC攻击的种类："></a>CC攻击的种类：</h1></li>
+</ul>
+<p><strong>直接攻击</strong>、<strong>代理攻击</strong>、<strong>僵尸网络攻击</strong>、<strong>单主机虚拟多IP地址攻击</strong>、</p>
+<ul>
+<li><strong>直接攻击</strong>：主要针对有重要缺陷的 WEB 应用程序，一般说来是程序写的有问题的时候才会出现这种情况，比较少见。</li>
+<li><strong>僵尸网络攻击</strong>：类似于 DDOS 攻击了，从 WEB 应用程序层面上已经无法防御。</li>
+<li><strong>代理攻击</strong>：是CC 攻击者一般会操作一批代理服务器，<strong>比方说 100 个代理，然后每个代理同时发出 10 个请求，这样 WEB 服务器同时收到 1000 个并发请求的，并且在发出请求后，立刻断掉与代理的连接，避免代理返回的数据将本身的带宽堵死，而不能发动再次请求，这时 WEB 服务器会将响应这些请求的进程进行队列，数据库服务器也同样如此，这样一来，正常请求将会被排在很后被处理，就象本来你去食堂吃饭时，一般只有不到十个人在排队，今天前面却插了一千个人，那么轮到你的机会就很小很小了，这时就出现页面打开极其缓慢或者白屏</strong>。</li>
+<li><strong>单主机虚拟多IP地址攻击</strong>：攻击者利用一台主机虚构出多个IP地址向目标服务器指定页面发送大量请求，当服务器来不及处理这些访问请求时，将导致该页面不能响应，正常的访问也将被拒绝。<h1 id="CC攻击与DDOS的区别："><a href="#CC攻击与DDOS的区别：" class="headerlink" title="CC攻击与DDOS的区别："></a>CC攻击与DDOS的区别：</h1></li>
+</ul>
+<p><strong>什么是DDoS攻击？</strong></p>
+<ul>
+<li>DDoS攻击就是分布式的拒绝服务攻击，DDoS攻击手段是在传统的DoS攻击基础之上产生的一类攻击方式。</li>
+<li>单一的DoS攻击一般是采用一对一方式的，随着计算机与网络技术的发展，DoS攻击的困难程度加大了。</li>
+<li>于是就产生了DDoS攻击，它的原理就很简单：计算机与网络的处理能力加大了10倍，用一台攻击机来攻击不再能起作用，那么DDoS就是利用更多的傀儡机来发起进攻，以比从前更大的规模来进攻受害者。</li>
+</ul>
+<p><strong>在这里补充两点</strong>：</p>
+<ul>
+<li>第一就是DDOS攻击不仅能攻击计算机，还能攻击路由器，因为路由器是一台特殊类型的计算机；</li>
+<li>第二是网速决定攻击的好和快，比如说，如果你一个被限制网速的环境下，它们的攻击效果不是很明显，但是快的网速相比之下更加具有攻击效果。</li>
+</ul>
+<p><strong>DDOS与CC两者的区别</strong></p>
+<ul>
+<li>DDoS是针对IP的攻击，而CC攻击的是服务器资源。<h1 id="如何确定被攻击："><a href="#如何确定被攻击：" class="headerlink" title="如何确定被攻击："></a>如何确定被攻击：</h1>CC攻击有一定的隐蔽性，那如何确定服务器正在遭受或者曾经遭受CC攻击呢?<br>可以通过以下三个方法来确定。</li>
+</ul>
+<ol>
+<li>命令行法</li>
+</ol>
+<ul>
+<li>一般遭受CC攻击时，Web服务器会出现80端口对外关闭的现象， 因为这个端口已经被大量的垃圾数据堵塞了正常的连接被中止了。</li>
+<li>可以通过在命令行下输入命令netstat -an来查看，　“SYN_RECEIVED”是TCP连接状态标志，意思是“正在处于连接的初始同步状态 ”，表明无法建立握手应答处于等待状态。</li>
+<li>这就是攻击的特征，一般情况下这样的记录一般都会有很多条，表示来自不同的代理IP的攻击。</li>
+</ul>
+<ol start="2">
+<li>批处理法</li>
+</ol>
+<ul>
+<li>上述方法需要手工输入命令且如果Web服务器IP连接太多看起来比较费劲，可以建立一个批处理文件，通过该脚本代码确定是否存在CC攻击。</li>
+<li>脚本筛选出当前所有的到80端口的连接。<br>当感觉服务器异常时就可以双击运行该批处理文件，然后在打开的log.log文件中查看所有的连接。<br>如果同一个IP有比较多的到服务器的连接，那就基本可以确定该IP正在对服务器进行CC攻击。</li>
+</ul>
+<ol start="3">
+<li>查看系统日志</li>
+</ol>
+<ul>
+<li><p>Web日志一般在C:\WINDOWS\system32\LogFiles\HTTPERR目录下，该目录下用类似httperr1.log的日志文件，这个文件就是记录Web访问错误的记录。</p>
+</li>
+<li><p>管理员可以依据日志时间属性选择相应的日志打开进行分析是否Web被CC攻击了。</p>
+</li>
+<li><p>默认情况下，Web日志记录的项并不是很多，可以通过ⅡS进行设置，让Web日志记录更多的项以便进行安全分析。</p>
+</li>
+<li><p>其操作步骤是：“开始→管理工具”打开“Internet信息服务器”，展开左侧的项定位到到相应的Web站点，然后右键点击选择“属性”打开站点属性窗口，在“网站”选项卡下点击“属性”按钮，在“日志记录属性”窗口的“高级”选项卡下可以勾选相应的“扩展属性”，以便让Web日志进行记录。</p>
+</li>
+<li><p>比如其中的“发送的字节数”、“接收的字节数”、“所用时间”这三项默认是没有选中的，但在记录判断CC攻击中是非常有用的，可以勾选。</p>
+</li>
+<li><p>另外，如果你对安全的要求比较高，可以在“常规”选项卡下对“新日志计划”进行设置，让其“每小时”或者“每一天”进行记录。</p>
+</li>
+<li><p>为了便于日后进行分析时好确定时间可以勾选“文件命名和创建使用当地时间”。</p>
+<h1 id="CC攻击的变异品种“慢速攻击”："><a href="#CC攻击的变异品种“慢速攻击”：" class="headerlink" title="CC攻击的变异品种“慢速攻击”："></a>CC攻击的变异品种“慢速攻击”：</h1><p>什么是慢速攻击</p>
+</li>
+<li><p>一说起慢速攻击，就要谈谈它的成名历史了。HTTP Post慢速DoS攻击第一次在技术社区被正式披露是2012年的OWASP大会上，由Wong Onn Chee 和 Tom Brennan共同演示了使用这一技术攻击的威力。</p>
+</li>
+<li><p>这个攻击的基本原理如下：对任何一个开放了HTTP访问的服务器HTTP服务器，先建立了一个连接，指定一个比较大的content-length，然后以非常低的速度发包，比如1-10s发一个字节，然后维持住这个连接不断开。如果客户端持续建立这样的连接，那么服务器上可用的连接将一点一点被占满，从而导致拒绝服务。</p>
+</li>
+<li><p>和CC攻击一样，只要Web服务器开放了Web服务，那么它就可以是一个靶子，HTTP协议在接收到request之前是不对请求内容作校验的，所以即使你的Web应用没有可用的form表单，这个攻击一样有效。</p>
+</li>
+<li><p>在客户端以单线程方式建立较大数量的无用连接，并保持持续发包的代价非常的低廉。实际试验中一台普通PC可以建立的连接在3000个以上。</p>
+</li>
+<li><p>这对一台普通的Web server，将是致命的打击。更不用说结合肉鸡群做分布式DoS了。</p>
+</li>
+<li><p>鉴于此攻击简单的利用程度、拒绝服务的后果、带有逃逸特性的攻击方式，这类攻击一炮而红，成为众多攻击者的研究和利用对象。</p>
+<h1 id="CC攻击防御方法："><a href="#CC攻击防御方法：" class="headerlink" title="CC攻击防御方法："></a>CC攻击防御方法：</h1></li>
+</ul>
+<ol>
+<li><p>选择可靠的高防服务器，提升服务器硬件和网络带宽资源：高性能服务器硬件能力和充足的网络带宽资源可以提升系统对CC攻击的承载能力</p>
+</li>
+<li><p>网站页面静态化： 网站页面静态化可以较大程度的减少系统资源消耗，从而达到提高抗系统抗攻击能力；</p>
+</li>
+<li><p>IP屏蔽限制：辨别攻击者的源IP，针对CC攻击的源IP，可以在IIS中设置屏蔽该IP，限制其访问，达到防范IIS攻击的目的；</p>
+</li>
+<li><p>部署高防CDN：接入高防CDN，隐藏服务器源IP，自动识别攻击流量，清洗后将正常访客流量回源到源服务器IP上，保障业务安全；</p>
+</li>
+<li><p>关闭不需要的端口和服务。</p>
+</li>
+<li><p>应对当前系统了如指掌，如系统最高负载、最高数据处理能力，以及系统防御体系的强项与弱点</p>
+</li>
+<li><p>历史日志的保存、分析</p>
+</li>
+<li><p>对当前系统进行严格安全审计</p>
+</li>
+<li><p>上报公安相关部分，努力追溯攻击者</p>
+</li>
+<li><p>网站，能静态，就一定不要动态，可采取定时从主数据库生成静态页面的方式，对需要访问主数据库的服务使用验证机制。</p>
+</li>
+<li><p>防御者应能从全局的角度，迅速及时地发现系统正在处于什么程度的攻击、何种攻击，在平时，应该建立起攻击应急策略，规范化操作，免得在急中犯下低级错误<br>对历史日志的分析这时将会非常重要，数据可视化与统计学的方法将会很有益处：</p>
+</li>
+<li><p>分析每个页面的平均访问频率</p>
+</li>
+<li><p>对访问频率异常的页面进行详细分析 分析得到ip-页面访问频率</p>
+</li>
+<li><p>得到对访问异常页面的访问异常ip列表</p>
+</li>
+<li><p>对日志分析得到忠实用户IP白名单</p>
+</li>
+<li><p>一般一个页面会关联多个资源，一次对于这样的页面访问往往会同时增加多个资源的访问数，而攻击程序一般不会加载这些它不感兴趣的资源，所以，这也是一个非常好的分析突破点</p>
+</li>
+</ol>
+<h1 id="防御思路："><a href="#防御思路：" class="headerlink" title="防御思路："></a>防御思路：</h1><blockquote>
+<p>因为CC攻击通过工具软件发起，而普通用户通过浏览器访问，这其中就会有某些区别。想办法对这二者作出判断，选择性的屏蔽来自机器的流量即可。</p>
+</blockquote>
+<p> <strong>初级</strong></p>
+<ul>
+<li>普通浏览器发起请求时，除了要访问的地址以外，Http头中还会带有Referer，UserAgent等多项信息。</li>
+<li>遇到攻击时可以通过日志查看访问信息，看攻击的流量是否有明显特征，比如固定的Referer或UserAgent，如果能找到特征，就可以直接屏蔽掉了。</li>
+</ul>
+<p><strong>中级</strong></p>
+<ul>
+<li><p>如果攻击者伪造了Referer和UserAgent等信息，那就需要从其他地方入手。</p>
+</li>
+<li><p>攻击软件一般来说功能都比较简单，只有固定的发包功能，而浏览器会完整的支持Http协议，我们可以利用这一点来进行防御。</p>
+</li>
+<li><p>首先为每个访问者定义一个字符串，保存在Cookies中作为Token，必须要带有正确的Token才可以访问后端服务。</p>
+</li>
+<li><p>当用户第一次访问时，会检测到用户的Cookies里面并没有这个Token，则返回一个302重定向，目标地址为当前页面，同时在返回的Http头中加入set cookies字段，对Cookies进行设置，使用户带有这个Token。</p>
+</li>
+<li><p>客户端如果是一个正常的浏览器，那么就会支持http头中的set cookie和302重定向指令，将带上正确的Token再次访问页面，这时候后台检测到正确的Token，就会放行，这之后用户的Http请求都会带有这个Token，所以并不会受到阻拦。</p>
+</li>
+<li><p>客户端如果是CC软件，那么一般不会支持这些指令，那么就会一直被拦在最外层，并不会对服务器内部造成压力。</p>
+</li>
+</ul>
+<p><strong>高级</strong></p>
+<ul>
+<li>高级一点的，还可以返回一个网页，在页面中嵌入JavaScript来设置Cookies并跳转，这样被伪造请求的可能性更小</li>
+</ul>
+<p><strong>Token生成算法</strong></p>
+<p>Token需要满足以下几点要求</p>
+<ol>
+<li><p>每个IP地址的Token不同</p>
+</li>
+<li><p>无法伪造</p>
+</li>
+<li><p> 一致性，即对相同的客户端，每次生成的Token相同</p>
+</li>
+</ol>
+<ul>
+<li>Token随IP地址变化是为了防止通过一台机器获取Token之后，再通过代理服务区进行攻击。一致性则是为了避免在服务器端需要存储已经生成的Token。</li>
+</ul>
+<p><strong>推荐使用以下算法生成Token，其中Key为服务器独有的保密字符串，这个算法生成的Token可以满足以上这些要求。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Token = Hash( UserAgent + client_ip + key )</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">御网尚书</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.hack-gov.com.cn/posts/3959.html">https://www.hack-gov.com.cn/posts/3959.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.hack-gov.com.cn" target="_blank">御网尚书</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%BB%91%E5%AE%A2%E6%94%BB%E5%87%BB/">黑客攻击</a><a class="post-meta__tags" href="/tags/CC%E6%94%BB%E5%87%BB/">CC攻击</a><a class="post-meta__tags" href="/tags/%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E7%82%B9/">安全知识点</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0810/1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/18935.html"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0805/1.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/timg.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">互联网专业术语大全</div></div></a></div><div class="next-post pull-right"><a href="/posts/23596.html"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0822/1.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/timg.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">中华人民共和国个人信息保护法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/2dd164dc.html" title="用于可视化数字威胁事件的前15个实时网络攻击图"><img class="cover" src="/news-photo/20201118/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-18</div><div class="title">用于可视化数字威胁事件的前15个实时网络攻击图</div></div></a></div><div><a href="/posts/51497.html" title="100个网络安全图文知识点"><img class="cover" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0724/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-24</div><div class="title">100个网络安全图文知识点</div></div></a></div><div><a href="/posts/21480.html" title="“国家反诈中心”APP介绍"><img class="cover" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo\20210906/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-06</div><div class="title">“国家反诈中心”APP介绍</div></div></a></div><div><a href="/posts/36709.html" title="防范电信网络诈骗宣传手册"><img class="cover" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo\20210907/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-07</div><div class="title">防范电信网络诈骗宣传手册</div></div></a></div></div></div></div></main><footer id="footer"><div class="footer"><div class="footer-intro"><img src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/reai.png" alt="愿景 — 不断创造黑科技，做全方位守护者"></div>
+<div id="heo-footer">
+<div class="footer-group"><h3 class="footer-title">运行</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" data-pjax-state="">框架-Hexo</a><a class="footer-item" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly" data-pjax-state="">主题-Butterfly</a></div>
+</div><div class="footer-group"><h3 class="footer-title">设计</h3><div class="footer-links"><a class="footer-item" href="/tags/Heocan/" data-pjax-state="">Heocan</a><a class="footer-item" href="/tags/Sketch/" data-pjax-state="">Sketch教程</a><a class="footer-item" href="/tags/优质报告/" data-pjax-state="">设计报告</a><a class="footer-item" href="/tags/Photoshop/" data-pjax-state="">Photoshop</a></div>
+</div><div class="footer-group"><h3 class="footer-title">项目</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener" href="https://www.siteweb.cn/" data-pjax-state="">WEB主页</a><a class="footer-item" href="\index.html" data-pjax-state="">御网尚书</a><a class="footer-item" target="_blank" rel="noopener" href="https://www.bufferfly.cn/" data-pjax-state="">主题致敬</a></div>
+</div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/music/" data-pjax-state="">音乐榜单🔥</a><a class="footer-item" href="/movies/" data-pjax-state="">我的电影</a><a class="footer-item" href="/bb/" data-pjax-state="">即刻短文</a><a class="footer-item" href="\Cyberthreats\" data-pjax-state="">安全舆情</a></div>
+</div><div class="footer-group"><h3 class="footer-title">分类</h3><div class="footer-links"><a class="footer-item" href="/categories/经验分享/" data-pjax-state="">经验分享</a><a class="footer-item" href="/categories/资源中心/" data-pjax-state="">资源中心</a><a class="footer-item" href="/categories/翻译内容/" data-pjax-state="">翻译内容</a><a class="footer-item" href="/categories/我的开发/" data-pjax-state="">我的开发</a><a class="footer-item" href="/categories/" data-pjax-state="">全部分类</a></div>
+</div><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/link/" data-pjax-state="">友情链接</a><a class="footer-item" href="/com.cn/sitemap.txt" data-pjax-state="">网站地图一</a><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="/cn/sitemap.txt">网站地图二</a><a class="footer-item" href="/com.cn/rss.xml" data-pjax-state="">国际RSS订阅</a><a class="footer-item" href="/cn/rss.xml" data-pjax-state="">国内RSS订阅</a></div>
+</div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/privacy/" data-pjax-state="">隐私协议</a><a class="footer-item" href="/privacy/#Cookie-的使用" data-pjax-state="">Cookies</a><a class="footer-item" href="/notice/" data-pjax-state="">版权协议</a></div></div></div><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 御网尚书</div><div class="framework-info"><span> </span><a target="_blank" rel="noopener" href="http://www.gov.cn/">中国政府网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="https://www.12377.cn/">互联网举报中心</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="https://www.12321.cn/">12321举报受理中心</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.shdf.gov.cn/">中国扫黄打非网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.djbh.net/webdev/web/HomeWebAction.do?p=init">网络安全等级保护网</a><span class="footer-separator">|</span><span> </span><a target="_blank" rel="noopener" href="http://www.cyberpolice.cn/wfjb/">网络违法犯罪举报网站</a></div><div class="footer_custom_text">严肃声明：本站基于网络安全法范围内不提供非法使用服务，请勿访问触犯法律性质的一切网站，本站概不负责使用后果。</a></div><div id="footer_deal"><a class="deal_link" href="mailto:1358685263@qq.com" rel="external nofollow noreferrer" title="mail" data-pjax-state=""><i class="iconfont icon-mail1"></i></a><a class="deal_link" target="_blank" href="/index.html" title="微博" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-weibo"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="facebook"><i class="iconfont icon-facebook"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="dribbble"><i class="iconfont icon-dribbble"></i></a><img class="footer_mini_logo entered loading" title="返回顶部" onclick="btf.scrollToDest(0,500)" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/footer.png" data-lazy-src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/img/loading.gif" data-ll-status="loading"><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="github"><i class="iconfont icon-github"></i></a><a class="deal_link" target="_blank" href="/index.html" title="pinterest" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-pinterest"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="bilibili"><i class="iconfont icon-bilibili"></i></a><a class="deal_link" target="_blank" href="/index.html" rel="noopener external nofollow noreferrer noopener" title="instagram"><i class="iconfont icon-insgram"></i></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v14/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'none';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 2500);</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script></div><script defer src="js/huise.js"></script><script defer src="http://code.jquery.com/jquery-1.8.3.js"></script><script defer src="/js/notice_pop.js"></script><script defer src="https://blog.zhheo.com/zhheo/travelling.js"></script><script defer src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/js/zhheo.js"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/gh/xingjiahui/modify/pace/pace.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script defer src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io@v6.0/js/vue.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="20px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="GalMenu GalDropDown"><div class="circle" id="gal"><div class="ring"><a class="menuItem" target="_blank" rel="noopener" href="https://www.hack-gov.cn"><span>首页</span></a><a class="menuItem" href="javascript:location.reload();"><span>刷新</span></a><a class="menuItem" href="javascript:history.go(1);"><span>前进</span></a><a class="menuItem" href="javascript:history.go(-1);"><span>后退</span></a><a class="menuItem" href="/random/"><span>随机文章</span></a></div></div></div><script defer="defer" src="https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@bf_3.3.0_12/js/custom/galmenu.min.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script data-pjax>
+                        function butterfly_swiper_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/12135.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/20201127/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="posts/12135.html" alt="">大数据“杀熟”详细介绍</a><div class="blog-slider__text">大数据杀熟的详细介绍以及如何防范被杀熟</div><a class="blog-slider__button" href="posts/12135.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/50261.html" alt=""><img width="48" height="48" src="/news-photo/1127/2.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="posts/50261.html" alt="">从飞鸽传书到有线通信的诞生与发展</a><div class="blog-slider__text">随着现代科技的大力发展我们的日常生活中已经离不开手机，电脑，微信，QQ这些时代的产物。</div><a class="blog-slider__button" href="posts/50261.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/795.html" alt=""><img width="48" height="48" src="/news-photo/1127/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-27</span><a class="blog-slider__title" href="posts/795.html" alt="">人类对时间的终极想象，都在这九部科幻作品的设定里</a><div class="blog-slider__text">人类对时间的终极想象，都在这九部科幻作品的设定里</div><a class="blog-slider__button" href="posts/795.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/39800.html" alt=""><img width="48" height="48" src="/news-photo/1030/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="posts/39800.html" alt="">个人信息保护法草案全文公布</a><div class="blog-slider__text">10月21日，全国人大法工委公开就《中华人民共和国个人信息保护法(草案)》征求意见，以下是草案全文和说明。</div><a class="blog-slider__button" href="posts/39800.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/14644.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/1101/3.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="posts/14644.html" alt="">中国网络安全法解析</a><div class="blog-slider__text">一图读懂网络安全法</div><a class="blog-slider__button" href="posts/14644.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/2dd164dc.html" alt=""><img width="48" height="48" src="/news-photo/20201118/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-18</span><a class="blog-slider__title" href="posts/2dd164dc.html" alt="">用于可视化数字威胁事件的前15个实时网络攻击图</a><div class="blog-slider__text">分布式拒绝服务（DDoS）攻击是一种恶意的尝试，通过用来自多个源的流量淹没目标服务器来扰乱目标服务器的典型Internet流量。DDoS攻击针对从银行到新闻网站等大量重要资源，对确保Internet用户可以发布和访问重要信息提出了重大挑战。DDoS攻击类似于高速公路上的交通拥堵，可防止典型的交通流。</div><a class="blog-slider__button" href="posts/2dd164dc.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/58432.html" alt=""><img width="48" height="48" src="/news-photo/1101/1.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-01</span><a class="blog-slider__title" href="posts/58432.html" alt="">中华人民共和国网络安全法</a><div class="blog-slider__text">《中华人民共和国网络安全法》是为保障网络安全，维护网络空间主权和国家安全、社会公共利益，保护公民、法人和其他组织的合法权益，促进经济社会信息化健康发展而制定的法律。</div><a class="blog-slider__button" href="posts/58432.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/35815.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/1030/2.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-10-30</span><a class="blog-slider__title" href="posts/35815.html" alt="">个人信息保护法草案解析</a><div class="blog-slider__text">10月13日，备受关注的个人信息保护法草案提请十三届全国人大常委会初次审议</div><a class="blog-slider__button" href="posts/35815.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/54739.html" alt=""><img width="48" height="48" src="https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/news-photo/0718/2.png" alt=""/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-06-10</span><a class="blog-slider__title" href="posts/54739.html" alt="">中华人民共和国反外国制裁法</a><div class="blog-slider__text">是我国为了坚决维护国家主权、尊严和核心利益，反对西方霸权主义和强权政治而制定的一部专门的反外国制裁法，为我国依法反制外国歧视性措施提供有力的法治支撑和保障</div><a class="blog-slider__button" href="posts/54739.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+                          console.log('已挂载butterfly_swiper')
+                          // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+                          }
+                        if( document.getElementById('recent-posts') && (location.pathname ==='all'|| 'all' ==='all')){
+                        butterfly_swiper_injector_config()
+                        }
+                      </script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper_init.js"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+                        function gitcalendar_injector_config(){
+                          var parent_div_git = document.getElementById('recent-posts');
+                          var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+                          parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+                          console.log('已挂载gitcalendar')
+                          }
+
+                        if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+                            gitcalendar_injector_config()
+                            GitCalendarInit("https://gitcalendar.akilar.top/api?adminks666",['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06'],'adminks666')
+                        }
+                      </script><!-- hexo injector body_end end --></body></html>
