@@ -717,7 +717,7 @@ a.card-archive-list-link-more{
 .face {
     position: absolute;
     width: 870px;
-    height: 326px%;
+    height: 326px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/advertisement/app.jpg) center center no-repeat;
