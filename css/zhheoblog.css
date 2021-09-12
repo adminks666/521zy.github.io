@@ -705,3 +705,21 @@ a.card-archive-list-link-more{
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .article-meta-label {
     display: contents;
 }
+#aside-content .card-widget#card-wechat {
+    background: #57bd6a;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+}
+.face {
+    position: absolute;
+    width: 870px;
+    height: 326px%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/advertisement/app.jpg) center center no-repeat;
+    background-size: 100%;
+}
