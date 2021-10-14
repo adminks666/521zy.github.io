@@ -1,0 +1,10 @@
+#footer-banner {
+    padding: 1rem;
+    color: #fff;
+    margin-top: 1rem;
+    background: linear-gradient(
+208deg,#4584ff 0,#4584ff 11%,#ff7676 100%);
+    display: flex;
+    overflow: hidden;
+    z-index: 1002;
+}
