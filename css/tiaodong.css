@@ -1,0 +1,12 @@
+#heartbeat {
+    color: red;
+    animation: iconAnimate 1s ease-in-out infinite;
+}	
+img.footer_mini_logo {
+    animation: iconAnimate 1.33s ease-in-out infinite;
+}
+#footer_deal i {
+    animation: iconAnimate 1.7s ease-in-out infinite;
+}
+#footer-wrap i {
+    /* margin-right: .5rem;
