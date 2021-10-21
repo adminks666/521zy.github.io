@@ -8,3 +8,9 @@ img.footer_mini_logo {
 #footer_deal i {
     animation: iconAnimate 1.7s ease-in-out infinite;
 }
+.face {
+    border-radius: 8px 8px 8px 8px;
+}
+img {
+    border-radius: 8px 8px 8px 8px;
+}
