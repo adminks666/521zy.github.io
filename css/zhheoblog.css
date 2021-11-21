@@ -3949,7 +3949,8 @@ a.darkmode_switchbutton{
 	display:none
 	}
 #footer{
-	background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/gov.png);
+	background: #000000;
+    /* background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/gov.png); */
 	margin-top:1rem;
 	display:flex;
 	/* width: 1920px; */
