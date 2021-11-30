@@ -6,6 +6,7 @@ https://www.hack-gov.com.cn/music/
 https://www.hack-gov.com.cn/movies/
 https://www.hack-gov.com.cn/Cyberthreats/
 https://www.hack-gov.com.cn/link/
+https://www.hack-gov.com.cn/security/
 https://www.hack-gov.com.cn/categories/HEXO/
 https://www.hack-gov.com.cn/categories/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/
 https://www.hack-gov.com.cn/categories/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3/
@@ -60,6 +61,7 @@ https://www.hack-gov.com.cn/notice/
 https://www.hack-gov.com.cn/index.html/
 https://www.hack-gov.com.cn/random/
 https://www.hack-gov.com.cn/menu/
+https://www.hack-gov.com.cn/yiyan/yiyan.html
 https://www.hack-gov.com.cn/posts/48777.html
 https://www.hack-gov.com.cn/posts/51497.html
 https://www.hack-gov.com.cn/posts/17366.html
@@ -84,6 +86,14 @@ https://www.hack-gov.com.cn/Cyberthreats/Akamai
 https://www.hack-gov.com.cn/Cyberthreats/LookingGlass
 https://www.hack-gov.com.cn/Cyberthreats/index.html
 https://www.hack-gov.com.cn/link/index.html
+https://www.hack-gov.com.cn/security/index.html
+https://www.hack-gov.com.cn/security/2.html
+https://www.hack-gov.com.cn/security/3.html
+https://www.hack-gov.com.cn/security/4.html
+https://www.hack-gov.com.cn/security/5.html
+https://www.hack-gov.com.cn/security/6.html
+https://www.hack-gov.com.cn/security/7.html
+https://www.hack-gov.com.cn/security/8.html
 https://www.hack-gov.com.cn/posts/29294.html
 https://www.hack-gov.com.cn/posts/25232.html
 https://www.hack-gov.com.cn/posts/51279.html

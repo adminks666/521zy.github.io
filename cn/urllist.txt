@@ -6,6 +6,7 @@ https://www.hack-gov.cn/music/
 https://www.hack-gov.cn/movies/
 https://www.hack-gov.cn/Cyberthreats/
 https://www.hack-gov.cn/link/
+https://www.hack-gov.cn/security/
 https://www.hack-gov.cn/categories/HEXO/
 https://www.hack-gov.cn/categories/%E6%80%9D%E6%83%B3%E5%AE%9E%E9%AA%8C/
 https://www.hack-gov.cn/categories/%E7%A7%91%E5%AD%A6%E5%B9%BB%E6%83%B3/
@@ -85,6 +86,14 @@ https://www.hack-gov.cn/Cyberthreats/Akamai
 https://www.hack-gov.cn/Cyberthreats/LookingGlass
 https://www.hack-gov.cn/Cyberthreats/index.html
 https://www.hack-gov.cn/link/index.html
+https://www.hack-gov.cn/security/index.html
+https://www.hack-gov.cn/security/2.html
+https://www.hack-gov.cn/security/3.html
+https://www.hack-gov.cn/security/4.html
+https://www.hack-gov.cn/security/5.html
+https://www.hack-gov.cn/security/6.html
+https://www.hack-gov.cn/security/7.html
+https://www.hack-gov.cn/security/8.html
 https://www.hack-gov.cn/posts/29294.html
 https://www.hack-gov.cn/posts/25232.html
 https://www.hack-gov.cn/posts/51279.html
