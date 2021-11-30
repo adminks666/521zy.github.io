@@ -3950,7 +3950,7 @@ a.darkmode_switchbutton{
 	}
 #footer{
 	background: #000000;
-    /* background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/gov.png); */
+	background: url(https://cdn.jsdelivr.net/gh/adminks666/521zy.github.io/img/gov.png);
 	margin-top:1rem;
 	display:flex;
 	/* width: 1920px; */
@@ -3959,6 +3959,7 @@ a.darkmode_switchbutton{
 	justify-content: center;
 	align-items: baseline;
 	align-content: center;
+	padding: 1px;
 	}
 @media screen and (max-width:768px){#footer{
 	margin-top:0
