@@ -186,8 +186,8 @@ ul.menus_item_child {
 }
 
 .content {
-    display: none;
-    opacity: 0;
+    /* display: none; */
+    /* opacity: 0; */
 }
 /*!
  * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
