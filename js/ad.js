@@ -1,4 +1,5 @@
 if(aidaori()){
+  btf.isJqueryLoad(() => {
     $("html").css({
         "filter":"gray !important",
         "filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)",
@@ -8,6 +9,7 @@ if(aidaori()){
         "-ms-filter":"grayscale(100%)",
         "-o-filter":"grayscale(100%)" 
     });
+    })	
 }
 function aidaori(){
     var aidaoriarr=new Array("0403","0404","0405","0406","0414","0512","0707","0807","0814","0909","0918","0930","1025","1213");
