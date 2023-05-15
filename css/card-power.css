@@ -1,0 +1,140 @@
+#aside-content .card-widget.card-power {
+padding: 0.4rem 0.6rem !important;
+}
+
+#aside-content .card-widget.card-power .power-charge {
+margin-left: auto;
+color: var(--heo-secondtext);
+font-size: 14px;
+line-height: 1;
+}
+
+#aside-content .card-widget.card-power .power-charge:hover {
+color: var(--heo-lighttext);
+}
+
+.power-list {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin: 0 -4px;
+}
+
+.power-list .power-item .power-item-link a {
+padding: 2px 4px;
+border-radius: 4px;
+margin-left: 8px;
+}
+
+.power-list .power-item .power-item-link a:hover {
+background: var(--heo-main);
+color: var(--heo-white);
+}
+
+#aside-content .power-item-body {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+#power-star-image {
+width: 60px;
+height: 60px;
+border-radius: 8px;
+background-size: contain;
+margin-right: 12px;
+}
+
+a#power-star {
+display: flex;
+padding: 8px;
+border: var(--style-border-always);
+border-radius: 8px;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+position: relative;
+margin: 12px 0;
+}
+.power-list .power-item .power-item-link a:hover {
+    background: var(--btn-bg);
+    color: #fff !important;
+}
+a.footer-item:hover{
+    background: var(--btn-bg);
+    color: #fff !important;    
+}
+a#power-star:hover {
+    background: var(--btn-bg);
+    color: #fff;
+}
+div#power-star-title {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 16px;
+font-weight: bold;
+line-height: 1;
+margin-bottom: 8px;
+}
+
+#power-star-desc {
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+font-size: 12px;
+max-width: 100%;
+line-height: 1.2;
+}
+
+.power-star-body {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+position: relative;
+width: calc(100% - 68px);
+justify-content: center;
+}
+
+/* 卡片标题 */
+#aside-content .item-headline {
+padding-bottom: 0;
+margin-left: 8px;
+font-size: 1em;
+font-weight: bold;
+display: none;
+align-items: center;
+}
+
+#aside-content .item-headline span {
+margin-left: 4px;
+}
+
+#aside-content .card-allinfo .item-headline {
+display: none;
+}
+
+#aside-content .item-headline i {
+min-width: 19.5px;
+font-size: 18px;
+}
+
+#aside-content .item-headline+div,
+#aside-content .item-headline+ul {
+padding: 0;
+-webkit-user-select: none;
+}
+
+@media screen and (min-width: 1300px) {
+#aside-content .card-widget {
+margin-top: 1rem;
+}
+}
+
+@media screen and (max-width: 768px) {
+#aside-content .card-widget {
+border-radius: 12px;
+}
+}

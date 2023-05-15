@@ -1,0 +1,43 @@
+div#heo-footer-banner a.footer-banner-link:hover {
+    background: #3b70fc !important;
+    color: #fff !important;
+}
+@media screen and (max-width: 768px)
+.post-reward {
+    display: block !important;
+}
+
+.post div#heo-footer-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  padding: 0px 0px 0px;
+}
+
+div#heo-footer-banner a.footer-banner-link {
+  padding: 4px 16px;
+  background: aliceblue;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+div#heo-footer-banner a.footer-banner-link:hover {
+  background: var(--heo-main);
+  color: var(--heo-white);
+}
+
+div#heo-footer-banner .footer-logo {
+  font-size: 24px;
+}
+
+div#heo-footer-banner .footer-banner-description {
+  color: rgb(255 255 255 / 80%);
+  font-weight: bold;
+  padding: 20px 0px 0px;
+}
+[data-theme="dark"] div#heo-footer-banner a.footer-banner-link {
+    color: black;
+}

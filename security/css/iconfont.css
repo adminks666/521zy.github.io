@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2896335 */
+  src: url('iconfont.woff2?t=1635314703407') format('woff2'),
+       url('iconfont.woff?t=1635314703407') format('woff'),
+       url('iconfont.ttf?t=1635314703407') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-FreeBuf_logowechat:before {
+  content: "\e6c4";
+}
+

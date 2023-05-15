@@ -1,0 +1,135 @@
+/* 媒体查询适配 */
+@media screen and (max-width: 1440px) {
+  .menus_item:hover > a.site-page {
+    color: var(--anzhiyu-white) !important;
+    background: var(--anzhiyu-main);
+    transition: 0.3s;
+    box-shadow: var(--anzhiyu-shadow-main);
+  }
+  #blog_name #site-name .title{
+    max-width:88px;
+  }
+  #page-header #nav #nav-right #switch-bg{
+    display:none
+  }*/
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  } 
+}
+@media screen and (max-width: 1390px) {
+  .menus_item:hover > a.site-page {
+    color: var(--anzhiyu-white) !important;
+    background: var(--anzhiyu-main);
+    transition: 0.3s;
+    box-shadow: var(--anzhiyu-shadow-main);
+  }
+  #blog_name #site-name .title{
+    max-width:88px;
+  }
+  #page-header #nav #nav-right #switch-bg{
+    display:none
+  }*/
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  } 
+}
+@media screen and (max-width: 1024px) {
+  .menus_item:hover > a.site-page {
+    color: var(--anzhiyu-white) !important;
+    background: var(--anzhiyu-main);
+    transition: 0.3s;
+    box-shadow: var(--anzhiyu-shadow-main);
+  }
+  #blog_name #site-name .title{
+    max-width:88px;
+  }
+  #page-header #nav #nav-right #switch-bg{
+    display:none
+  }*/
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  }
+  div#banners {
+    display:none
+  }  
+}
+
+@media screen and (max-width: 768px) {
+  #blog_name #site-name .title{
+    max-width:88px
+  }
+  div#banners {
+    display:none
+  }
+  /*#page-header #nav #nav-right #switch-bg{
+    display:none
+  }
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  }*/
+}
+
+@media screen and (max-width: 768px) {
+  .menus_item:hover > a.site-page {
+    color: var(--anzhiyu-white) !important;
+    background: var(--anzhiyu-main);
+    transition: 0.3s;
+    box-shadow: var(--anzhiyu-shadow-main);
+  }
+  #blog_name #site-name .title{
+    max-width:88px;
+  }
+  #page-header #nav #nav-right #switch-bg{
+    display:none
+  }*/
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  } 
+}
+@media screen and (max-width: 320px) {
+  .menus_item:hover > a.site-page {
+    color: var(--anzhiyu-white) !important;
+    background: var(--anzhiyu-main);
+    transition: 0.3s;
+    box-shadow: var(--anzhiyu-shadow-main);
+  }
+  div#banners {
+    display:none
+  }  
+  #blog_name #site-name .title{
+    max-width:88px;
+  }
+  #page-header #nav #nav-right #switch-bg{
+    display:none
+  }
+  #randomPost_button{
+   display:none  
+  }
+  #fps {
+   display:none 
+  }
+  #he-plugin-simple {
+   display:none 
+  } 
+}
+#blog_name #site-name{
+  max-width: 88px !important;
+}
+#blog_name #site-name .title{
+  max-width: 88px !important;
+}

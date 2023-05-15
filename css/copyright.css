@@ -1,0 +1,314 @@
+/* 版权css修改
+.layout #post .post-copyright {
+  border: 1px solid var(--anzhiyu-blue-main);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.layout #post .post-copyright:before {
+  top: -71px;
+  right: -20px;
+  font-size: 8.3em;
+}
+#post .post-copyright a:not([data-fancybox="gallery"]) {
+  font-weight: 500;
+  border-bottom: solid 2px var(--anzhiyu-lighttext);
+  color: var(--anzhiyu-fontcolor);
+  padding: 0 0.2em;
+  text-decoration: none;
+}
+#post .post-copyright a:not([data-fancybox="gallery"]):hover {
+  color: var(--anzhiyu-white);
+  background-color: var(--anzhiyu-main);
+  border-radius: 4px;
+} */
+
+[data-theme="dark"] .post-copyright-info {
+    color: #e0e0e4;
+}
+
+#post .post-copyright {
+    padding: 16px !important;
+    justify-content: space-around !important;
+}
+
+[data-theme="dark"] #post .post-copyright {
+    background-color: rgb(7 8 10);
+    /* text-shadow: #bfbeb8 1px 0 4px; */
+    border: 1px solid rgb(19 18 18 / 35%);
+}
+
+.zuoce {
+    min-width: 306px !important;
+    padding: 0 !important;
+}
+
+.youce {
+    min-width: 289px !important;
+}
+
+.post-copyright-a {
+    padding-left: 6px;
+}
+
+.post-copyright-c,
+.post-copyright-u {
+    margin-left: 6px !important;
+}
+
+.download-group {
+    padding: 10px !important;
+    height: 160px;
+}
+
+.download-group .qrcode {
+    padding: 0 !important;
+}
+
+.download-group .qrcode .code1 {
+    display: flex;
+    align-items: center;
+}
+
+.download-group .qrcode .code1 img {
+    width: 139px;
+}
+
+.web-download-box {
+    justify-content: space-between !important;
+    height: 100% !important;
+}
+
+.web-download-box .web-download-android img {
+    height: 60px !important;
+}
+
+.text-group .weui-flex__item {
+    margin-bottom: 20px;
+}
+
+.text-group .weui-flex__item .title {
+    display: inline-block;
+}
+
+.text-group .weui-flex__item .sub-title {
+    display: inline-block;
+    margin-bottom: 16px !important;
+}
+
+#post .post-copyright__title {
+    font-size: 22px;
+}
+
+#post .post-copyright__notice {
+    font-size: 15px;
+}
+
+[data-theme="dark"] #post .post-copyright {
+    border: 1px dashed #ddd;
+}
+
+.social-share .icon-wechat .wechat-qrcode {
+    display: block !important;
+    border-radius: 6px;
+    left: -110000px !important;
+}
+
+.social-share .icon-wechat:hover .wechat-qrcode {
+    display: none !important;
+}
+
+.social-share .icon-wechat .wechat-qrcode .qrcode img {
+    width: 130px !important;
+    height: 130px !important;
+    margin: 5px auto !important;
+}
+
+.social-share .icon-wechat .wechat-qrcode .qrcode {
+    width: 140px !important;
+    margin: 0 !important;
+}
+
+.social-share .icon-wechat .wechat-qrcode:after {
+    display: none !important;
+}
+
+.social-share .icon-wechat .wechat-qrcode h4,
+.social-share .icon-wechat .wechat-qrcode .help {
+    display: none !important;
+}
+
+@media screen and (max-width:1400px) {
+    .post-copyright-info {
+        display: inline-block;
+        max-width: 300px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #post .post-copyright {
+        padding: 16px 30px !important;
+        flex-direction: column;
+    }
+    .post-copyright-info {
+        display: inline-block;
+        max-width: 100%;
+        overflow: auto !important;
+        text-align: initial !important;
+    }
+    .post-copyright-c,
+    .post-copyright-u {
+        margin-left: 16px !important;
+        /* width: 110px !important; */
+    }
+    .post-copyright-m .post-copyright-m-info :nth-child(2) {
+        margin-left: 6px !important;
+    }
+    .post-copyright-m .post-copyright-m-info :nth-child(5) {
+        width: 100% !important;
+        /* margin-left: 6px !important; */
+    }
+    .post-copyright-m .post-copyright-m-info .post-copyright-cc-info {
+        margin-left: 0 !important;
+    }
+    .youce,
+    .weui-flex,
+    .text-group {
+        width: 100% !important;
+    }
+    .youce {
+        margin-top: 8px;
+    }
+    .weui-flex {
+        justify-content: space-between !important;
+    }
+    .text-group {
+        display: flex;
+        flex-direction: row !important;
+    }
+    .text-group>div {
+        display: flex;
+        flex: 1;
+    }
+    .weui-flex__item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:1024px) {
+    .t-t-r{
+      display:none !important;
+    }
+  a.power-charge{
+  padding: 0px 0px 0px 75px  !important;
+  }
+  a.footer-item{
+  margin-left: 50px;  
+  }
+  
+}
+@media screen and (max-width:992px) {
+    .text-group {
+        flex-direction: column !important;
+    }
+    .download-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .web-download-box {
+        align-items: center !important;
+    }
+    .web-download-box .web-download-android {
+        margin: 4px 0;
+    }
+}
+@media screen and (max-width:768px) {
+    .zuoce {
+        min-width: 0 !important;
+    }
+    #post .post-copyright .post-copyright-info{
+      font-size: 20px;
+    }
+}
+@media screen and (max-width:720px) {
+    .zuoce {
+        min-width: 0 !important;
+    }
+    #post .post-copyright .post-copyright-info{
+      font-size: 20px;
+    }
+    .ft-links{
+      padding: 0 83px !important;
+    }
+    p.ft-t.t-l-t{
+      margin-left: 0px !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+	.copyright{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	}
+    #post .post-copyright {
+        padding: 16px !important;
+    }
+    .zuoce {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .post-copyright-info {
+        width: 100% !important;
+        white-space: pre-wrap !important;
+        text-align: initial !important;
+    }
+    .post-copyright-c {
+        width: 50% !important;
+        margin-left: 6px !important;
+        margin-top: 4px !important;
+    }
+    .post-copyright-m .post-copyright-m-info :nth-child(5) {
+        margin-top: 16px !important;
+    }
+    #post .post-copyright .post-copyright-info{
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    .text-group .weui-flex__item {
+        margin-bottom: 0px !important;
+    }
+    .download-group {
+        flex-direction: column !important;
+    }
+    .qrcode {
+        margin-bottom: 30px !important;
+    }
+    .web-download-android {
+        margin-bottom: 20px !important;
+    }
+    .post-copyright-c,
+    .post-copyright-u {
+        margin-left: 6px !important;
+    }
+    #post .post-copyright .post-copyright-info{
+      font-size: 20px;
+    }
+}
+@media screen and (max-width:375px) {
+    #post .post-copyright .post-copyright-info{
+      font-size: 15px;
+    }
+}
+@media screen and (max-width:320px) {
+    #post .post-copyright .post-copyright-info{
+      font-size: 15px;
+    }
+}
