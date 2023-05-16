@@ -175,3 +175,24 @@ if (url.indexOf("about") > -1) {
   // 如果包含，给 body 添加背景图片
   document.querySelector("body").style.backgroundImage = "url('https://img0.baidu.com/it/u=1820810252,2383896203&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500')";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 获取要监测的元素
+  const el = document.querySelector("#post .post-copyright .post-copyright-info");
+
+  // 创建一个 MutationObserver
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === "attributes" && mutation.attributeName === "style") {
+        const height = el.getBoundingClientRect().height;
+        if (height > 66) {
+          el.querySelector(".post-copyright-info").style.fontSize = "1em";
+        } else {
+        }
+      }
+    }
+  });
+
+  // 开始监听目标元素的变化
+  observer.observe(el, { attributes: true });
+});

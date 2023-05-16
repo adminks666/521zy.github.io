@@ -21,7 +21,9 @@
   background-color: var(--anzhiyu-main);
   border-radius: 4px;
 } */
-
+#post .post-copyright .post-copyright-info h {
+    height: 66px;
+}
 [data-theme="dark"] .post-copyright-info {
     color: #e0e0e4;
 }
