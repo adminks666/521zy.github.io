@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
 
         var link = document.createElement('a');
-        link.href = 'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png';
+        link.href = 'https://www.123pan.com/s/Ulh1jv-YbD4.html';
         link.target = '_blank';
 
         var img = document.createElement('img');
