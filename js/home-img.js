@@ -15,12 +15,6 @@ setInterval(function() {
 
 function generateModalHtml() {
   return `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全局居中弹窗示例</title>
     <style>
       /* 模态框样式 */  
       .modal {  
@@ -135,8 +129,6 @@ function generateModalHtml() {
       // JavaScript代码将保持不变，因为它们是控制模态框行为的脚本
       // ...
     </script>
-  </body>
-</html>
   `;
 }
 
