@@ -14,7 +14,85 @@ setInterval(function() {
 }, 50);
 
 document.addEventListener("DOMContentLoaded", function() {
-    // 创建模态框
+// 创建一个名为styles的对象来存储样式
+var styles = {
+  modal: {
+    display: 'none',
+    position: 'fixed',
+    zIndex: 1,
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%',
+    overflow: 'auto',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  modalContent: {
+    backgroundColor: '#fefefe',
+    margin: 'auto',
+    padding: '20px',
+    border: '1px solid #888',
+    width: '80%',
+    maxWidth: '600px',
+    borderRadius: '25px'
+  },
+  close: {
+    color: '#aaa',
+    float: 'right',
+    fontSize: '28px',
+    fontWeight: 'bold',
+    cursor: 'pointer'
+  },
+  modalImage: {
+    width: '100%',
+    borderRadius: '25px'
+  },
+  modalText: {
+    p: {
+      textAlign: 'center'
+    }
+  },
+  button: {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    color: 'white',
+    borderRadius: '4px',
+    border: 'none',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+    marginRight: '25px'
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '20px'
+  },
+  styledButton: {
+    display: 'inline-block',
+    padding: '10px 20px',
+    fontSize: '16px',
+    color: 'white',
+    backgroundColor: '#007BFF',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s'
+  },
+  button1: {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    color: 'white',
+    borderRadius: '4px',
+    border: 'none',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
+    marginLeft: '25px'
+  }
+};
+  // 创建模态框
     var modal = document.createElement("div");
     modal.id = "modal";
     modal.className = "modal";
