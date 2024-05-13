@@ -13,318 +13,133 @@ setInterval(function() {
   }
 }, 50);
 
-document.writeln("		<style>");
-document.writeln("			/* 模态框样式 */  ");
-document.writeln("						  .modal {  ");
-document.writeln("						    display: none; /* 初始状态为隐藏 */  ");
-document.writeln("						    position: fixed;  ");
-document.writeln("						    z-index: 1;  ");
-document.writeln("						    left: 0;  ");
-document.writeln("						    top: 0;  ");
-document.writeln("						    width: 100%; /* 宽度覆盖全屏 */  ");
-document.writeln("						    height: 100%; /* 高度覆盖全屏 */  ");
-document.writeln("						    overflow: auto; /* 允许滚动条 */  ");
-document.writeln("						    background-color: rgba(0,0,0,0.4); /* 黑色背景带有40%的不透明度 */  ");
-document.writeln("						    display: flex; /* 使用Flexbox布局 */  ");
-document.writeln("						    align-items: center; /* 垂直居中 */  ");
-document.writeln("						    justify-content: center; /* 水平居中 */  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  /* 模态框内容样式 */  ");
-document.writeln("						  .modal-content {  ");
-document.writeln("						    background-color: #fefefe;  ");
-document.writeln("						    margin: auto; /* 保留此属性，尽管在此例中不是必要的 */  ");
-document.writeln("						    padding: 20px;  ");
-document.writeln("						    border: 1px solid #888;  ");
-document.writeln("						    width: 80%; /* 内容宽度 */  ");
-document.writeln("						    max-width: 600px; /* 最大内容宽度 */ ");
-document.writeln("						    border-radius: 25px; ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  /* 关闭按钮样式 */  ");
-document.writeln("						  .close {  ");
-document.writeln("						    color: #aaa;  ");
-document.writeln("						    float: right;  ");
-document.writeln("						    font-size: 28px;  ");
-document.writeln("						    font-weight: bold;  ");
-document.writeln("						    cursor: pointer;  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  .close:hover,  ");
-document.writeln("						  .close:focus {  ");
-document.writeln("						    color: black;  ");
-document.writeln("						    text-decoration: none;  ");
-document.writeln("						    cursor: pointer;  ");
-document.writeln("						  }");
-document.writeln("						img#modalImage {");
-document.writeln("						    width: 100%;");
-document.writeln("						    border-radius: 25px;");
-document.writeln("						}");
-document.writeln("						.modal-text p {");
-document.writeln("						    text-align: center;");
-document.writeln("						}");
-document.writeln("						    .button {  ");
-document.writeln("						        padding: 10px 20px;  ");
-document.writeln("						        background-color: #007BFF;  ");
-document.writeln("						        color: white;  ");
-document.writeln("						        border-radius: 4px;  ");
-document.writeln("						        border: none;  ");
-document.writeln("						        cursor: pointer;  ");
-document.writeln("						        transition: background-color 0.3s;");
-document.writeln("						        margin-right: 25px;  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .button:hover {  ");
-document.writeln("						        background-color: #0056b3;  ");
-document.writeln("						    }");
-document.writeln("						    .button-container {  ");
-document.writeln("						        /* 可以为包含button的div添加一些样式，比如间距、边距等 */  ");
-document.writeln("						        display: flex;  ");
-document.writeln("						        justify-content: center; /* 水平居中 */  ");
-document.writeln("						        margin-top: 20px; /* 顶部边距 */  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .styled-button {  ");
-document.writeln("						        /* 定义按钮的样式 */  ");
-document.writeln("						        display: inline-block;  ");
-document.writeln("						        padding: 10px 20px;  ");
-document.writeln("						        font-size: 16px;  ");
-document.writeln("						        color: white;  ");
-document.writeln("						        background-color: #007BFF;  ");
-document.writeln("						        border: none;  ");
-document.writeln("						        border-radius: 4px;  ");
-document.writeln("						        cursor: pointer;  ");
-document.writeln("						        transition: background-color 0.3s;  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .styled-button:hover {  ");
-document.writeln("						        background-color: #0056b3; /* 鼠标悬停时改变背景色 */  ");
-document.writeln("						    }");
-document.writeln("						button.button1 {");
-document.writeln("						    padding: 10px 20px;");
-document.writeln("						    background-color: #007BFF;");
-document.writeln("						    color: white;");
-document.writeln("						    border-radius: 4px;");
-document.writeln("						    border: none;");
-document.writeln("						    cursor: pointer;");
-document.writeln("						    transition: background-color 0.3s;");
-document.writeln("						    margin-left: 25px;");
-document.writeln("						}");
-document.writeln("		</style>");
-document.writeln("	</head>");
-document.writeln("	<body>");
-document.writeln("");
-document.writeln("		<!-- 模态框 -->");
-document.writeln("		<div id=\"modal\" class=\"modal\">");
-document.writeln("			<div class=\"modal-content\">");
-document.writeln("				<span class=\"close\" onclick=\"closeModal()\">&times;</span>");
-document.writeln("				<div class=\"modal-image\">");
-document.writeln("					<img id=\"modalImage\" src=\"large-image.jpg\" alt=\"示例图片\">");
-document.writeln("				</div>");
-document.writeln("				<div class=\"modal-text\">");
-document.writeln("					<p>开发者会嘤嘤嘤。</p>");
-document.writeln("					<div class=\"button-container\">");
-document.writeln("						<button class=\"button\" onclick=\"window.location.href=\'https://www.example.com\';\">点击下载</button>");
-document.writeln("						<button class=\"button1\" onclick=\"window.location.href=\'点击链接加入群聊【远航】：https://qm.qq.com/q/4GWKUepisU\';\">点击进群</button>");
-document.writeln("					</div>");
-document.writeln("");
-document.writeln("				</div>");
-document.writeln("			</div>");
-document.writeln("		</div>");
-document.writeln("");
-document.writeln("		<script>");
-document.writeln("			// 初始打开弹窗的函数  ");
-document.writeln("						  function openModal() {  ");
-document.writeln("						    document.getElementById(\'modal\').style.display = \'flex\';  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 关闭弹窗的函数  ");
-document.writeln("						  function closeModal() {  ");
-document.writeln("						    document.getElementById(\'modal\').style.display = \'none\';  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 监听窗口大小变化，并更改图片链接  ");
-document.writeln("						  function resizeImage() {  ");
-document.writeln("						    var img = document.getElementById(\'modalImage\');  ");
-document.writeln("						    var windowWidth = window.innerWidth;  ");
-document.writeln("						  ");
-document.writeln("						    if (windowWidth <= 600) {  ");
-document.writeln("						      // 如果窗口宽度小于等于600px，则更换为小图的链接  ");
-document.writeln("						      img.src = \'https://pic.rmb.bdstatic.com/bjh/240513/material/642256f4d7e743721aaea11764b0da341408.png\';  ");
-document.writeln("						    } else {  ");
-document.writeln("						      // 否则，更换为大图的链接  ");
-document.writeln("						      img.src = \'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png\';  ");
-document.writeln("						    }  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 页面加载完成后打开弹窗并设置图片链接  ");
-document.writeln("						  window.onload = function() {  ");
-document.writeln("						    openModal();  ");
-document.writeln("						    resizeImage();  ");
-document.writeln("						  };  ");
-document.writeln("						  ");
-document.writeln("						  // 监听窗口大小变化  ");
-document.writeln("						  window.addEventListener(\'resize\', resizeImage);  ");
-document.writeln("						  ");
-document.writeln("						  // 阻止事件冒泡到弹窗内容  ");
-document.writeln("						  document.querySelector(\'.modal-content\').addEventListener(\'click\', function(e) {  ");
-document.writeln("						    e.stopPropagation();  ");
-document.writeln("						  });");
-document.writeln("		</script>");document.writeln("		<style>");
-document.writeln("			/* 模态框样式 */  ");
-document.writeln("						  .modal {  ");
-document.writeln("						    display: none; /* 初始状态为隐藏 */  ");
-document.writeln("						    position: fixed;  ");
-document.writeln("						    z-index: 1;  ");
-document.writeln("						    left: 0;  ");
-document.writeln("						    top: 0;  ");
-document.writeln("						    width: 100%; /* 宽度覆盖全屏 */  ");
-document.writeln("						    height: 100%; /* 高度覆盖全屏 */  ");
-document.writeln("						    overflow: auto; /* 允许滚动条 */  ");
-document.writeln("						    background-color: rgba(0,0,0,0.4); /* 黑色背景带有40%的不透明度 */  ");
-document.writeln("						    display: flex; /* 使用Flexbox布局 */  ");
-document.writeln("						    align-items: center; /* 垂直居中 */  ");
-document.writeln("						    justify-content: center; /* 水平居中 */  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  /* 模态框内容样式 */  ");
-document.writeln("						  .modal-content {  ");
-document.writeln("						    background-color: #fefefe;  ");
-document.writeln("						    margin: auto; /* 保留此属性，尽管在此例中不是必要的 */  ");
-document.writeln("						    padding: 20px;  ");
-document.writeln("						    border: 1px solid #888;  ");
-document.writeln("						    width: 80%; /* 内容宽度 */  ");
-document.writeln("						    max-width: 600px; /* 最大内容宽度 */ ");
-document.writeln("						    border-radius: 25px; ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  /* 关闭按钮样式 */  ");
-document.writeln("						  .close {  ");
-document.writeln("						    color: #aaa;  ");
-document.writeln("						    float: right;  ");
-document.writeln("						    font-size: 28px;  ");
-document.writeln("						    font-weight: bold;  ");
-document.writeln("						    cursor: pointer;  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  .close:hover,  ");
-document.writeln("						  .close:focus {  ");
-document.writeln("						    color: black;  ");
-document.writeln("						    text-decoration: none;  ");
-document.writeln("						    cursor: pointer;  ");
-document.writeln("						  }");
-document.writeln("						img#modalImage {");
-document.writeln("						    width: 100%;");
-document.writeln("						    border-radius: 25px;");
-document.writeln("						}");
-document.writeln("						.modal-text p {");
-document.writeln("						    text-align: center;");
-document.writeln("						}");
-document.writeln("						    .button {  ");
-document.writeln("						        padding: 10px 20px;  ");
-document.writeln("						        background-color: #007BFF;  ");
-document.writeln("						        color: white;  ");
-document.writeln("						        border-radius: 4px;  ");
-document.writeln("						        border: none;  ");
-document.writeln("						        cursor: pointer;  ");
-document.writeln("						        transition: background-color 0.3s;");
-document.writeln("						        margin-right: 25px;  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .button:hover {  ");
-document.writeln("						        background-color: #0056b3;  ");
-document.writeln("						    }");
-document.writeln("						    .button-container {  ");
-document.writeln("						        /* 可以为包含button的div添加一些样式，比如间距、边距等 */  ");
-document.writeln("						        display: flex;  ");
-document.writeln("						        justify-content: center; /* 水平居中 */  ");
-document.writeln("						        margin-top: 20px; /* 顶部边距 */  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .styled-button {  ");
-document.writeln("						        /* 定义按钮的样式 */  ");
-document.writeln("						        display: inline-block;  ");
-document.writeln("						        padding: 10px 20px;  ");
-document.writeln("						        font-size: 16px;  ");
-document.writeln("						        color: white;  ");
-document.writeln("						        background-color: #007BFF;  ");
-document.writeln("						        border: none;  ");
-document.writeln("						        border-radius: 4px;  ");
-document.writeln("						        cursor: pointer;  ");
-document.writeln("						        transition: background-color 0.3s;  ");
-document.writeln("						    }  ");
-document.writeln("						  ");
-document.writeln("						    .styled-button:hover {  ");
-document.writeln("						        background-color: #0056b3; /* 鼠标悬停时改变背景色 */  ");
-document.writeln("						    }");
-document.writeln("						button.button1 {");
-document.writeln("						    padding: 10px 20px;");
-document.writeln("						    background-color: #007BFF;");
-document.writeln("						    color: white;");
-document.writeln("						    border-radius: 4px;");
-document.writeln("						    border: none;");
-document.writeln("						    cursor: pointer;");
-document.writeln("						    transition: background-color 0.3s;");
-document.writeln("						    margin-left: 25px;");
-document.writeln("						}");
-document.writeln("		</style>");
-document.writeln("	</head>");
-document.writeln("	<body>");
-document.writeln("");
-document.writeln("		<!-- 模态框 -->");
-document.writeln("		<div id=\"modal\" class=\"modal\">");
-document.writeln("			<div class=\"modal-content\">");
-document.writeln("				<span class=\"close\" onclick=\"closeModal()\">&times;</span>");
-document.writeln("				<div class=\"modal-image\">");
-document.writeln("					<img id=\"modalImage\" src=\"large-image.jpg\" alt=\"示例图片\">");
-document.writeln("				</div>");
-document.writeln("				<div class=\"modal-text\">");
-document.writeln("					<p>开发者会嘤嘤嘤。</p>");
-document.writeln("					<div class=\"button-container\">");
-document.writeln("						<button class=\"button\" onclick=\"window.location.href=\'https://www.example.com\';\">点击下载</button>");
-document.writeln("						<button class=\"button1\" onclick=\"window.location.href=\'点击链接加入群聊【远航】：https://qm.qq.com/q/4GWKUepisU\';\">点击进群</button>");
-document.writeln("					</div>");
-document.writeln("");
-document.writeln("				</div>");
-document.writeln("			</div>");
-document.writeln("		</div>");
-document.writeln("");
-document.writeln("		<script>");
-document.writeln("			// 初始打开弹窗的函数  ");
-document.writeln("						  function openModal() {  ");
-document.writeln("						    document.getElementById(\'modal\').style.display = \'flex\';  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 关闭弹窗的函数  ");
-document.writeln("						  function closeModal() {  ");
-document.writeln("						    document.getElementById(\'modal\').style.display = \'none\';  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 监听窗口大小变化，并更改图片链接  ");
-document.writeln("						  function resizeImage() {  ");
-document.writeln("						    var img = document.getElementById(\'modalImage\');  ");
-document.writeln("						    var windowWidth = window.innerWidth;  ");
-document.writeln("						  ");
-document.writeln("						    if (windowWidth <= 600) {  ");
-document.writeln("						      // 如果窗口宽度小于等于600px，则更换为小图的链接  ");
-document.writeln("						      img.src = \'https://pic.rmb.bdstatic.com/bjh/240513/material/642256f4d7e743721aaea11764b0da341408.png\';  ");
-document.writeln("						    } else {  ");
-document.writeln("						      // 否则，更换为大图的链接  ");
-document.writeln("						      img.src = \'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png\';  ");
-document.writeln("						    }  ");
-document.writeln("						  }  ");
-document.writeln("						  ");
-document.writeln("						  // 页面加载完成后打开弹窗并设置图片链接  ");
-document.writeln("						  window.onload = function() {  ");
-document.writeln("						    openModal();  ");
-document.writeln("						    resizeImage();  ");
-document.writeln("						  };  ");
-document.writeln("						  ");
-document.writeln("						  // 监听窗口大小变化  ");
-document.writeln("						  window.addEventListener(\'resize\', resizeImage);  ");
-document.writeln("						  ");
-document.writeln("						  // 阻止事件冒泡到弹窗内容  ");
-document.writeln("						  document.querySelector(\'.modal-content\').addEventListener(\'click\', function(e) {  ");
-document.writeln("						    e.stopPropagation();  ");
-document.writeln("						  });");
-document.writeln("		</script>");
+function generateModalHtml() {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全局居中弹窗示例</title>
+    <style>
+      /* 模态框样式 */  
+      .modal {  
+        display: none; /* 初始状态为隐藏 */  
+        position: fixed;  
+        z-index: 1;  
+        left: 0;  
+        top: 0;  
+        width: 100%; /* 宽度覆盖全屏 */  
+        height: 100%; /* 高度覆盖全屏 */  
+        overflow: auto; /* 允许滚动条 */  
+        background-color: rgba(0,0,0,0.4); /* 黑色背景带有40%的不透明度 */  
+        display: flex; /* 使用Flexbox布局 */  
+        align-items: center; /* 垂直居中 */  
+        justify-content: center; /* 水平居中 */  
+      }  
+      /* 模态框内容样式 */  
+      .modal-content {  
+        background-color: #fefefe;  
+        margin: auto; /* 保留此属性，尽管在此例中不是必要的 */  
+        padding: 20px;  
+        border: 1px solid #888;  
+        width: 80%; /* 内容宽度 */  
+        max-width: 600px; /* 最大内容宽度 */ 
+        border-radius: 25px; 
+      }  
+      /* 关闭按钮样式 */  
+      .close {  
+        color: #aaa;  
+        float: right;  
+        font-size: 28px;  
+        font-weight: bold;  
+        cursor: pointer;  
+      }  
+      .close:hover,  
+      .close:focus {  
+        color: black;  
+        text-decoration: none;  
+        cursor: pointer;  
+      }
+      img#modalImage {
+        width: 100%;
+        border-radius: 25px;
+      }
+      .modal-text p {
+        text-align: center;
+      }
+      .button {  
+        padding: 10px 20px;  
+        background-color: #007BFF;  
+        color: white;  
+        border-radius: 4px;  
+        border: none;  
+        cursor: pointer;  
+        transition: background-color 0.3s;
+        margin-right: 25px;  
+      }  
+      .button:hover {  
+        background-color: #0056b3;  
+      }
+      .button-container {  
+        display: flex;  
+        justify-content: center; /* 水平居中 */  
+        margin-top: 20px; /* 顶部边距 */  
+      }  
+      .styled-button {  
+        display: inline-block;  
+        padding: 10px 20px;  
+        font-size: 16px;  
+        color: white;  
+        background-color: #007BFF;  
+        border: none;  
+        border-radius: 4px;  
+        cursor: pointer;  
+        transition: background-color 0.3s;  
+      }  
+      .styled-button:hover {  
+        background-color: #0056b3; /* 鼠标悬停时改变背景色 */  
+      }
+      button.button1 {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-image">
+          < img id="modalImage" src="large-image.jpg" alt="示例图片">
+        </div>
+        <div class="modal-text">
+          <p>开发者会嘤嘤嘤。</p >
+          <div class="button-container">
+            <button class="button" onclick="window.location.href='https://www.example.com';">点击下载</button>
+            <button class="button1" onclick="window.location.href='点击链接加入群聊【远航】：https://qm.qq.com/q/4GWKUepisU';">点击进群</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript代码将保持不变，因为它们是控制模态框行为的脚本
+      // ...
+    </script>
+  </body>
+</html>
+  `;
+}
+
+// 使用函数生成HTML并将其插入到DOM中
+var htmlContent = generateModalHtml();
+document.body.innerHTML = htmlContent;
