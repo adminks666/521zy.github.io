@@ -211,15 +211,28 @@ function createModal() {
     // 将模态框添加到文档中
     document.body.appendChild(modal);
 
-    // 根据窗口大小调整图片
-    function resizeImage() {
-        var windowWidth = window.innerWidth;
-        if (windowWidth <= 600) {
-            modalImage.src = 'https://pic.rmb.bdstatic.com/bjh/240513/material/642256f4d7e743721aaea11764b0da341408.png';
-        } else {
-            modalImage.src = 'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916.png';
-        }
-    }
+// 假设这是你的模态框显示函数
+function showModal() {
+  var modal = document.getElementById('modal');
+  modal.style.display = 'flex'; // 或者 'block'，取决于你的CSS设置
+
+  // 模态框显示后，设置图片的src属性
+  resizeImage();
+}
+
+// 修改你的resizeImage函数，使其可以在模态框打开时正确设置图片
+function resizeImage() {
+  var img = document.getElementById('modalImage');
+  var windowWidth = window.innerWidth;
+
+  // 设置图片的src属性
+  if (windowWidth <= 600) {
+    img.src = 'https://pic.rmb.bdstatic.com/bjh/240513/material/642256f4d7e743721aaea11764b0da341408.png';
+  } else {
+    img.src = 'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png';
+  }
+}
+  
 
     // 页面加载完成后打开模态框并设置图片链接
     window.onload = function() {
