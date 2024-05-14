@@ -187,7 +187,7 @@ function createModal() {
     downloadButton.className = 'button';
     downloadButton.innerText = '点击下载';
     downloadButton.onclick = function() {
-        window.location.href = 'https://www.example.com';
+        window.location.href = 'https://www.123pan.com/s/Ulh1jv-3VD4.html';
     };
 
     // 创建进群按钮
