@@ -37,7 +37,9 @@
 	justify-content: center;
  /* 水平居中 */
 }  
-						  
+img#modalImage {
+    background: url(https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png);
+}						  
 						  /* 模态框内容样式 */  
 .modal-content {
 	background-color: #fefefe;
