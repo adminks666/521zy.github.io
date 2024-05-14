@@ -35,6 +35,7 @@ var cssStyles = `.modal {
     /* 垂直居中 */
     justify - content: center;
     /* 水平居中 */
+    z-index: 9999999 !important;
 }
 
 /* 模态框内容样式 */
