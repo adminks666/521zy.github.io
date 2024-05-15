@@ -182,20 +182,22 @@ function createModal() {
     var buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
 
-    // 创建下载按钮
-    var downloadButton = document.createElement('button');
-    downloadButton.className = 'button';
-    downloadButton.innerText = '点击下载';
-    downloadButton.onclick = function() {
-        window.location.href = 'https://www.123pan.com/s/Ulh1jv-3VD4.html';
-    };
+    // 创建下载按钮  
+    var downloadButton = document.createElement('button');  
+    downloadButton.className = 'button';  
+    downloadButton.innerText = '点击下载';  
+    downloadButton.onclick = function() {  
+        window.open('https://www.123pan.com/s/Ulh1jv-3VD4.html', '_blank'); // 在新窗口或标签页中打开链接  
+    };  
+    // 将按钮添加到文档的某个位置，例如body  
+    document.body.appendChild(downloadButton);
 
     // 创建进群按钮
     var joinGroupButton = document.createElement('button');
     joinGroupButton.className = 'button1';
     joinGroupButton.innerText = '点击进群';
     joinGroupButton.onclick = function() {
-        window.location.href = 'https://qm.qq.com/q/4GWKUepisU';
+        window.open('https://qm.qq.com/q/4GWKUepisU', '_blank'); // 在新窗口或标签页中打开链接
     };
 
     // 将所有元素组合到一起
