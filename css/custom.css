@@ -52,6 +52,7 @@ img#modalImage {
 	max-width: 600px;
  /* 最大内容宽度 */
 	border-radius: 25px;
+	color: rgb(225 0 0 / 70%);
 }  
 						  
 						  /* 关闭按钮样式 */  
