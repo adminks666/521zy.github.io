@@ -176,7 +176,7 @@ function createModal() {
     modalText.className = 'modal-text';
 
     var modalTextP = document.createElement('p');
-    modalTextP.innerText = '开发者会嘤嘤嘤。';
+    modalTextP.innerText = '焘酱紫会嘤嘤嘤，加群即可领略JK、双马尾萝莉。';
 
     // 创建按钮容器
     var buttonContainer = document.createElement('div');
