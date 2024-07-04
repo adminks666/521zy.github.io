@@ -166,7 +166,7 @@ function createModal() {
     // 创建图片
     var modalImage = document.createElement('img');
     modalImage.id = 'modalImage';
-    modalImage.src = 'https://pic.rmb.bdstatic.com/bjh/240510/material/ebc3df5500125e6267fe66a29fb7e916364.png'; // 默认图片路径
+    modalImage.src = 'https://pic.rmb.bdstatic.com/bjh/3ede906cd38/240704/a995fe97e490caf60e6a690832a983de.jpeg'; // 默认图片路径
     modalImage.alt = '示例图片';
     modalImage.style.width = '100%';
     modalImage.style.borderRadius = '25px';
